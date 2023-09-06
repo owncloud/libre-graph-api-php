@@ -28,6 +28,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+
 $apiInstance = new OpenAPI\Client\Api\GroupApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -57,7 +58,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -81,6 +82,7 @@ Delete entity from groups
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -113,7 +115,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -137,6 +139,7 @@ Delete member from a group
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -171,7 +174,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -195,6 +198,7 @@ Get entity from groups by key
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -230,7 +234,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -254,6 +258,7 @@ Get a list of the group's direct members
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -285,7 +290,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -309,6 +314,7 @@ Update entity in groups
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -341,7 +347,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 

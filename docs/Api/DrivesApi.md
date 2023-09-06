@@ -26,6 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+
 $apiInstance = new OpenAPI\Client\Api\DrivesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -54,7 +55,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -78,6 +79,7 @@ Delete a specific space
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -110,7 +112,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -134,6 +136,7 @@ Get drive by id
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -165,7 +168,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -189,6 +192,7 @@ Update the drive
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -222,7 +226,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 

@@ -26,6 +26,7 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+
 $apiInstance = new OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
@@ -55,7 +56,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -79,6 +80,7 @@ export personal data of a user
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -111,7 +113,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -135,6 +137,7 @@ Get entity from users by key
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -170,7 +173,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
@@ -194,6 +197,7 @@ Update entity in users
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+
 
 
 
@@ -227,7 +231,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[openId](../../README.md#openId)
 
 ### HTTP request headers
 
