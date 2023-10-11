@@ -123,6 +123,8 @@ Class | Method | HTTP request | Description
 *MeDriveRootChildrenApi* | [**homeGetChildren**](docs/Api/MeDriveRootChildrenApi.md#homegetchildren) | **GET** /me/drive/root/children | Get children from drive
 *MeDrivesApi* | [**listMyDrives**](docs/Api/MeDrivesApi.md#listmydrives) | **GET** /me/drives | Get all drives where the current user is a regular member of
 *MeUserApi* | [**getOwnUser**](docs/Api/MeUserApi.md#getownuser) | **GET** /me | Get current user
+*RoleManagementApi* | [**getPermissionRoleDefinition**](docs/Api/RoleManagementApi.md#getpermissionroledefinition) | **GET** /roleManagement/permissions/roleDefinitions/{role-id} | Get unifiedRoleDefinition
+*RoleManagementApi* | [**listPermissionRoleDefinitions**](docs/Api/RoleManagementApi.md#listpermissionroledefinitions) | **GET** /roleManagement/permissions/roleDefinitions | List roleDefinitions
 *TagsApi* | [**assignTags**](docs/Api/TagsApi.md#assigntags) | **PUT** /extensions/org.libregraph/tags | Assign tags to a resource
 *TagsApi* | [**getTags**](docs/Api/TagsApi.md#gettags) | **GET** /extensions/org.libregraph/tags | Get all known tags
 *TagsApi* | [**unassignTags**](docs/Api/TagsApi.md#unassigntags) | **DELETE** /extensions/org.libregraph/tags | Unassign tags from a resource
@@ -194,6 +196,8 @@ Class | Method | HTTP request | Description
 - [TagAssignment](docs/Model/TagAssignment.md)
 - [TagUnassignment](docs/Model/TagUnassignment.md)
 - [Trash](docs/Model/Trash.md)
+- [UnifiedRoleDefinition](docs/Model/UnifiedRoleDefinition.md)
+- [UnifiedRolePermission](docs/Model/UnifiedRolePermission.md)
 - [User](docs/Model/User.md)
 
 ## Authorization

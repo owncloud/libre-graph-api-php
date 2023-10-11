@@ -19,6 +19,7 @@ docs/Api/MeDriveRootApi.md
 docs/Api/MeDriveRootChildrenApi.md
 docs/Api/MeDrivesApi.md
 docs/Api/MeUserApi.md
+docs/Api/RoleManagementApi.md
 docs/Api/TagsApi.md
 docs/Api/UserApi.md
 docs/Api/UserAppRoleAssignmentApi.md
@@ -79,6 +80,8 @@ docs/Model/SpecialFolder.md
 docs/Model/TagAssignment.md
 docs/Model/TagUnassignment.md
 docs/Model/Trash.md
+docs/Model/UnifiedRoleDefinition.md
+docs/Model/UnifiedRolePermission.md
 docs/Model/User.md
 git_push.sh
 lib/Api/ApplicationsApi.php
@@ -97,6 +100,7 @@ lib/Api/MeDriveRootApi.php
 lib/Api/MeDriveRootChildrenApi.php
 lib/Api/MeDrivesApi.php
 lib/Api/MeUserApi.php
+lib/Api/RoleManagementApi.php
 lib/Api/TagsApi.php
 lib/Api/UserApi.php
 lib/Api/UserAppRoleAssignmentApi.php
@@ -161,6 +165,8 @@ lib/Model/SpecialFolder.php
 lib/Model/TagAssignment.php
 lib/Model/TagUnassignment.php
 lib/Model/Trash.php
+lib/Model/UnifiedRoleDefinition.php
+lib/Model/UnifiedRolePermission.php
 lib/Model/User.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
@@ -180,6 +186,7 @@ test/Api/MeDriveRootApiTest.php
 test/Api/MeDriveRootChildrenApiTest.php
 test/Api/MeDrivesApiTest.php
 test/Api/MeUserApiTest.php
+test/Api/RoleManagementApiTest.php
 test/Api/TagsApiTest.php
 test/Api/UserApiTest.php
 test/Api/UserAppRoleAssignmentApiTest.php
@@ -240,4 +247,6 @@ test/Model/SpecialFolderTest.php
 test/Model/TagAssignmentTest.php
 test/Model/TagUnassignmentTest.php
 test/Model/TrashTest.php
+test/Model/UnifiedRoleDefinitionTest.php
+test/Model/UnifiedRolePermissionTest.php
 test/Model/UserTest.php
