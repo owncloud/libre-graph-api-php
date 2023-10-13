@@ -62,7 +62,7 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
         'display_name' => 'string',
         'id' => 'string',
         'role_permissions' => '\OpenAPI\Client\Model\UnifiedRolePermission[]',
-        'weight' => 'int'
+        'at_libre_graph_weight' => 'int'
     ];
 
     /**
@@ -77,7 +77,7 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
         'display_name' => null,
         'id' => null,
         'role_permissions' => null,
-        'weight' => null
+        'at_libre_graph_weight' => null
     ];
 
     /**
@@ -90,7 +90,7 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
 		'display_name' => false,
 		'id' => false,
 		'role_permissions' => false,
-		'weight' => false
+		'at_libre_graph_weight' => false
     ];
 
     /**
@@ -183,7 +183,7 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
         'display_name' => 'displayName',
         'id' => 'id',
         'role_permissions' => 'rolePermissions',
-        'weight' => 'weight'
+        'at_libre_graph_weight' => '@libre.graph.weight'
     ];
 
     /**
@@ -196,7 +196,7 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
         'display_name' => 'setDisplayName',
         'id' => 'setId',
         'role_permissions' => 'setRolePermissions',
-        'weight' => 'setWeight'
+        'at_libre_graph_weight' => 'setAtLibreGraphWeight'
     ];
 
     /**
@@ -209,7 +209,7 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
         'display_name' => 'getDisplayName',
         'id' => 'getId',
         'role_permissions' => 'getRolePermissions',
-        'weight' => 'getWeight'
+        'at_libre_graph_weight' => 'getAtLibreGraphWeight'
     ];
 
     /**
@@ -273,7 +273,7 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
         $this->setIfExists('display_name', $data ?? [], null);
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('role_permissions', $data ?? [], null);
-        $this->setIfExists('weight', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_weight', $data ?? [], null);
     }
 
     /**
@@ -427,28 +427,28 @@ class UnifiedRoleDefinition implements ModelInterface, ArrayAccess, \JsonSeriali
     }
 
     /**
-     * Gets weight
+     * Gets at_libre_graph_weight
      *
      * @return int|null
      */
-    public function getWeight()
+    public function getAtLibreGraphWeight()
     {
-        return $this->container['weight'];
+        return $this->container['at_libre_graph_weight'];
     }
 
     /**
-     * Sets weight
+     * Sets at_libre_graph_weight
      *
-     * @param int|null $weight When presenting a list of roles the weight can be used to order them in a meaningful way. Lower weight gets higher precedence. So content with lower weight will come first. If set, weights should be non-zero, as 0 is interpreted as an unset weight.
+     * @param int|null $at_libre_graph_weight When presenting a list of roles the weight can be used to order them in a meaningful way. Lower weight gets higher precedence. So content with lower weight will come first. If set, weights should be non-zero, as 0 is interpreted as an unset weight.
      *
      * @return self
      */
-    public function setWeight($weight)
+    public function setAtLibreGraphWeight($at_libre_graph_weight)
     {
-        if (is_null($weight)) {
-            throw new \InvalidArgumentException('non-nullable weight cannot be null');
+        if (is_null($at_libre_graph_weight)) {
+            throw new \InvalidArgumentException('non-nullable at_libre_graph_weight cannot be null');
         }
-        $this->container['weight'] = $weight;
+        $this->container['at_libre_graph_weight'] = $at_libre_graph_weight;
 
         return $this;
     }

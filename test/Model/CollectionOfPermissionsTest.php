@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * CollectionOfPermissionsTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * CollectionOfPermissionsTest Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description CollectionOfPermissions
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class CollectionOfPermissionsTest extends TestCase
 {
 
     /**
@@ -71,54 +71,36 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "CollectionOfPermissions"
      */
-    public function testItemReference()
+    public function testCollectionOfPermissions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_id"
+     * Test attribute "at_libre_graph_permissions_roles_allowed_values"
      */
-    public function testPropertyDriveId()
+    public function testPropertyAtLibreGraphPermissionsRolesAllowedValues()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_type"
+     * Test attribute "at_libre_graph_permissions_actions_allowed_values"
      */
-    public function testPropertyDriveType()
+    public function testPropertyAtLibreGraphPermissionsActionsAllowedValues()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "value"
      */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testPropertyValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

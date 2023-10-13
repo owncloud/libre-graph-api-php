@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * SharingLinkTypeTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * SharingLinkTypeTest Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description The type of the link created.  | Value          | Display name      | Description                                                     | | -------------- | ----------------- | --------------------------------------------------------------- | | view           | View              | Creates a read-only link to the driveItem.                      | | upload         | Upload            | Creates a read-write link to the folder driveItem.              | | edit           | Edit              | Creates a read-write link to the driveItem.                     | | createOnly     | File Drop         | Creates an upload-only link to the folder driveItem.            | | blocksDownload | Secure View       | Creates a read-only link that blocks download to the driveItem. |
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class SharingLinkTypeTest extends TestCase
 {
 
     /**
@@ -71,54 +71,9 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "SharingLinkType"
      */
-    public function testItemReference()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "drive_id"
-     */
-    public function testPropertyDriveId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "drive_type"
-     */
-    public function testPropertyDriveType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testSharingLinkType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

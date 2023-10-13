@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReference
+ * CollectionOfPermissions
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ItemReference Class Doc Comment
+ * CollectionOfPermissions Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
+class CollectionOfPermissions implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'itemReference';
+    protected static $openAPIModelName = 'Collection_of_permissions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +57,9 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'drive_id' => 'string',
-        'drive_type' => 'string',
-        'id' => 'string',
-        'name' => 'string',
-        'path' => 'string'
+        'at_libre_graph_permissions_roles_allowed_values' => '\OpenAPI\Client\Model\UnifiedRoleDefinition[]',
+        'at_libre_graph_permissions_actions_allowed_values' => 'string[]',
+        'value' => '\OpenAPI\Client\Model\Permission[]'
     ];
 
     /**
@@ -72,11 +70,9 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'drive_id' => null,
-        'drive_type' => null,
-        'id' => null,
-        'name' => null,
-        'path' => null
+        'at_libre_graph_permissions_roles_allowed_values' => null,
+        'at_libre_graph_permissions_actions_allowed_values' => null,
+        'value' => null
     ];
 
     /**
@@ -85,11 +81,9 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'drive_id' => false,
-		'drive_type' => false,
-		'id' => false,
-		'name' => false,
-		'path' => false
+        'at_libre_graph_permissions_roles_allowed_values' => false,
+		'at_libre_graph_permissions_actions_allowed_values' => false,
+		'value' => false
     ];
 
     /**
@@ -178,11 +172,9 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'drive_id' => 'driveId',
-        'drive_type' => 'driveType',
-        'id' => 'id',
-        'name' => 'name',
-        'path' => 'path'
+        'at_libre_graph_permissions_roles_allowed_values' => '@libre.graph.permissions.roles.allowedValues',
+        'at_libre_graph_permissions_actions_allowed_values' => '@libre.graph.permissions.actions.allowedValues',
+        'value' => 'value'
     ];
 
     /**
@@ -191,11 +183,9 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'drive_id' => 'setDriveId',
-        'drive_type' => 'setDriveType',
-        'id' => 'setId',
-        'name' => 'setName',
-        'path' => 'setPath'
+        'at_libre_graph_permissions_roles_allowed_values' => 'setAtLibreGraphPermissionsRolesAllowedValues',
+        'at_libre_graph_permissions_actions_allowed_values' => 'setAtLibreGraphPermissionsActionsAllowedValues',
+        'value' => 'setValue'
     ];
 
     /**
@@ -204,11 +194,9 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'drive_id' => 'getDriveId',
-        'drive_type' => 'getDriveType',
-        'id' => 'getId',
-        'name' => 'getName',
-        'path' => 'getPath'
+        'at_libre_graph_permissions_roles_allowed_values' => 'getAtLibreGraphPermissionsRolesAllowedValues',
+        'at_libre_graph_permissions_actions_allowed_values' => 'getAtLibreGraphPermissionsActionsAllowedValues',
+        'value' => 'getValue'
     ];
 
     /**
@@ -268,11 +256,9 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('drive_id', $data ?? [], null);
-        $this->setIfExists('drive_type', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('path', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_permissions_roles_allowed_values', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_permissions_actions_allowed_values', $data ?? [], null);
+        $this->setIfExists('value', $data ?? [], null);
     }
 
     /**
@@ -318,136 +304,82 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets drive_id
+     * Gets at_libre_graph_permissions_roles_allowed_values
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\UnifiedRoleDefinition[]|null
      */
-    public function getDriveId()
+    public function getAtLibreGraphPermissionsRolesAllowedValues()
     {
-        return $this->container['drive_id'];
+        return $this->container['at_libre_graph_permissions_roles_allowed_values'];
     }
 
     /**
-     * Sets drive_id
+     * Sets at_libre_graph_permissions_roles_allowed_values
      *
-     * @param string|null $drive_id Unique identifier of the drive instance that contains the item. Read-only.
+     * @param \OpenAPI\Client\Model\UnifiedRoleDefinition[]|null $at_libre_graph_permissions_roles_allowed_values A list of role definitions that can be chosen for the resource.
      *
      * @return self
      */
-    public function setDriveId($drive_id)
+    public function setAtLibreGraphPermissionsRolesAllowedValues($at_libre_graph_permissions_roles_allowed_values)
     {
-        if (is_null($drive_id)) {
-            throw new \InvalidArgumentException('non-nullable drive_id cannot be null');
+        if (is_null($at_libre_graph_permissions_roles_allowed_values)) {
+            throw new \InvalidArgumentException('non-nullable at_libre_graph_permissions_roles_allowed_values cannot be null');
         }
-        $this->container['drive_id'] = $drive_id;
+        $this->container['at_libre_graph_permissions_roles_allowed_values'] = $at_libre_graph_permissions_roles_allowed_values;
 
         return $this;
     }
 
     /**
-     * Gets drive_type
+     * Gets at_libre_graph_permissions_actions_allowed_values
      *
-     * @return string|null
+     * @return string[]|null
      */
-    public function getDriveType()
+    public function getAtLibreGraphPermissionsActionsAllowedValues()
     {
-        return $this->container['drive_type'];
+        return $this->container['at_libre_graph_permissions_actions_allowed_values'];
     }
 
     /**
-     * Sets drive_type
+     * Sets at_libre_graph_permissions_actions_allowed_values
      *
-     * @param string|null $drive_type Identifies the type of drive. See [drive][] resource for values. Read-only.
+     * @param string[]|null $at_libre_graph_permissions_actions_allowed_values A list of actions that can be chosen for a custom role.  Following the CS3 API we can represent the CS3 permissions by mapping them to driveItem properties or relations like this: | [CS3 ResourcePermission](https://cs3org.github.io/cs3apis/#cs3.storage.provider.v1beta1.ResourcePermissions) | action | comment | | ------------------------------------------------------------------------------------------------------------ | ------ | ------- | | `stat` | `libre.graph/driveItem/basic/read` | `basic` because it does not include versions or trashed items | | `get_quota` | `libre.graph/driveItem/quota/read` | read only the `quota` property | | `get_path` | `libre.graph/driveItem/path/read` | read only the `path` property | | `move` | `libre.graph/driveItem/path/update` | allows updating the `path` property of a CS3 resource | | `delete` | `libre.graph/driveItem/standard/delete` | `standard` because deleting is a common update operation | | `list_container` | `libre.graph/driveItem/children/read` | | | `create_container` | `libre.graph/driveItem/children/create` | | | `initiate_file_download` | `libre.graph/driveItem/content/read` | `content` is the property read when initiating a download | | `initiate_file_upload` | `libre.graph/driveItem/upload/create` | `uploads` are a separate property. postprocessing creates the `content` | | `add_grant` | `libre.graph/driveItem/permissions/create` | | | `list_grant` | `libre.graph/driveItem/permissions/read` | | | `update_grant` | `libre.graph/driveItem/permissions/update` | | | `remove_grant` | `libre.graph/driveItem/permissions/delete` | | | `deny_grant` | `libre.graph/driveItem/permissions/deny` | uses a non CRUD action `deny` | | `list_file_versions` | `libre.graph/driveItem/versions/read` | `versions` is a `driveItemVersion` collection | | `restore_file_version` | `libre.graph/driveItem/versions/update` | the only `update` action is restore | | `list_recycle` | `libre.graph/driveItem/deleted/read` | reading a driveItem `deleted` property implies listing | | `restore_recycle_item` | `libre.graph/driveItem/deleted/update` | the only `update` action is restore | | `purge_recycle` | `libre.graph/driveItem/deleted/delete` | allows purging deleted `driveItems` |
      *
      * @return self
      */
-    public function setDriveType($drive_type)
+    public function setAtLibreGraphPermissionsActionsAllowedValues($at_libre_graph_permissions_actions_allowed_values)
     {
-        if (is_null($drive_type)) {
-            throw new \InvalidArgumentException('non-nullable drive_type cannot be null');
+        if (is_null($at_libre_graph_permissions_actions_allowed_values)) {
+            throw new \InvalidArgumentException('non-nullable at_libre_graph_permissions_actions_allowed_values cannot be null');
         }
-        $this->container['drive_type'] = $drive_type;
+        $this->container['at_libre_graph_permissions_actions_allowed_values'] = $at_libre_graph_permissions_actions_allowed_values;
 
         return $this;
     }
 
     /**
-     * Gets id
+     * Gets value
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\Permission[]|null
      */
-    public function getId()
+    public function getValue()
     {
-        return $this->container['id'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets id
+     * Sets value
      *
-     * @param string|null $id Unique identifier of the item in the drive. Read-only.
+     * @param \OpenAPI\Client\Model\Permission[]|null $value value
      *
      * @return self
      */
-    public function setId($id)
+    public function setValue($value)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($value)) {
+            throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name The name of the item being referenced. Read-only.
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets path
-     *
-     * @return string|null
-     */
-    public function getPath()
-    {
-        return $this->container['path'];
-    }
-
-    /**
-     * Sets path
-     *
-     * @param string|null $path Path that can be used to navigate to the item. Read-only.
-     *
-     * @return self
-     */
-    public function setPath($path)
-    {
-        if (is_null($path)) {
-            throw new \InvalidArgumentException('non-nullable path cannot be null');
-        }
-        $this->container['path'] = $path;
+        $this->container['value'] = $value;
 
         return $this;
     }

@@ -116,9 +116,9 @@ class UnifiedRoleDefinitionTest extends TestCase
     }
 
     /**
-     * Test attribute "weight"
+     * Test attribute "at_libre_graph_weight"
      */
-    public function testPropertyWeight()
+    public function testPropertyAtLibreGraphWeight()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

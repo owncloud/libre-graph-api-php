@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReference
+ * CollectionOfDriveItems1
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ItemReference Class Doc Comment
+ * CollectionOfDriveItems1 Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
+class CollectionOfDriveItems1 implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'itemReference';
+    protected static $openAPIModelName = 'Collection_of_driveItems_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +57,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'drive_id' => 'string',
-        'drive_type' => 'string',
-        'id' => 'string',
-        'name' => 'string',
-        'path' => 'string'
+        'value' => '\OpenAPI\Client\Model\DriveItem[]'
     ];
 
     /**
@@ -72,11 +68,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'drive_id' => null,
-        'drive_type' => null,
-        'id' => null,
-        'name' => null,
-        'path' => null
+        'value' => null
     ];
 
     /**
@@ -85,11 +77,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'drive_id' => false,
-		'drive_type' => false,
-		'id' => false,
-		'name' => false,
-		'path' => false
+        'value' => false
     ];
 
     /**
@@ -178,11 +166,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'drive_id' => 'driveId',
-        'drive_type' => 'driveType',
-        'id' => 'id',
-        'name' => 'name',
-        'path' => 'path'
+        'value' => 'value'
     ];
 
     /**
@@ -191,11 +175,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'drive_id' => 'setDriveId',
-        'drive_type' => 'setDriveType',
-        'id' => 'setId',
-        'name' => 'setName',
-        'path' => 'setPath'
+        'value' => 'setValue'
     ];
 
     /**
@@ -204,11 +184,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'drive_id' => 'getDriveId',
-        'drive_type' => 'getDriveType',
-        'id' => 'getId',
-        'name' => 'getName',
-        'path' => 'getPath'
+        'value' => 'getValue'
     ];
 
     /**
@@ -268,11 +244,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('drive_id', $data ?? [], null);
-        $this->setIfExists('drive_type', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('path', $data ?? [], null);
+        $this->setIfExists('value', $data ?? [], null);
     }
 
     /**
@@ -318,136 +290,28 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets drive_id
+     * Gets value
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\DriveItem[]|null
      */
-    public function getDriveId()
+    public function getValue()
     {
-        return $this->container['drive_id'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets drive_id
+     * Sets value
      *
-     * @param string|null $drive_id Unique identifier of the drive instance that contains the item. Read-only.
+     * @param \OpenAPI\Client\Model\DriveItem[]|null $value value
      *
      * @return self
      */
-    public function setDriveId($drive_id)
+    public function setValue($value)
     {
-        if (is_null($drive_id)) {
-            throw new \InvalidArgumentException('non-nullable drive_id cannot be null');
+        if (is_null($value)) {
+            throw new \InvalidArgumentException('non-nullable value cannot be null');
         }
-        $this->container['drive_id'] = $drive_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets drive_type
-     *
-     * @return string|null
-     */
-    public function getDriveType()
-    {
-        return $this->container['drive_type'];
-    }
-
-    /**
-     * Sets drive_type
-     *
-     * @param string|null $drive_type Identifies the type of drive. See [drive][] resource for values. Read-only.
-     *
-     * @return self
-     */
-    public function setDriveType($drive_type)
-    {
-        if (is_null($drive_type)) {
-            throw new \InvalidArgumentException('non-nullable drive_type cannot be null');
-        }
-        $this->container['drive_type'] = $drive_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id Unique identifier of the item in the drive. Read-only.
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name The name of the item being referenced. Read-only.
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets path
-     *
-     * @return string|null
-     */
-    public function getPath()
-    {
-        return $this->container['path'];
-    }
-
-    /**
-     * Sets path
-     *
-     * @param string|null $path Path that can be used to navigate to the item. Read-only.
-     *
-     * @return self
-     */
-    public function setPath($path)
-    {
-        if (is_null($path)) {
-            throw new \InvalidArgumentException('non-nullable path cannot be null');
-        }
-        $this->container['path'] = $path;
+        $this->container['value'] = $value;
 
         return $this;
     }

@@ -9,6 +9,5 @@ Name | Type | Description | Notes
 **id** | **string** | Unique identifier of the item in the drive. Read-only. | [optional] [readonly]
 **name** | **string** | The name of the item being referenced. Read-only. | [optional] [readonly]
 **path** | **string** | Path that can be used to navigate to the item. Read-only. | [optional] [readonly]
-**share_id** | **string** | A unique identifier for a shared resource that can be accessed via the [Shares][] API. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

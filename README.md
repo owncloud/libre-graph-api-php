@@ -81,6 +81,12 @@ Class | Method | HTTP request | Description
 *DrivesApi* | [**getDrive**](docs/Api/DrivesApi.md#getdrive) | **GET** /drives/{drive-id} | Get drive by id
 *DrivesApi* | [**updateDrive**](docs/Api/DrivesApi.md#updatedrive) | **PATCH** /drives/{drive-id} | Update the drive
 *DrivesGetDrivesApi* | [**listAllDrives**](docs/Api/DrivesGetDrivesApi.md#listalldrives) | **GET** /drives | Get all available drives
+*DrivesPermissionsApi* | [**createLink**](docs/Api/DrivesPermissionsApi.md#createlink) | **POST** /drives/{drive-id}/items/{item-id}/createLink | Create a sharing link for a DriveItem
+*DrivesPermissionsApi* | [**deletePermission**](docs/Api/DrivesPermissionsApi.md#deletepermission) | **DELETE** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Delete entity from groups
+*DrivesPermissionsApi* | [**getPermission**](docs/Api/DrivesPermissionsApi.md#getpermission) | **GET** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Get sharing permission for a file or folder
+*DrivesPermissionsApi* | [**invite**](docs/Api/DrivesPermissionsApi.md#invite) | **POST** /drives/{drive-id}/items/{item-id}/invite | Send a sharing invitation
+*DrivesPermissionsApi* | [**listPermissions**](docs/Api/DrivesPermissionsApi.md#listpermissions) | **GET** /drives/{drive-id}/items/{item-id}/permissions | List the effective sharing permissions on a driveItem.
+*DrivesPermissionsApi* | [**updatePermission**](docs/Api/DrivesPermissionsApi.md#updatepermission) | **PATCH** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Update sharing permission
 *DrivesRootApi* | [**getRoot**](docs/Api/DrivesRootApi.md#getroot) | **GET** /drives/{drive-id}/root | Get root from arbitrary space
 *EducationClassApi* | [**addUserToClass**](docs/Api/EducationClassApi.md#addusertoclass) | **POST** /education/classes/{class-id}/members/$ref | Assign a user to a class
 *EducationClassApi* | [**createClass**](docs/Api/EducationClassApi.md#createclass) | **POST** /education/classes | Add new education class
@@ -119,6 +125,8 @@ Class | Method | HTTP request | Description
 *GroupsApi* | [**listGroups**](docs/Api/GroupsApi.md#listgroups) | **GET** /groups | Get entities from groups
 *MeChangepasswordApi* | [**changeOwnPassword**](docs/Api/MeChangepasswordApi.md#changeownpassword) | **POST** /me/changePassword | Chanage your own password
 *MeDriveApi* | [**getHome**](docs/Api/MeDriveApi.md#gethome) | **GET** /me/drive | Get personal space for user
+*MeDriveApi* | [**listSharedByMe**](docs/Api/MeDriveApi.md#listsharedbyme) | **GET** /me/drive/sharedByMe | Get a list of driveItem objects shared by the current user.
+*MeDriveApi* | [**listSharedWithMe**](docs/Api/MeDriveApi.md#listsharedwithme) | **GET** /me/drive/sharedWithMe | Get a list of driveItem objects shared with the owner of a drive.
 *MeDriveRootApi* | [**homeGetRoot**](docs/Api/MeDriveRootApi.md#homegetroot) | **GET** /me/drive/root | Get root from personal space
 *MeDriveRootChildrenApi* | [**homeGetChildren**](docs/Api/MeDriveRootChildrenApi.md#homegetchildren) | **GET** /me/drive/root/children | Get children from drive
 *MeDrivesApi* | [**listMyDrives**](docs/Api/MeDrivesApi.md#listmydrives) | **GET** /me/drives | Get all drives where the current user is a regular member of
@@ -150,12 +158,14 @@ Class | Method | HTTP request | Description
 - [CollectionOfApplications](docs/Model/CollectionOfApplications.md)
 - [CollectionOfClass](docs/Model/CollectionOfClass.md)
 - [CollectionOfDriveItems](docs/Model/CollectionOfDriveItems.md)
+- [CollectionOfDriveItems1](docs/Model/CollectionOfDriveItems1.md)
 - [CollectionOfDrives](docs/Model/CollectionOfDrives.md)
 - [CollectionOfDrives1](docs/Model/CollectionOfDrives1.md)
 - [CollectionOfEducationClass](docs/Model/CollectionOfEducationClass.md)
 - [CollectionOfEducationUser](docs/Model/CollectionOfEducationUser.md)
 - [CollectionOfEducationUser1](docs/Model/CollectionOfEducationUser1.md)
 - [CollectionOfGroup](docs/Model/CollectionOfGroup.md)
+- [CollectionOfPermissions](docs/Model/CollectionOfPermissions.md)
 - [CollectionOfSchools](docs/Model/CollectionOfSchools.md)
 - [CollectionOfTags](docs/Model/CollectionOfTags.md)
 - [CollectionOfUser](docs/Model/CollectionOfUser.md)
@@ -164,6 +174,9 @@ Class | Method | HTTP request | Description
 - [DirectoryObject](docs/Model/DirectoryObject.md)
 - [Drive](docs/Model/Drive.md)
 - [DriveItem](docs/Model/DriveItem.md)
+- [DriveItemCreateLink](docs/Model/DriveItemCreateLink.md)
+- [DriveItemInvite](docs/Model/DriveItemInvite.md)
+- [DriveRecipient](docs/Model/DriveRecipient.md)
 - [EducationClass](docs/Model/EducationClass.md)
 - [EducationOrganization](docs/Model/EducationOrganization.md)
 - [EducationSchool](docs/Model/EducationSchool.md)
@@ -191,7 +204,10 @@ Class | Method | HTTP request | Description
 - [Permission](docs/Model/Permission.md)
 - [Quota](docs/Model/Quota.md)
 - [RemoteItem](docs/Model/RemoteItem.md)
+- [SharePointIdentitySet](docs/Model/SharePointIdentitySet.md)
 - [Shared](docs/Model/Shared.md)
+- [SharingLink](docs/Model/SharingLink.md)
+- [SharingLinkType](docs/Model/SharingLinkType.md)
 - [SpecialFolder](docs/Model/SpecialFolder.md)
 - [TagAssignment](docs/Model/TagAssignment.md)
 - [TagUnassignment](docs/Model/TagUnassignment.md)

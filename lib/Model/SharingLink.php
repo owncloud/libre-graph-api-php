@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReference
+ * SharingLink
  *
  * PHP version 7.4
  *
@@ -32,15 +32,16 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ItemReference Class Doc Comment
+ * SharingLink Class Doc Comment
  *
  * @category Class
+ * @description The &#x60;SharingLink&#x60; resource groups link-related data items into a single structure.  If a &#x60;permission&#x60; resource has a non-null &#x60;sharingLink&#x60; facet, the permission represents a sharing link (as opposed to permissions granted to a person or group).
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
+class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'itemReference';
+    protected static $openAPIModelName = 'sharingLink';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +58,10 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'drive_id' => 'string',
-        'drive_type' => 'string',
-        'id' => 'string',
-        'name' => 'string',
-        'path' => 'string'
+        'type' => '\OpenAPI\Client\Model\SharingLinkType',
+        'prevents_download' => 'bool',
+        'web_url' => 'string',
+        'at_libre_graph_display_name' => 'string'
     ];
 
     /**
@@ -72,11 +72,10 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'drive_id' => null,
-        'drive_type' => null,
-        'id' => null,
-        'name' => null,
-        'path' => null
+        'type' => null,
+        'prevents_download' => null,
+        'web_url' => null,
+        'at_libre_graph_display_name' => null
     ];
 
     /**
@@ -85,11 +84,10 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'drive_id' => false,
-		'drive_type' => false,
-		'id' => false,
-		'name' => false,
-		'path' => false
+        'type' => false,
+		'prevents_download' => false,
+		'web_url' => false,
+		'at_libre_graph_display_name' => false
     ];
 
     /**
@@ -178,11 +176,10 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'drive_id' => 'driveId',
-        'drive_type' => 'driveType',
-        'id' => 'id',
-        'name' => 'name',
-        'path' => 'path'
+        'type' => 'type',
+        'prevents_download' => 'preventsDownload',
+        'web_url' => 'webUrl',
+        'at_libre_graph_display_name' => '@libre.graph.displayName'
     ];
 
     /**
@@ -191,11 +188,10 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'drive_id' => 'setDriveId',
-        'drive_type' => 'setDriveType',
-        'id' => 'setId',
-        'name' => 'setName',
-        'path' => 'setPath'
+        'type' => 'setType',
+        'prevents_download' => 'setPreventsDownload',
+        'web_url' => 'setWebUrl',
+        'at_libre_graph_display_name' => 'setAtLibreGraphDisplayName'
     ];
 
     /**
@@ -204,11 +200,10 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'drive_id' => 'getDriveId',
-        'drive_type' => 'getDriveType',
-        'id' => 'getId',
-        'name' => 'getName',
-        'path' => 'getPath'
+        'type' => 'getType',
+        'prevents_download' => 'getPreventsDownload',
+        'web_url' => 'getWebUrl',
+        'at_libre_graph_display_name' => 'getAtLibreGraphDisplayName'
     ];
 
     /**
@@ -268,11 +263,10 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('drive_id', $data ?? [], null);
-        $this->setIfExists('drive_type', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('path', $data ?? [], null);
+        $this->setIfExists('type', $data ?? [], null);
+        $this->setIfExists('prevents_download', $data ?? [], null);
+        $this->setIfExists('web_url', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_display_name', $data ?? [], null);
     }
 
     /**
@@ -318,136 +312,109 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets drive_id
+     * Gets type
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\SharingLinkType|null
      */
-    public function getDriveId()
+    public function getType()
     {
-        return $this->container['drive_id'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets drive_id
+     * Sets type
      *
-     * @param string|null $drive_id Unique identifier of the drive instance that contains the item. Read-only.
+     * @param \OpenAPI\Client\Model\SharingLinkType|null $type type
      *
      * @return self
      */
-    public function setDriveId($drive_id)
+    public function setType($type)
     {
-        if (is_null($drive_id)) {
-            throw new \InvalidArgumentException('non-nullable drive_id cannot be null');
+        if (is_null($type)) {
+            throw new \InvalidArgumentException('non-nullable type cannot be null');
         }
-        $this->container['drive_id'] = $drive_id;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets drive_type
+     * Gets prevents_download
      *
-     * @return string|null
+     * @return bool|null
      */
-    public function getDriveType()
+    public function getPreventsDownload()
     {
-        return $this->container['drive_type'];
+        return $this->container['prevents_download'];
     }
 
     /**
-     * Sets drive_type
+     * Sets prevents_download
      *
-     * @param string|null $drive_type Identifies the type of drive. See [drive][] resource for values. Read-only.
+     * @param bool|null $prevents_download If `true` then the user can only use this link to view the item on the web, and cannot use it to download the contents of the item.
      *
      * @return self
      */
-    public function setDriveType($drive_type)
+    public function setPreventsDownload($prevents_download)
     {
-        if (is_null($drive_type)) {
-            throw new \InvalidArgumentException('non-nullable drive_type cannot be null');
+        if (is_null($prevents_download)) {
+            throw new \InvalidArgumentException('non-nullable prevents_download cannot be null');
         }
-        $this->container['drive_type'] = $drive_type;
+        $this->container['prevents_download'] = $prevents_download;
 
         return $this;
     }
 
     /**
-     * Gets id
+     * Gets web_url
      *
      * @return string|null
      */
-    public function getId()
+    public function getWebUrl()
     {
-        return $this->container['id'];
+        return $this->container['web_url'];
     }
 
     /**
-     * Sets id
+     * Sets web_url
      *
-     * @param string|null $id Unique identifier of the item in the drive. Read-only.
+     * @param string|null $web_url A URL that opens the item in the browser on the website.
      *
      * @return self
      */
-    public function setId($id)
+    public function setWebUrl($web_url)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($web_url)) {
+            throw new \InvalidArgumentException('non-nullable web_url cannot be null');
         }
-        $this->container['id'] = $id;
+        $this->container['web_url'] = $web_url;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets at_libre_graph_display_name
      *
      * @return string|null
      */
-    public function getName()
+    public function getAtLibreGraphDisplayName()
     {
-        return $this->container['name'];
+        return $this->container['at_libre_graph_display_name'];
     }
 
     /**
-     * Sets name
+     * Sets at_libre_graph_display_name
      *
-     * @param string|null $name The name of the item being referenced. Read-only.
+     * @param string|null $at_libre_graph_display_name Provides a user-visible display name of the link. Optional. Libregraph only.
      *
      * @return self
      */
-    public function setName($name)
+    public function setAtLibreGraphDisplayName($at_libre_graph_display_name)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($at_libre_graph_display_name)) {
+            throw new \InvalidArgumentException('non-nullable at_libre_graph_display_name cannot be null');
         }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets path
-     *
-     * @return string|null
-     */
-    public function getPath()
-    {
-        return $this->container['path'];
-    }
-
-    /**
-     * Sets path
-     *
-     * @param string|null $path Path that can be used to navigate to the item. Read-only.
-     *
-     * @return self
-     */
-    public function setPath($path)
-    {
-        if (is_null($path)) {
-            throw new \InvalidArgumentException('non-nullable path cannot be null');
-        }
-        $this->container['path'] = $path;
+        $this->container['at_libre_graph_display_name'] = $at_libre_graph_display_name;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * SharePointIdentitySetTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * SharePointIdentitySetTest Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description This resource is used to represent a set of identities associated with various events for an item, such as created by or last modified by.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class SharePointIdentitySetTest extends TestCase
 {
 
     /**
@@ -71,54 +71,27 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "SharePointIdentitySet"
      */
-    public function testItemReference()
+    public function testSharePointIdentitySet()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_id"
+     * Test attribute "user"
      */
-    public function testPropertyDriveId()
+    public function testPropertyUser()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_type"
+     * Test attribute "group"
      */
-    public function testPropertyDriveType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testPropertyGroup()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

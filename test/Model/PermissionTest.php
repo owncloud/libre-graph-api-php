@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * PermissionTest Class Doc Comment
  *
  * @category    Class
- * @description The Permission resource provides information about a sharing permission granted for a DriveItem resource.
+ * @description The Permission resource provides information about a sharing permission granted for a DriveItem resource.  ### Remarks  The Permission resource uses *facets* to provide information about the kind of permission represented by the resource.  Permissions with a &#x60;link&#x60; facet represent sharing links created on the item. Sharing links contain a unique token that provides access to the item for anyone with the link.  Permissions with a &#x60;invitation&#x60; facet represent permissions added by inviting specific users or groups to have access to the file.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -80,9 +80,54 @@ class PermissionTest extends TestCase
     }
 
     /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "has_password"
+     */
+    public function testPropertyHasPassword()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "expiration_date_time"
      */
     public function testPropertyExpirationDateTime()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "granted_to_v2"
+     */
+    public function testPropertyGrantedToV2()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "link"
+     */
+    public function testPropertyLink()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "roles"
+     */
+    public function testPropertyRoles()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -98,9 +143,18 @@ class PermissionTest extends TestCase
     }
 
     /**
-     * Test attribute "roles"
+     * Test attribute "at_libre_graph_permissions_actions"
      */
-    public function testPropertyRoles()
+    public function testPropertyAtLibreGraphPermissionsActions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "at_ui_hidden"
+     */
+    public function testPropertyAtUiHidden()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

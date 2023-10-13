@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * DriveItemInviteTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * DriveItemInviteTest Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description DriveItemInvite
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class DriveItemInviteTest extends TestCase
 {
 
     /**
@@ -71,54 +71,45 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "DriveItemInvite"
      */
-    public function testItemReference()
+    public function testDriveItemInvite()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_id"
+     * Test attribute "recipients"
      */
-    public function testPropertyDriveId()
+    public function testPropertyRecipients()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_type"
+     * Test attribute "roles"
      */
-    public function testPropertyDriveType()
+    public function testPropertyRoles()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "at_libre_graph_permissions_actions"
      */
-    public function testPropertyId()
+    public function testPropertyAtLibreGraphPermissionsActions()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "expiration_date_time"
      */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testPropertyExpirationDateTime()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

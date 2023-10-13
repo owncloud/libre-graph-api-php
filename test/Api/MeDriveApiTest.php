@@ -82,4 +82,28 @@ class MeDriveApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for listSharedByMe
+     *
+     * Get a list of driveItem objects shared by the current user..
+     *
+     */
+    public function testListSharedByMe()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listSharedWithMe
+     *
+     * Get a list of driveItem objects shared with the owner of a drive..
+     *
+     */
+    public function testListSharedWithMe()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

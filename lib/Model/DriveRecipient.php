@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReference
+ * DriveRecipient
  *
  * PHP version 7.4
  *
@@ -32,15 +32,16 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ItemReference Class Doc Comment
+ * DriveRecipient Class Doc Comment
  *
  * @category Class
+ * @description Represents a person, group, or other recipient to share a drive item with using the invite action.  When using invite to add permissions, the &#x60;driveRecipient&#x60; object would specify the &#x60;email&#x60;, &#x60;alias&#x60;, or &#x60;objectId&#x60; of the recipient. Only one of these values is required; multiple values are not accepted.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
+class DriveRecipient implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +50,7 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'itemReference';
+    protected static $openAPIModelName = 'driveRecipient';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +58,8 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'drive_id' => 'string',
-        'drive_type' => 'string',
-        'id' => 'string',
-        'name' => 'string',
-        'path' => 'string'
+        'object_id' => 'string',
+        'at_libre_graph_recipient_type' => 'string'
     ];
 
     /**
@@ -72,11 +70,8 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'drive_id' => null,
-        'drive_type' => null,
-        'id' => null,
-        'name' => null,
-        'path' => null
+        'object_id' => null,
+        'at_libre_graph_recipient_type' => null
     ];
 
     /**
@@ -85,11 +80,8 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'drive_id' => false,
-		'drive_type' => false,
-		'id' => false,
-		'name' => false,
-		'path' => false
+        'object_id' => false,
+		'at_libre_graph_recipient_type' => false
     ];
 
     /**
@@ -178,11 +170,8 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'drive_id' => 'driveId',
-        'drive_type' => 'driveType',
-        'id' => 'id',
-        'name' => 'name',
-        'path' => 'path'
+        'object_id' => 'objectId',
+        'at_libre_graph_recipient_type' => '@libre.graph.recipient.type'
     ];
 
     /**
@@ -191,11 +180,8 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'drive_id' => 'setDriveId',
-        'drive_type' => 'setDriveType',
-        'id' => 'setId',
-        'name' => 'setName',
-        'path' => 'setPath'
+        'object_id' => 'setObjectId',
+        'at_libre_graph_recipient_type' => 'setAtLibreGraphRecipientType'
     ];
 
     /**
@@ -204,11 +190,8 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'drive_id' => 'getDriveId',
-        'drive_type' => 'getDriveType',
-        'id' => 'getId',
-        'name' => 'getName',
-        'path' => 'getPath'
+        'object_id' => 'getObjectId',
+        'at_libre_graph_recipient_type' => 'getAtLibreGraphRecipientType'
     ];
 
     /**
@@ -268,11 +251,8 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('drive_id', $data ?? [], null);
-        $this->setIfExists('drive_type', $data ?? [], null);
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('path', $data ?? [], null);
+        $this->setIfExists('object_id', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_recipient_type', $data ?? [], 'user');
     }
 
     /**
@@ -318,136 +298,55 @@ class ItemReference implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets drive_id
+     * Gets object_id
      *
      * @return string|null
      */
-    public function getDriveId()
+    public function getObjectId()
     {
-        return $this->container['drive_id'];
+        return $this->container['object_id'];
     }
 
     /**
-     * Sets drive_id
+     * Sets object_id
      *
-     * @param string|null $drive_id Unique identifier of the drive instance that contains the item. Read-only.
+     * @param string|null $object_id The unique identifier for the recipient in the directory.
      *
      * @return self
      */
-    public function setDriveId($drive_id)
+    public function setObjectId($object_id)
     {
-        if (is_null($drive_id)) {
-            throw new \InvalidArgumentException('non-nullable drive_id cannot be null');
+        if (is_null($object_id)) {
+            throw new \InvalidArgumentException('non-nullable object_id cannot be null');
         }
-        $this->container['drive_id'] = $drive_id;
+        $this->container['object_id'] = $object_id;
 
         return $this;
     }
 
     /**
-     * Gets drive_type
+     * Gets at_libre_graph_recipient_type
      *
      * @return string|null
      */
-    public function getDriveType()
+    public function getAtLibreGraphRecipientType()
     {
-        return $this->container['drive_type'];
+        return $this->container['at_libre_graph_recipient_type'];
     }
 
     /**
-     * Sets drive_type
+     * Sets at_libre_graph_recipient_type
      *
-     * @param string|null $drive_type Identifies the type of drive. See [drive][] resource for values. Read-only.
+     * @param string|null $at_libre_graph_recipient_type When the recipient is referenced by objectId this annotation is used to differentiate `user` and `group` recipients.
      *
      * @return self
      */
-    public function setDriveType($drive_type)
+    public function setAtLibreGraphRecipientType($at_libre_graph_recipient_type)
     {
-        if (is_null($drive_type)) {
-            throw new \InvalidArgumentException('non-nullable drive_type cannot be null');
+        if (is_null($at_libre_graph_recipient_type)) {
+            throw new \InvalidArgumentException('non-nullable at_libre_graph_recipient_type cannot be null');
         }
-        $this->container['drive_type'] = $drive_type;
-
-        return $this;
-    }
-
-    /**
-     * Gets id
-     *
-     * @return string|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param string|null $id Unique identifier of the item in the drive. Read-only.
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string|null
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string|null $name The name of the item being referenced. Read-only.
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets path
-     *
-     * @return string|null
-     */
-    public function getPath()
-    {
-        return $this->container['path'];
-    }
-
-    /**
-     * Sets path
-     *
-     * @param string|null $path Path that can be used to navigate to the item. Read-only.
-     *
-     * @return self
-     */
-    public function setPath($path)
-    {
-        if (is_null($path)) {
-            throw new \InvalidArgumentException('non-nullable path cannot be null');
-        }
-        $this->container['path'] = $path;
+        $this->container['at_libre_graph_recipient_type'] = $at_libre_graph_recipient_type;
 
         return $this;
     }

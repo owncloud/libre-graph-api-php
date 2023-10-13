@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * SharingLinkTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * SharingLinkTest Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description The &#x60;SharingLink&#x60; resource groups link-related data items into a single structure.  If a &#x60;permission&#x60; resource has a non-null &#x60;sharingLink&#x60; facet, the permission represents a sharing link (as opposed to permissions granted to a person or group).
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class SharingLinkTest extends TestCase
 {
 
     /**
@@ -71,54 +71,45 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "SharingLink"
      */
-    public function testItemReference()
+    public function testSharingLink()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_id"
+     * Test attribute "type"
      */
-    public function testPropertyDriveId()
+    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_type"
+     * Test attribute "prevents_download"
      */
-    public function testPropertyDriveType()
+    public function testPropertyPreventsDownload()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "web_url"
      */
-    public function testPropertyId()
+    public function testPropertyWebUrl()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "at_libre_graph_display_name"
      */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testPropertyAtLibreGraphDisplayName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

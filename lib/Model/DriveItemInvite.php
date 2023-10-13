@@ -1,6 +1,6 @@
 <?php
 /**
- * Permission
+ * DriveItemInvite
  *
  * PHP version 7.4
  *
@@ -32,16 +32,15 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * Permission Class Doc Comment
+ * DriveItemInvite Class Doc Comment
  *
  * @category Class
- * @description The Permission resource provides information about a sharing permission granted for a DriveItem resource.  ### Remarks  The Permission resource uses *facets* to provide information about the kind of permission represented by the resource.  Permissions with a &#x60;link&#x60; facet represent sharing links created on the item. Sharing links contain a unique token that provides access to the item for anyone with the link.  Permissions with a &#x60;invitation&#x60; facet represent permissions added by inviting specific users or groups to have access to the file.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
+class DriveItemInvite implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +49,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'permission';
+    protected static $openAPIModelName = 'driveItemInvite';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,15 +57,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'string',
-        'has_password' => 'bool',
-        'expiration_date_time' => '\DateTime',
-        'granted_to_v2' => '\OpenAPI\Client\Model\SharePointIdentitySet',
-        'link' => '\OpenAPI\Client\Model\SharingLink',
+        'recipients' => '\OpenAPI\Client\Model\DriveRecipient[]',
         'roles' => 'string[]',
-        'granted_to_identities' => '\OpenAPI\Client\Model\IdentitySet[]',
         'at_libre_graph_permissions_actions' => 'string[]',
-        'at_ui_hidden' => 'bool'
+        'expiration_date_time' => '\DateTime'
     ];
 
     /**
@@ -77,15 +71,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'has_password' => null,
-        'expiration_date_time' => 'date-time',
-        'granted_to_v2' => null,
-        'link' => null,
+        'recipients' => null,
         'roles' => null,
-        'granted_to_identities' => null,
         'at_libre_graph_permissions_actions' => null,
-        'at_ui_hidden' => null
+        'expiration_date_time' => 'date-time'
     ];
 
     /**
@@ -94,15 +83,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-		'has_password' => false,
-		'expiration_date_time' => false,
-		'granted_to_v2' => false,
-		'link' => false,
+        'recipients' => false,
 		'roles' => false,
-		'granted_to_identities' => false,
 		'at_libre_graph_permissions_actions' => false,
-		'at_ui_hidden' => false
+		'expiration_date_time' => false
     ];
 
     /**
@@ -191,15 +175,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'has_password' => 'hasPassword',
-        'expiration_date_time' => 'expirationDateTime',
-        'granted_to_v2' => 'grantedToV2',
-        'link' => 'link',
+        'recipients' => 'recipients',
         'roles' => 'roles',
-        'granted_to_identities' => 'grantedToIdentities',
         'at_libre_graph_permissions_actions' => '@libre.graph.permissions.actions',
-        'at_ui_hidden' => '@UI.Hidden'
+        'expiration_date_time' => 'expirationDateTime'
     ];
 
     /**
@@ -208,15 +187,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'has_password' => 'setHasPassword',
-        'expiration_date_time' => 'setExpirationDateTime',
-        'granted_to_v2' => 'setGrantedToV2',
-        'link' => 'setLink',
+        'recipients' => 'setRecipients',
         'roles' => 'setRoles',
-        'granted_to_identities' => 'setGrantedToIdentities',
         'at_libre_graph_permissions_actions' => 'setAtLibreGraphPermissionsActions',
-        'at_ui_hidden' => 'setAtUiHidden'
+        'expiration_date_time' => 'setExpirationDateTime'
     ];
 
     /**
@@ -225,15 +199,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'has_password' => 'getHasPassword',
-        'expiration_date_time' => 'getExpirationDateTime',
-        'granted_to_v2' => 'getGrantedToV2',
-        'link' => 'getLink',
+        'recipients' => 'getRecipients',
         'roles' => 'getRoles',
-        'granted_to_identities' => 'getGrantedToIdentities',
         'at_libre_graph_permissions_actions' => 'getAtLibreGraphPermissionsActions',
-        'at_ui_hidden' => 'getAtUiHidden'
+        'expiration_date_time' => 'getExpirationDateTime'
     ];
 
     /**
@@ -293,15 +262,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('has_password', $data ?? [], null);
-        $this->setIfExists('expiration_date_time', $data ?? [], null);
-        $this->setIfExists('granted_to_v2', $data ?? [], null);
-        $this->setIfExists('link', $data ?? [], null);
+        $this->setIfExists('recipients', $data ?? [], null);
         $this->setIfExists('roles', $data ?? [], null);
-        $this->setIfExists('granted_to_identities', $data ?? [], null);
         $this->setIfExists('at_libre_graph_permissions_actions', $data ?? [], null);
-        $this->setIfExists('at_ui_hidden', $data ?? [], null);
+        $this->setIfExists('expiration_date_time', $data ?? [], null);
     }
 
     /**
@@ -347,136 +311,28 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
+     * Gets recipients
      *
-     * @return string|null
+     * @return \OpenAPI\Client\Model\DriveRecipient[]|null
      */
-    public function getId()
+    public function getRecipients()
     {
-        return $this->container['id'];
+        return $this->container['recipients'];
     }
 
     /**
-     * Sets id
+     * Sets recipients
      *
-     * @param string|null $id The unique identifier of the permission among all permissions on the item. Read-only.
+     * @param \OpenAPI\Client\Model\DriveRecipient[]|null $recipients A collection of recipients who will receive access and the sharing invitation. Currently, only internal users or gorups are supported.
      *
      * @return self
      */
-    public function setId($id)
+    public function setRecipients($recipients)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($recipients)) {
+            throw new \InvalidArgumentException('non-nullable recipients cannot be null');
         }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets has_password
-     *
-     * @return bool|null
-     */
-    public function getHasPassword()
-    {
-        return $this->container['has_password'];
-    }
-
-    /**
-     * Sets has_password
-     *
-     * @param bool|null $has_password Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only.
-     *
-     * @return self
-     */
-    public function setHasPassword($has_password)
-    {
-        if (is_null($has_password)) {
-            throw new \InvalidArgumentException('non-nullable has_password cannot be null');
-        }
-        $this->container['has_password'] = $has_password;
-
-        return $this;
-    }
-
-    /**
-     * Gets expiration_date_time
-     *
-     * @return \DateTime|null
-     */
-    public function getExpirationDateTime()
-    {
-        return $this->container['expiration_date_time'];
-    }
-
-    /**
-     * Sets expiration_date_time
-     *
-     * @param \DateTime|null $expiration_date_time An optional expiration date which limits the permission in time.
-     *
-     * @return self
-     */
-    public function setExpirationDateTime($expiration_date_time)
-    {
-        if (is_null($expiration_date_time)) {
-            throw new \InvalidArgumentException('non-nullable expiration_date_time cannot be null');
-        }
-        $this->container['expiration_date_time'] = $expiration_date_time;
-
-        return $this;
-    }
-
-    /**
-     * Gets granted_to_v2
-     *
-     * @return \OpenAPI\Client\Model\SharePointIdentitySet|null
-     */
-    public function getGrantedToV2()
-    {
-        return $this->container['granted_to_v2'];
-    }
-
-    /**
-     * Sets granted_to_v2
-     *
-     * @param \OpenAPI\Client\Model\SharePointIdentitySet|null $granted_to_v2 granted_to_v2
-     *
-     * @return self
-     */
-    public function setGrantedToV2($granted_to_v2)
-    {
-        if (is_null($granted_to_v2)) {
-            throw new \InvalidArgumentException('non-nullable granted_to_v2 cannot be null');
-        }
-        $this->container['granted_to_v2'] = $granted_to_v2;
-
-        return $this;
-    }
-
-    /**
-     * Gets link
-     *
-     * @return \OpenAPI\Client\Model\SharingLink|null
-     */
-    public function getLink()
-    {
-        return $this->container['link'];
-    }
-
-    /**
-     * Sets link
-     *
-     * @param \OpenAPI\Client\Model\SharingLink|null $link link
-     *
-     * @return self
-     */
-    public function setLink($link)
-    {
-        if (is_null($link)) {
-            throw new \InvalidArgumentException('non-nullable link cannot be null');
-        }
-        $this->container['link'] = $link;
+        $this->container['recipients'] = $recipients;
 
         return $this;
     }
@@ -494,7 +350,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets roles
      *
-     * @param string[]|null $roles roles
+     * @param string[]|null $roles Specifies the roles that are to be granted to the recipients of the sharing invitation.
      *
      * @return self
      */
@@ -504,35 +360,6 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable roles cannot be null');
         }
         $this->container['roles'] = $roles;
-
-        return $this;
-    }
-
-    /**
-     * Gets granted_to_identities
-     *
-     * @return \OpenAPI\Client\Model\IdentitySet[]|null
-     * @deprecated
-     */
-    public function getGrantedToIdentities()
-    {
-        return $this->container['granted_to_identities'];
-    }
-
-    /**
-     * Sets granted_to_identities
-     *
-     * @param \OpenAPI\Client\Model\IdentitySet[]|null $granted_to_identities For link type permissions, the details of the identity to whom permission was granted. This could be used to grant access to a an external user that can be identified by email, aka guest accounts.
-     *
-     * @return self
-     * @deprecated
-     */
-    public function setGrantedToIdentities($granted_to_identities)
-    {
-        if (is_null($granted_to_identities)) {
-            throw new \InvalidArgumentException('non-nullable granted_to_identities cannot be null');
-        }
-        $this->container['granted_to_identities'] = $granted_to_identities;
 
         return $this;
     }
@@ -550,7 +377,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets at_libre_graph_permissions_actions
      *
-     * @param string[]|null $at_libre_graph_permissions_actions Use this to create a permission with custom actions.
+     * @param string[]|null $at_libre_graph_permissions_actions Specifies the actions that are to be granted to the recipients of the sharing invitation, in effect creating a custom role.
      *
      * @return self
      */
@@ -565,28 +392,28 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets at_ui_hidden
+     * Gets expiration_date_time
      *
-     * @return bool|null
+     * @return \DateTime|null
      */
-    public function getAtUiHidden()
+    public function getExpirationDateTime()
     {
-        return $this->container['at_ui_hidden'];
+        return $this->container['expiration_date_time'];
     }
 
     /**
-     * Sets at_ui_hidden
+     * Sets expiration_date_time
      *
-     * @param bool|null $at_ui_hidden Properties or facets (see UI.Facet) annotated with this term will not be rendered if the annotation evaluates to true. Users can set this to hide permissons.
+     * @param \DateTime|null $expiration_date_time Specifies the dateTime after which the permission expires.
      *
      * @return self
      */
-    public function setAtUiHidden($at_ui_hidden)
+    public function setExpirationDateTime($expiration_date_time)
     {
-        if (is_null($at_ui_hidden)) {
-            throw new \InvalidArgumentException('non-nullable at_ui_hidden cannot be null');
+        if (is_null($expiration_date_time)) {
+            throw new \InvalidArgumentException('non-nullable expiration_date_time cannot be null');
         }
-        $this->container['at_ui_hidden'] = $at_ui_hidden;
+        $this->container['expiration_date_time'] = $expiration_date_time;
 
         return $this;
     }

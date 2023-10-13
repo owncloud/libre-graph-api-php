@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * DriveItemCreateLinkTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * DriveItemCreateLinkTest Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description DriveItemCreateLink
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class DriveItemCreateLinkTest extends TestCase
 {
 
     /**
@@ -71,54 +71,45 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "DriveItemCreateLink"
      */
-    public function testItemReference()
+    public function testDriveItemCreateLink()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_id"
+     * Test attribute "type"
      */
-    public function testPropertyDriveId()
+    public function testPropertyType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_type"
+     * Test attribute "expiration_date_time"
      */
-    public function testPropertyDriveType()
+    public function testPropertyExpirationDateTime()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "password"
      */
-    public function testPropertyId()
+    public function testPropertyPassword()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "display_name"
      */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testPropertyDisplayName()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

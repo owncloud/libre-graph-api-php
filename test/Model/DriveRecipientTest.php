@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * DriveRecipientTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * DriveRecipientTest Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description Represents a person, group, or other recipient to share a drive item with using the invite action.  When using invite to add permissions, the &#x60;driveRecipient&#x60; object would specify the &#x60;email&#x60;, &#x60;alias&#x60;, or &#x60;objectId&#x60; of the recipient. Only one of these values is required; multiple values are not accepted.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class DriveRecipientTest extends TestCase
 {
 
     /**
@@ -71,54 +71,27 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "DriveRecipient"
      */
-    public function testItemReference()
+    public function testDriveRecipient()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_id"
+     * Test attribute "object_id"
      */
-    public function testPropertyDriveId()
+    public function testPropertyObjectId()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_type"
+     * Test attribute "at_libre_graph_recipient_type"
      */
-    public function testPropertyDriveType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testPropertyAtLibreGraphRecipientType()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

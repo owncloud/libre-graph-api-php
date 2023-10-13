@@ -1,6 +1,6 @@
 <?php
 /**
- * ItemReferenceTest
+ * CollectionOfDriveItems1Test
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ItemReferenceTest Class Doc Comment
+ * CollectionOfDriveItems1Test Class Doc Comment
  *
  * @category    Class
- * @description ItemReference
+ * @description CollectionOfDriveItems1
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ItemReferenceTest extends TestCase
+class CollectionOfDriveItems1Test extends TestCase
 {
 
     /**
@@ -71,54 +71,18 @@ class ItemReferenceTest extends TestCase
     }
 
     /**
-     * Test "ItemReference"
+     * Test "CollectionOfDriveItems1"
      */
-    public function testItemReference()
+    public function testCollectionOfDriveItems1()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "drive_id"
+     * Test attribute "value"
      */
-    public function testPropertyDriveId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "drive_type"
-     */
-    public function testPropertyDriveType()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "path"
-     */
-    public function testPropertyPath()
+    public function testPropertyValue()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
