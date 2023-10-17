@@ -35,7 +35,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * DriveItem Class Doc Comment
  *
  * @category Class
- * @description Reprensents a resource inside a drive. Read-only.
+ * @description Represents a resource inside a drive. Read-only.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -84,7 +84,8 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'size' => 'int',
         'web_dav_url' => 'string',
         'children' => '\OpenAPI\Client\Model\DriveItem[]',
-        'permissions' => '\OpenAPI\Client\Model\Permission[]'
+        'permissions' => '\OpenAPI\Client\Model\Permission[]',
+        'audio' => '\OpenAPI\Client\Model\Audio'
     ];
 
     /**
@@ -121,7 +122,8 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'size' => 'int64',
         'web_dav_url' => null,
         'children' => null,
-        'permissions' => null
+        'permissions' => null,
+        'audio' => null
     ];
 
     /**
@@ -156,7 +158,8 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
 		'size' => false,
 		'web_dav_url' => false,
 		'children' => false,
-		'permissions' => false
+		'permissions' => false,
+		'audio' => false
     ];
 
     /**
@@ -271,7 +274,8 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'size' => 'size',
         'web_dav_url' => 'webDavUrl',
         'children' => 'children',
-        'permissions' => 'permissions'
+        'permissions' => 'permissions',
+        'audio' => 'audio'
     ];
 
     /**
@@ -306,7 +310,8 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'size' => 'setSize',
         'web_dav_url' => 'setWebDavUrl',
         'children' => 'setChildren',
-        'permissions' => 'setPermissions'
+        'permissions' => 'setPermissions',
+        'audio' => 'setAudio'
     ];
 
     /**
@@ -341,7 +346,8 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'size' => 'getSize',
         'web_dav_url' => 'getWebDavUrl',
         'children' => 'getChildren',
-        'permissions' => 'getPermissions'
+        'permissions' => 'getPermissions',
+        'audio' => 'getAudio'
     ];
 
     /**
@@ -428,6 +434,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('web_dav_url', $data ?? [], null);
         $this->setIfExists('children', $data ?? [], null);
         $this->setIfExists('permissions', $data ?? [], null);
+        $this->setIfExists('audio', $data ?? [], null);
     }
 
     /**
@@ -1215,6 +1222,33 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable permissions cannot be null');
         }
         $this->container['permissions'] = $permissions;
+
+        return $this;
+    }
+
+    /**
+     * Gets audio
+     *
+     * @return \OpenAPI\Client\Model\Audio|null
+     */
+    public function getAudio()
+    {
+        return $this->container['audio'];
+    }
+
+    /**
+     * Sets audio
+     *
+     * @param \OpenAPI\Client\Model\Audio|null $audio audio
+     *
+     * @return self
+     */
+    public function setAudio($audio)
+    {
+        if (is_null($audio)) {
+            throw new \InvalidArgumentException('non-nullable audio cannot be null');
+        }
+        $this->container['audio'] = $audio;
 
         return $this;
     }

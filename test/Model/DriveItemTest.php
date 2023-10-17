@@ -34,7 +34,7 @@ use PHPUnit\Framework\TestCase;
  * DriveItemTest Class Doc Comment
  *
  * @category    Class
- * @description Reprensents a resource inside a drive. Read-only.
+ * @description Represents a resource inside a drive. Read-only.
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
@@ -317,6 +317,15 @@ class DriveItemTest extends TestCase
      * Test attribute "permissions"
      */
     public function testPropertyPermissions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "audio"
+     */
+    public function testPropertyAudio()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

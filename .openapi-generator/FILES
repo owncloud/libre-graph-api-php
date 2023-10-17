@@ -28,6 +28,7 @@ docs/Api/UsersApi.md
 docs/Model/AppRole.md
 docs/Model/AppRoleAssignment.md
 docs/Model/Application.md
+docs/Model/Audio.md
 docs/Model/ClassMemberReference.md
 docs/Model/ClassReference.md
 docs/Model/ClassTeacherReference.md
@@ -123,6 +124,7 @@ lib/HeaderSelector.php
 lib/Model/AppRole.php
 lib/Model/AppRoleAssignment.php
 lib/Model/Application.php
+lib/Model/Audio.php
 lib/Model/ClassMemberReference.php
 lib/Model/ClassReference.php
 lib/Model/ClassTeacherReference.php
@@ -217,6 +219,7 @@ test/Api/UsersApiTest.php
 test/Model/AppRoleAssignmentTest.php
 test/Model/AppRoleTest.php
 test/Model/ApplicationTest.php
+test/Model/AudioTest.php
 test/Model/ClassMemberReferenceTest.php
 test/Model/ClassReferenceTest.php
 test/Model/ClassTeacherReferenceTest.php
