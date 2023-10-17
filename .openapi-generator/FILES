@@ -79,6 +79,7 @@ docs/Model/OpenGraphFile.md
 docs/Model/PasswordChange.md
 docs/Model/PasswordProfile.md
 docs/Model/Permission.md
+docs/Model/Photo.md
 docs/Model/Quota.md
 docs/Model/RemoteItem.md
 docs/Model/SharePointIdentitySet.md
@@ -173,6 +174,7 @@ lib/Model/OpenGraphFile.php
 lib/Model/PasswordChange.php
 lib/Model/PasswordProfile.php
 lib/Model/Permission.php
+lib/Model/Photo.php
 lib/Model/Quota.php
 lib/Model/RemoteItem.php
 lib/Model/SharePointIdentitySet.php
@@ -264,6 +266,7 @@ test/Model/OpenGraphFileTest.php
 test/Model/PasswordChangeTest.php
 test/Model/PasswordProfileTest.php
 test/Model/PermissionTest.php
+test/Model/PhotoTest.php
 test/Model/QuotaTest.php
 test/Model/RemoteItemTest.php
 test/Model/SharePointIdentitySetTest.php

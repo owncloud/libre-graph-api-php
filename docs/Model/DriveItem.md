@@ -21,6 +21,7 @@ Name | Type | Description | Notes
 **file_system_info** | [**\OpenAPI\Client\Model\FileSystemInfo**](FileSystemInfo.md) |  | [optional]
 **folder** | [**\OpenAPI\Client\Model\Folder**](Folder.md) |  | [optional]
 **image** | [**\OpenAPI\Client\Model\Image**](Image.md) |  | [optional]
+**photo** | [**\OpenAPI\Client\Model\Photo**](Photo.md) |  | [optional]
 **root** | **object** | If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. | [optional]
 **trash** | [**\OpenAPI\Client\Model\Trash**](Trash.md) |  | [optional]
 **special_folder** | [**\OpenAPI\Client\Model\SpecialFolder**](SpecialFolder.md) |  | [optional]

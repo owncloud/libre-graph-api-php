@@ -233,6 +233,15 @@ class DriveItemTest extends TestCase
     }
 
     /**
+     * Test attribute "photo"
+     */
+    public function testPropertyPhoto()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "root"
      */
     public function testPropertyRoot()
