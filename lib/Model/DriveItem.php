@@ -76,6 +76,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'folder' => '\OpenAPI\Client\Model\Folder',
         'image' => '\OpenAPI\Client\Model\Image',
         'photo' => '\OpenAPI\Client\Model\Photo',
+        'location' => '\OpenAPI\Client\Model\GeoCoordinates',
         'root' => 'object',
         'trash' => '\OpenAPI\Client\Model\Trash',
         'special_folder' => '\OpenAPI\Client\Model\SpecialFolder',
@@ -112,6 +113,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'folder' => null,
         'image' => null,
         'photo' => null,
+        'location' => null,
         'root' => null,
         'trash' => null,
         'special_folder' => null,
@@ -146,6 +148,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
 		'folder' => false,
 		'image' => false,
 		'photo' => false,
+		'location' => false,
 		'root' => false,
 		'trash' => false,
 		'special_folder' => false,
@@ -260,6 +263,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'folder' => 'folder',
         'image' => 'image',
         'photo' => 'photo',
+        'location' => 'location',
         'root' => 'root',
         'trash' => 'trash',
         'special_folder' => 'specialFolder',
@@ -294,6 +298,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'folder' => 'setFolder',
         'image' => 'setImage',
         'photo' => 'setPhoto',
+        'location' => 'setLocation',
         'root' => 'setRoot',
         'trash' => 'setTrash',
         'special_folder' => 'setSpecialFolder',
@@ -328,6 +333,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         'folder' => 'getFolder',
         'image' => 'getImage',
         'photo' => 'getPhoto',
+        'location' => 'getLocation',
         'root' => 'getRoot',
         'trash' => 'getTrash',
         'special_folder' => 'getSpecialFolder',
@@ -413,6 +419,7 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('folder', $data ?? [], null);
         $this->setIfExists('image', $data ?? [], null);
         $this->setIfExists('photo', $data ?? [], null);
+        $this->setIfExists('location', $data ?? [], null);
         $this->setIfExists('root', $data ?? [], null);
         $this->setIfExists('trash', $data ?? [], null);
         $this->setIfExists('special_folder', $data ?? [], null);
@@ -965,6 +972,33 @@ class DriveItem implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable photo cannot be null');
         }
         $this->container['photo'] = $photo;
+
+        return $this;
+    }
+
+    /**
+     * Gets location
+     *
+     * @return \OpenAPI\Client\Model\GeoCoordinates|null
+     */
+    public function getLocation()
+    {
+        return $this->container['location'];
+    }
+
+    /**
+     * Sets location
+     *
+     * @param \OpenAPI\Client\Model\GeoCoordinates|null $location location
+     *
+     * @return self
+     */
+    public function setLocation($location)
+    {
+        if (is_null($location)) {
+            throw new \InvalidArgumentException('non-nullable location cannot be null');
+        }
+        $this->container['location'] = $location;
 
         return $this;
     }

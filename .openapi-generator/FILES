@@ -64,6 +64,7 @@ docs/Model/ExportPersonalDataRequest.md
 docs/Model/FileSystemInfo.md
 docs/Model/Folder.md
 docs/Model/FolderView.md
+docs/Model/GeoCoordinates.md
 docs/Model/Group.md
 docs/Model/Hashes.md
 docs/Model/Identity.md
@@ -158,6 +159,7 @@ lib/Model/ExportPersonalDataRequest.php
 lib/Model/FileSystemInfo.php
 lib/Model/Folder.php
 lib/Model/FolderView.php
+lib/Model/GeoCoordinates.php
 lib/Model/Group.php
 lib/Model/Hashes.php
 lib/Model/Identity.php
@@ -251,6 +253,7 @@ test/Model/ExportPersonalDataRequestTest.php
 test/Model/FileSystemInfoTest.php
 test/Model/FolderTest.php
 test/Model/FolderViewTest.php
+test/Model/GeoCoordinatesTest.php
 test/Model/GroupTest.php
 test/Model/HashesTest.php
 test/Model/IdentitySetTest.php

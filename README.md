@@ -187,6 +187,7 @@ Class | Method | HTTP request | Description
 - [FileSystemInfo](docs/Model/FileSystemInfo.md)
 - [Folder](docs/Model/Folder.md)
 - [FolderView](docs/Model/FolderView.md)
+- [GeoCoordinates](docs/Model/GeoCoordinates.md)
 - [Group](docs/Model/Group.md)
 - [Hashes](docs/Model/Hashes.md)
 - [Identity](docs/Model/Identity.md)

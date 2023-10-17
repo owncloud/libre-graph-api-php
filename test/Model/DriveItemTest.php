@@ -242,6 +242,15 @@ class DriveItemTest extends TestCase
     }
 
     /**
+     * Test attribute "location"
+     */
+    public function testPropertyLocation()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "root"
      */
     public function testPropertyRoot()
