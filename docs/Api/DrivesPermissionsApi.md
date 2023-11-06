@@ -5,7 +5,7 @@ All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createLink()**](DrivesPermissionsApi.md#createLink) | **POST** /drives/{drive-id}/items/{item-id}/createLink | Create a sharing link for a DriveItem |
-| [**deletePermission()**](DrivesPermissionsApi.md#deletePermission) | **DELETE** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Delete entity from groups |
+| [**deletePermission()**](DrivesPermissionsApi.md#deletePermission) | **DELETE** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Remove access to a DriveItem |
 | [**getPermission()**](DrivesPermissionsApi.md#getPermission) | **GET** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Get sharing permission for a file or folder |
 | [**invite()**](DrivesPermissionsApi.md#invite) | **POST** /drives/{drive-id}/items/{item-id}/invite | Send a sharing invitation |
 | [**listPermissions()**](DrivesPermissionsApi.md#listPermissions) | **GET** /drives/{drive-id}/items/{item-id}/permissions | List the effective sharing permissions on a driveItem. |
@@ -80,7 +80,7 @@ try {
 deletePermission($drive_id, $item_id, $perm_id)
 ```
 
-Delete entity from groups
+Remove access to a DriveItem
 
 Remove access to a DriveItem.  Only sharing permissions that are not inherited can be deleted. The `inheritedFrom` property must be `null`.
 

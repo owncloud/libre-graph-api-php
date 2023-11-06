@@ -479,7 +479,7 @@ class DrivesPermissionsApi
     /**
      * Operation deletePermission
      *
-     * Delete entity from groups
+     * Remove access to a DriveItem
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $item_id key: id of item (required)
@@ -498,7 +498,7 @@ class DrivesPermissionsApi
     /**
      * Operation deletePermissionWithHttpInfo
      *
-     * Delete entity from groups
+     * Remove access to a DriveItem
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $item_id key: id of item (required)
@@ -568,7 +568,7 @@ class DrivesPermissionsApi
     /**
      * Operation deletePermissionAsync
      *
-     * Delete entity from groups
+     * Remove access to a DriveItem
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $item_id key: id of item (required)
@@ -591,7 +591,7 @@ class DrivesPermissionsApi
     /**
      * Operation deletePermissionAsyncWithHttpInfo
      *
-     * Delete entity from groups
+     * Remove access to a DriveItem
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $item_id key: id of item (required)

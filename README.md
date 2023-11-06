@@ -82,7 +82,7 @@ Class | Method | HTTP request | Description
 *DrivesApi* | [**updateDrive**](docs/Api/DrivesApi.md#updatedrive) | **PATCH** /drives/{drive-id} | Update the drive
 *DrivesGetDrivesApi* | [**listAllDrives**](docs/Api/DrivesGetDrivesApi.md#listalldrives) | **GET** /drives | Get all available drives
 *DrivesPermissionsApi* | [**createLink**](docs/Api/DrivesPermissionsApi.md#createlink) | **POST** /drives/{drive-id}/items/{item-id}/createLink | Create a sharing link for a DriveItem
-*DrivesPermissionsApi* | [**deletePermission**](docs/Api/DrivesPermissionsApi.md#deletepermission) | **DELETE** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Delete entity from groups
+*DrivesPermissionsApi* | [**deletePermission**](docs/Api/DrivesPermissionsApi.md#deletepermission) | **DELETE** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Remove access to a DriveItem
 *DrivesPermissionsApi* | [**getPermission**](docs/Api/DrivesPermissionsApi.md#getpermission) | **GET** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Get sharing permission for a file or folder
 *DrivesPermissionsApi* | [**invite**](docs/Api/DrivesPermissionsApi.md#invite) | **POST** /drives/{drive-id}/items/{item-id}/invite | Send a sharing invitation
 *DrivesPermissionsApi* | [**listPermissions**](docs/Api/DrivesPermissionsApi.md#listpermissions) | **GET** /drives/{drive-id}/items/{item-id}/permissions | List the effective sharing permissions on a driveItem.

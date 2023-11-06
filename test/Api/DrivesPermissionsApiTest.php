@@ -86,7 +86,7 @@ class DrivesPermissionsApiTest extends TestCase
     /**
      * Test case for deletePermission
      *
-     * Delete entity from groups.
+     * Remove access to a DriveItem.
      *
      */
     public function testDeletePermission()
