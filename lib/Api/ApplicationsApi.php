@@ -359,7 +359,7 @@ class ApplicationsApi
         }
 
 
-        $resourcePath = '/applications/{application-id}';
+        $resourcePath = '/v1.0/applications/{application-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -653,7 +653,7 @@ class ApplicationsApi
     {
 
 
-        $resourcePath = '/applications';
+        $resourcePath = '/v1.0/applications';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

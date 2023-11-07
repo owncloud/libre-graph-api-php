@@ -287,7 +287,7 @@ class MeChangepasswordApi
         }
 
 
-        $resourcePath = '/me/changePassword';
+        $resourcePath = '/v1.0/me/changePassword';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

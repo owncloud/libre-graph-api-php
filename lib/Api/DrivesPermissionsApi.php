@@ -389,7 +389,7 @@ class DrivesPermissionsApi
 
 
 
-        $resourcePath = '/drives/{drive-id}/items/{item-id}/createLink';
+        $resourcePath = '/v1beta1/drives/{drive-id}/items/{item-id}/createLink';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -665,7 +665,7 @@ class DrivesPermissionsApi
         }
 
 
-        $resourcePath = '/drives/{drive-id}/items/{item-id}/permissions/{perm-id}';
+        $resourcePath = '/v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1011,7 +1011,7 @@ class DrivesPermissionsApi
         }
 
 
-        $resourcePath = '/drives/{drive-id}/items/{item-id}/permissions/{perm-id}';
+        $resourcePath = '/v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1374,7 +1374,7 @@ class DrivesPermissionsApi
 
 
 
-        $resourcePath = '/drives/{drive-id}/items/{item-id}/invite';
+        $resourcePath = '/v1beta1/drives/{drive-id}/items/{item-id}/invite';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1707,7 +1707,7 @@ class DrivesPermissionsApi
         }
 
 
-        $resourcePath = '/drives/{drive-id}/items/{item-id}/permissions';
+        $resourcePath = '/v1beta1/drives/{drive-id}/items/{item-id}/permissions';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2057,7 +2057,7 @@ class DrivesPermissionsApi
         }
 
 
-        $resourcePath = '/drives/{drive-id}/items/{item-id}/permissions/{perm-id}';
+        $resourcePath = '/v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -314,7 +314,7 @@ class GroupApi
         }
 
 
-        $resourcePath = '/groups/{group-id}/members/$ref';
+        $resourcePath = '/v1.0/groups/{group-id}/members/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -564,7 +564,7 @@ class GroupApi
 
 
 
-        $resourcePath = '/groups/{group-id}';
+        $resourcePath = '/v1.0/groups/{group-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -823,7 +823,7 @@ class GroupApi
 
 
 
-        $resourcePath = '/groups/{group-id}/members/{directory-object-id}/$ref';
+        $resourcePath = '/v1.0/groups/{group-id}/members/{directory-object-id}/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1153,7 +1153,7 @@ class GroupApi
         
         
 
-        $resourcePath = '/groups/{group-id}';
+        $resourcePath = '/v1.0/groups/{group-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1477,7 +1477,7 @@ class GroupApi
         }
 
 
-        $resourcePath = '/groups/{group-id}/members';
+        $resourcePath = '/v1.0/groups/{group-id}/members';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1726,7 +1726,7 @@ class GroupApi
         }
 
 
-        $resourcePath = '/groups/{group-id}';
+        $resourcePath = '/v1.0/groups/{group-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -1,20 +1,20 @@
 # OpenAPI\Client\EducationSchoolApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**addClassToSchool()**](EducationSchoolApi.md#addClassToSchool) | **POST** /education/schools/{school-id}/classes/$ref | Assign a class to a school |
-| [**addUserToSchool()**](EducationSchoolApi.md#addUserToSchool) | **POST** /education/schools/{school-id}/users/$ref | Assign a user to a school |
-| [**createSchool()**](EducationSchoolApi.md#createSchool) | **POST** /education/schools | Add new school |
-| [**deleteClassFromSchool()**](EducationSchoolApi.md#deleteClassFromSchool) | **DELETE** /education/schools/{school-id}/classes/{class-id}/$ref | Unassign class from a school |
-| [**deleteSchool()**](EducationSchoolApi.md#deleteSchool) | **DELETE** /education/schools/{school-id} | Delete school |
-| [**deleteUserFromSchool()**](EducationSchoolApi.md#deleteUserFromSchool) | **DELETE** /education/schools/{school-id}/users/{user-id}/$ref | Unassign user from a school |
-| [**getSchool()**](EducationSchoolApi.md#getSchool) | **GET** /education/schools/{school-id} | Get the properties of a specific school |
-| [**listSchoolClasses()**](EducationSchoolApi.md#listSchoolClasses) | **GET** /education/schools/{school-id}/classes | Get the educationClass resources owned by an educationSchool |
-| [**listSchoolUsers()**](EducationSchoolApi.md#listSchoolUsers) | **GET** /education/schools/{school-id}/users | Get the educationUser resources associated with an educationSchool |
-| [**listSchools()**](EducationSchoolApi.md#listSchools) | **GET** /education/schools | Get a list of schools and their properties |
-| [**updateSchool()**](EducationSchoolApi.md#updateSchool) | **PATCH** /education/schools/{school-id} | Update properties of a school |
+| [**addClassToSchool()**](EducationSchoolApi.md#addClassToSchool) | **POST** /v1.0/education/schools/{school-id}/classes/$ref | Assign a class to a school |
+| [**addUserToSchool()**](EducationSchoolApi.md#addUserToSchool) | **POST** /v1.0/education/schools/{school-id}/users/$ref | Assign a user to a school |
+| [**createSchool()**](EducationSchoolApi.md#createSchool) | **POST** /v1.0/education/schools | Add new school |
+| [**deleteClassFromSchool()**](EducationSchoolApi.md#deleteClassFromSchool) | **DELETE** /v1.0/education/schools/{school-id}/classes/{class-id}/$ref | Unassign class from a school |
+| [**deleteSchool()**](EducationSchoolApi.md#deleteSchool) | **DELETE** /v1.0/education/schools/{school-id} | Delete school |
+| [**deleteUserFromSchool()**](EducationSchoolApi.md#deleteUserFromSchool) | **DELETE** /v1.0/education/schools/{school-id}/users/{user-id}/$ref | Unassign user from a school |
+| [**getSchool()**](EducationSchoolApi.md#getSchool) | **GET** /v1.0/education/schools/{school-id} | Get the properties of a specific school |
+| [**listSchoolClasses()**](EducationSchoolApi.md#listSchoolClasses) | **GET** /v1.0/education/schools/{school-id}/classes | Get the educationClass resources owned by an educationSchool |
+| [**listSchoolUsers()**](EducationSchoolApi.md#listSchoolUsers) | **GET** /v1.0/education/schools/{school-id}/users | Get the educationUser resources associated with an educationSchool |
+| [**listSchools()**](EducationSchoolApi.md#listSchools) | **GET** /v1.0/education/schools | Get a list of schools and their properties |
+| [**updateSchool()**](EducationSchoolApi.md#updateSchool) | **PATCH** /v1.0/education/schools/{school-id} | Update properties of a school |
 
 
 ## `addClassToSchool()`

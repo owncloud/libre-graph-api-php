@@ -356,7 +356,7 @@ class DrivesRootApi
         }
 
 
-        $resourcePath = '/drives/{drive-id}/root';
+        $resourcePath = '/v1.0/drives/{drive-id}/root';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

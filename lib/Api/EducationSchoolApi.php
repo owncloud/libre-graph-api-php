@@ -329,7 +329,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}/classes/$ref';
+        $resourcePath = '/v1.0/education/schools/{school-id}/classes/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -589,7 +589,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}/users/$ref';
+        $resourcePath = '/v1.0/education/schools/{school-id}/users/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -906,7 +906,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools';
+        $resourcePath = '/v1.0/education/schools';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1158,7 +1158,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}/classes/{class-id}/$ref';
+        $resourcePath = '/v1.0/education/schools/{school-id}/classes/{class-id}/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1407,7 +1407,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}';
+        $resourcePath = '/v1.0/education/schools/{school-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1660,7 +1660,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}/users/{user-id}/$ref';
+        $resourcePath = '/v1.0/education/schools/{school-id}/users/{user-id}/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1978,7 +1978,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}';
+        $resourcePath = '/v1.0/education/schools/{school-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2288,7 +2288,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}/classes';
+        $resourcePath = '/v1.0/education/schools/{school-id}/classes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2598,7 +2598,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}/users';
+        $resourcePath = '/v1.0/education/schools/{school-id}/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2896,7 +2896,7 @@ class EducationSchoolApi
     {
 
 
-        $resourcePath = '/education/schools';
+        $resourcePath = '/v1.0/education/schools';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3210,7 +3210,7 @@ class EducationSchoolApi
         }
 
 
-        $resourcePath = '/education/schools/{school-id}';
+        $resourcePath = '/v1.0/education/schools/{school-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

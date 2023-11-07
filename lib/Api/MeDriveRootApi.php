@@ -344,7 +344,7 @@ class MeDriveRootApi
     {
 
 
-        $resourcePath = '/me/drive/root';
+        $resourcePath = '/v1.0/me/drive/root';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

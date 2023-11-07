@@ -356,7 +356,7 @@ class MeDrivesApi
 
 
 
-        $resourcePath = '/me/drives';
+        $resourcePath = '/v1.0/me/drives';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

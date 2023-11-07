@@ -359,7 +359,7 @@ class RoleManagementApi
         }
 
 
-        $resourcePath = '/roleManagement/permissions/roleDefinitions/{role-id}';
+        $resourcePath = '/v1beta1/roleManagement/permissions/roleDefinitions/{role-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -653,7 +653,7 @@ class RoleManagementApi
     {
 
 
-        $resourcePath = '/roleManagement/permissions/roleDefinitions';
+        $resourcePath = '/v1beta1/roleManagement/permissions/roleDefinitions';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

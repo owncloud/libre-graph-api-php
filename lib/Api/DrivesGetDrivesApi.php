@@ -356,7 +356,7 @@ class DrivesGetDrivesApi
 
 
 
-        $resourcePath = '/drives';
+        $resourcePath = '/v1.0/drives';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

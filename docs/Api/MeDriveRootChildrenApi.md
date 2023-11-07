@@ -1,10 +1,10 @@
 # OpenAPI\Client\MeDriveRootChildrenApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**homeGetChildren()**](MeDriveRootChildrenApi.md#homeGetChildren) | **GET** /me/drive/root/children | Get children from drive |
+| [**homeGetChildren()**](MeDriveRootChildrenApi.md#homeGetChildren) | **GET** /v1.0/me/drive/root/children | Get children from drive |
 
 
 ## `homeGetChildren()`

@@ -1,10 +1,10 @@
 # OpenAPI\Client\MeDriveRootApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**homeGetRoot()**](MeDriveRootApi.md#homeGetRoot) | **GET** /me/drive/root | Get root from personal space |
+| [**homeGetRoot()**](MeDriveRootApi.md#homeGetRoot) | **GET** /v1.0/me/drive/root | Get root from personal space |
 
 
 ## `homeGetRoot()`

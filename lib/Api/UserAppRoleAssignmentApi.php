@@ -374,7 +374,7 @@ class UserAppRoleAssignmentApi
         }
 
 
-        $resourcePath = '/users/{user-id}/appRoleAssignments';
+        $resourcePath = '/v1.0/users/{user-id}/appRoleAssignments';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -636,7 +636,7 @@ class UserAppRoleAssignmentApi
 
 
 
-        $resourcePath = '/users/{user-id}/appRoleAssignments/{appRoleAssignment-id}';
+        $resourcePath = '/v1.0/users/{user-id}/appRoleAssignments/{appRoleAssignment-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -954,7 +954,7 @@ class UserAppRoleAssignmentApi
         }
 
 
-        $resourcePath = '/users/{user-id}/appRoleAssignments';
+        $resourcePath = '/v1.0/users/{user-id}/appRoleAssignments';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

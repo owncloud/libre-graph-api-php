@@ -359,7 +359,7 @@ class GroupsApi
         }
 
 
-        $resourcePath = '/groups';
+        $resourcePath = '/v1.0/groups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -676,7 +676,7 @@ class GroupsApi
         
         
 
-        $resourcePath = '/groups';
+        $resourcePath = '/v1.0/groups';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

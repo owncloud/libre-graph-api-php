@@ -1,12 +1,12 @@
 # OpenAPI\Client\UserAppRoleAssignmentApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**userCreateAppRoleAssignments()**](UserAppRoleAssignmentApi.md#userCreateAppRoleAssignments) | **POST** /users/{user-id}/appRoleAssignments | Grant an appRoleAssignment to a user |
-| [**userDeleteAppRoleAssignments()**](UserAppRoleAssignmentApi.md#userDeleteAppRoleAssignments) | **DELETE** /users/{user-id}/appRoleAssignments/{appRoleAssignment-id} | Delete the appRoleAssignment from a user |
-| [**userListAppRoleAssignments()**](UserAppRoleAssignmentApi.md#userListAppRoleAssignments) | **GET** /users/{user-id}/appRoleAssignments | Get appRoleAssignments from a user |
+| [**userCreateAppRoleAssignments()**](UserAppRoleAssignmentApi.md#userCreateAppRoleAssignments) | **POST** /v1.0/users/{user-id}/appRoleAssignments | Grant an appRoleAssignment to a user |
+| [**userDeleteAppRoleAssignments()**](UserAppRoleAssignmentApi.md#userDeleteAppRoleAssignments) | **DELETE** /v1.0/users/{user-id}/appRoleAssignments/{appRoleAssignment-id} | Delete the appRoleAssignment from a user |
+| [**userListAppRoleAssignments()**](UserAppRoleAssignmentApi.md#userListAppRoleAssignments) | **GET** /v1.0/users/{user-id}/appRoleAssignments | Get appRoleAssignments from a user |
 
 
 ## `userCreateAppRoleAssignments()`

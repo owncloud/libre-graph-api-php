@@ -1,12 +1,12 @@
 # OpenAPI\Client\EducationClassTeachersApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**addTeacherToClass()**](EducationClassTeachersApi.md#addTeacherToClass) | **POST** /education/classes/{class-id}/teachers/$ref | Assign a teacher to a class |
-| [**deleteTeacherFromClass()**](EducationClassTeachersApi.md#deleteTeacherFromClass) | **DELETE** /education/classes/{class-id}/teachers/{user-id}/$ref | Unassign user as teacher of a class |
-| [**getTeachers()**](EducationClassTeachersApi.md#getTeachers) | **GET** /education/classes/{class-id}/teachers | Get the teachers for a class |
+| [**addTeacherToClass()**](EducationClassTeachersApi.md#addTeacherToClass) | **POST** /v1.0/education/classes/{class-id}/teachers/$ref | Assign a teacher to a class |
+| [**deleteTeacherFromClass()**](EducationClassTeachersApi.md#deleteTeacherFromClass) | **DELETE** /v1.0/education/classes/{class-id}/teachers/{user-id}/$ref | Unassign user as teacher of a class |
+| [**getTeachers()**](EducationClassTeachersApi.md#getTeachers) | **GET** /v1.0/education/classes/{class-id}/teachers | Get the teachers for a class |
 
 
 ## `addTeacherToClass()`

@@ -1,14 +1,14 @@
 # OpenAPI\Client\EducationUserApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createEducationUser()**](EducationUserApi.md#createEducationUser) | **POST** /education/users | Add new education user |
-| [**deleteEducationUser()**](EducationUserApi.md#deleteEducationUser) | **DELETE** /education/users/{user-id} | Delete educationUser |
-| [**getEducationUser()**](EducationUserApi.md#getEducationUser) | **GET** /education/users/{user-id} | Get properties of educationUser |
-| [**listEducationUsers()**](EducationUserApi.md#listEducationUsers) | **GET** /education/users | Get entities from education users |
-| [**updateEducationUser()**](EducationUserApi.md#updateEducationUser) | **PATCH** /education/users/{user-id} | Update properties of educationUser |
+| [**createEducationUser()**](EducationUserApi.md#createEducationUser) | **POST** /v1.0/education/users | Add new education user |
+| [**deleteEducationUser()**](EducationUserApi.md#deleteEducationUser) | **DELETE** /v1.0/education/users/{user-id} | Delete educationUser |
+| [**getEducationUser()**](EducationUserApi.md#getEducationUser) | **GET** /v1.0/education/users/{user-id} | Get properties of educationUser |
+| [**listEducationUsers()**](EducationUserApi.md#listEducationUsers) | **GET** /v1.0/education/users | Get entities from education users |
+| [**updateEducationUser()**](EducationUserApi.md#updateEducationUser) | **PATCH** /v1.0/education/users/{user-id} | Update properties of educationUser |
 
 
 ## `createEducationUser()`

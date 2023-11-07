@@ -302,7 +302,7 @@ class UserApi
 
 
 
-        $resourcePath = '/users/{user-id}';
+        $resourcePath = '/v1.0/users/{user-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -549,7 +549,7 @@ class UserApi
 
 
 
-        $resourcePath = '/users/{user-id}/exportPersonalData';
+        $resourcePath = '/v1.0/users/{user-id}/exportPersonalData';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -874,7 +874,7 @@ class UserApi
         
         
 
-        $resourcePath = '/users/{user-id}';
+        $resourcePath = '/v1.0/users/{user-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1210,7 +1210,7 @@ class UserApi
         }
 
 
-        $resourcePath = '/users/{user-id}';
+        $resourcePath = '/v1.0/users/{user-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

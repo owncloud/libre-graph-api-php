@@ -1,10 +1,10 @@
 # OpenAPI\Client\DrivesRootApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getRoot()**](DrivesRootApi.md#getRoot) | **GET** /drives/{drive-id}/root | Get root from arbitrary space |
+| [**getRoot()**](DrivesRootApi.md#getRoot) | **GET** /v1.0/drives/{drive-id}/root | Get root from arbitrary space |
 
 
 ## `getRoot()`

@@ -287,7 +287,7 @@ class TagsApi
 
 
 
-        $resourcePath = '/extensions/org.libregraph/tags';
+        $resourcePath = '/v1.0/extensions/org.libregraph/tags';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -580,7 +580,7 @@ class TagsApi
     {
 
 
-        $resourcePath = '/extensions/org.libregraph/tags';
+        $resourcePath = '/v1.0/extensions/org.libregraph/tags';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -803,7 +803,7 @@ class TagsApi
 
 
 
-        $resourcePath = '/extensions/org.libregraph/tags';
+        $resourcePath = '/v1.0/extensions/org.libregraph/tags';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

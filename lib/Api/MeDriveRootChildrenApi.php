@@ -344,7 +344,7 @@ class MeDriveRootChildrenApi
     {
 
 
-        $resourcePath = '/me/drive/root/children';
+        $resourcePath = '/v1.0/me/drive/root/children';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

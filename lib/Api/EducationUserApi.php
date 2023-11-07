@@ -368,7 +368,7 @@ class EducationUserApi
         }
 
 
-        $resourcePath = '/education/users';
+        $resourcePath = '/v1.0/education/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -608,7 +608,7 @@ class EducationUserApi
         }
 
 
-        $resourcePath = '/education/users/{user-id}';
+        $resourcePath = '/v1.0/education/users/{user-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -924,7 +924,7 @@ class EducationUserApi
 
         
 
-        $resourcePath = '/education/users/{user-id}';
+        $resourcePath = '/v1.0/education/users/{user-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1243,7 +1243,7 @@ class EducationUserApi
         
         
 
-        $resourcePath = '/education/users';
+        $resourcePath = '/v1.0/education/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1575,7 +1575,7 @@ class EducationUserApi
         }
 
 
-        $resourcePath = '/education/users/{user-id}';
+        $resourcePath = '/v1.0/education/users/{user-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

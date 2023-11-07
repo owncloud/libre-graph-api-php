@@ -305,7 +305,7 @@ class EducationClassTeachersApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}/teachers/$ref';
+        $resourcePath = '/v1.0/education/classes/{class-id}/teachers/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -565,7 +565,7 @@ class EducationClassTeachersApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}/teachers/{user-id}/$ref';
+        $resourcePath = '/v1.0/education/classes/{class-id}/teachers/{user-id}/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -883,7 +883,7 @@ class EducationClassTeachersApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}/teachers';
+        $resourcePath = '/v1.0/education/classes/{class-id}/teachers';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

@@ -359,7 +359,7 @@ class UsersApi
         }
 
 
-        $resourcePath = '/users';
+        $resourcePath = '/v1.0/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -682,7 +682,7 @@ class UsersApi
         
         
 
-        $resourcePath = '/users';
+        $resourcePath = '/v1.0/users';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

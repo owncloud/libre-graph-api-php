@@ -1,10 +1,10 @@
 # OpenAPI\Client\DrivesGetDrivesApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**listAllDrives()**](DrivesGetDrivesApi.md#listAllDrives) | **GET** /drives | Get all available drives |
+| [**listAllDrives()**](DrivesGetDrivesApi.md#listAllDrives) | **GET** /v1.0/drives | Get all available drives |
 
 
 ## `listAllDrives()`

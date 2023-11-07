@@ -1,13 +1,13 @@
 # OpenAPI\Client\UserApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**deleteUser()**](UserApi.md#deleteUser) | **DELETE** /users/{user-id} | Delete entity from users |
-| [**exportPersonalData()**](UserApi.md#exportPersonalData) | **POST** /users/{user-id}/exportPersonalData | export personal data of a user |
-| [**getUser()**](UserApi.md#getUser) | **GET** /users/{user-id} | Get entity from users by key |
-| [**updateUser()**](UserApi.md#updateUser) | **PATCH** /users/{user-id} | Update entity in users |
+| [**deleteUser()**](UserApi.md#deleteUser) | **DELETE** /v1.0/users/{user-id} | Delete entity from users |
+| [**exportPersonalData()**](UserApi.md#exportPersonalData) | **POST** /v1.0/users/{user-id}/exportPersonalData | export personal data of a user |
+| [**getUser()**](UserApi.md#getUser) | **GET** /v1.0/users/{user-id} | Get entity from users by key |
+| [**updateUser()**](UserApi.md#updateUser) | **PATCH** /v1.0/users/{user-id} | Update entity in users |
 
 
 ## `deleteUser()`

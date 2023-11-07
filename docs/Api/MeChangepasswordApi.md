@@ -1,10 +1,10 @@
 # OpenAPI\Client\MeChangepasswordApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**changeOwnPassword()**](MeChangepasswordApi.md#changeOwnPassword) | **POST** /me/changePassword | Chanage your own password |
+| [**changeOwnPassword()**](MeChangepasswordApi.md#changeOwnPassword) | **POST** /v1.0/me/changePassword | Chanage your own password |
 
 
 ## `changeOwnPassword()`

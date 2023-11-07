@@ -350,7 +350,7 @@ class MeUserApi
 
         
 
-        $resourcePath = '/me';
+        $resourcePath = '/v1.0/me';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

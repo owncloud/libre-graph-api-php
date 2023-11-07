@@ -350,7 +350,7 @@ class MeDriveApi
     {
 
 
-        $resourcePath = '/me/drive';
+        $resourcePath = '/v1.0/me/drive';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -636,7 +636,7 @@ class MeDriveApi
     {
 
 
-        $resourcePath = '/me/drive/sharedByMe';
+        $resourcePath = '/v1beta1/me/drive/sharedByMe';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -922,7 +922,7 @@ class MeDriveApi
     {
 
 
-        $resourcePath = '/me/drive/sharedWithMe';
+        $resourcePath = '/v1beta1/me/drive/sharedWithMe';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

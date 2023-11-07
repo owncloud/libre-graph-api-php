@@ -365,7 +365,7 @@ class DrivesApi
         }
 
 
-        $resourcePath = '/drives';
+        $resourcePath = '/v1.0/drives';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -607,7 +607,7 @@ class DrivesApi
 
 
 
-        $resourcePath = '/drives/{drive-id}';
+        $resourcePath = '/v1.0/drives/{drive-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -917,7 +917,7 @@ class DrivesApi
         }
 
 
-        $resourcePath = '/drives/{drive-id}';
+        $resourcePath = '/v1.0/drives/{drive-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1235,7 +1235,7 @@ class DrivesApi
         }
 
 
-        $resourcePath = '/drives/{drive-id}';
+        $resourcePath = '/v1.0/drives/{drive-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

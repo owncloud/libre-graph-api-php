@@ -1,15 +1,15 @@
 # OpenAPI\Client\DrivesPermissionsApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createLink()**](DrivesPermissionsApi.md#createLink) | **POST** /drives/{drive-id}/items/{item-id}/createLink | Create a sharing link for a DriveItem |
-| [**deletePermission()**](DrivesPermissionsApi.md#deletePermission) | **DELETE** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Remove access to a DriveItem |
-| [**getPermission()**](DrivesPermissionsApi.md#getPermission) | **GET** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Get sharing permission for a file or folder |
-| [**invite()**](DrivesPermissionsApi.md#invite) | **POST** /drives/{drive-id}/items/{item-id}/invite | Send a sharing invitation |
-| [**listPermissions()**](DrivesPermissionsApi.md#listPermissions) | **GET** /drives/{drive-id}/items/{item-id}/permissions | List the effective sharing permissions on a driveItem. |
-| [**updatePermission()**](DrivesPermissionsApi.md#updatePermission) | **PATCH** /drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Update sharing permission |
+| [**createLink()**](DrivesPermissionsApi.md#createLink) | **POST** /v1beta1/drives/{drive-id}/items/{item-id}/createLink | Create a sharing link for a DriveItem |
+| [**deletePermission()**](DrivesPermissionsApi.md#deletePermission) | **DELETE** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Remove access to a DriveItem |
+| [**getPermission()**](DrivesPermissionsApi.md#getPermission) | **GET** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Get sharing permission for a file or folder |
+| [**invite()**](DrivesPermissionsApi.md#invite) | **POST** /v1beta1/drives/{drive-id}/items/{item-id}/invite | Send a sharing invitation |
+| [**listPermissions()**](DrivesPermissionsApi.md#listPermissions) | **GET** /v1beta1/drives/{drive-id}/items/{item-id}/permissions | List the effective sharing permissions on a driveItem. |
+| [**updatePermission()**](DrivesPermissionsApi.md#updatePermission) | **PATCH** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Update sharing permission |
 
 
 ## `createLink()`

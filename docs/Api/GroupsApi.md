@@ -1,11 +1,11 @@
 # OpenAPI\Client\GroupsApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createGroup()**](GroupsApi.md#createGroup) | **POST** /groups | Add new entity to groups |
-| [**listGroups()**](GroupsApi.md#listGroups) | **GET** /groups | Get entities from groups |
+| [**createGroup()**](GroupsApi.md#createGroup) | **POST** /v1.0/groups | Add new entity to groups |
+| [**listGroups()**](GroupsApi.md#listGroups) | **GET** /v1.0/groups | Get entities from groups |
 
 
 ## `createGroup()`

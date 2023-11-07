@@ -320,7 +320,7 @@ class EducationClassApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}/members/$ref';
+        $resourcePath = '/v1.0/education/classes/{class-id}/members/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -637,7 +637,7 @@ class EducationClassApi
         }
 
 
-        $resourcePath = '/education/classes';
+        $resourcePath = '/v1.0/education/classes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -877,7 +877,7 @@ class EducationClassApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}';
+        $resourcePath = '/v1.0/education/classes/{class-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1130,7 +1130,7 @@ class EducationClassApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}/members/{user-id}/$ref';
+        $resourcePath = '/v1.0/education/classes/{class-id}/members/{user-id}/$ref';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1448,7 +1448,7 @@ class EducationClassApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}';
+        $resourcePath = '/v1.0/education/classes/{class-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1758,7 +1758,7 @@ class EducationClassApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}/members';
+        $resourcePath = '/v1.0/education/classes/{class-id}/members';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2056,7 +2056,7 @@ class EducationClassApi
     {
 
 
-        $resourcePath = '/education/classes';
+        $resourcePath = '/v1.0/education/classes';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2370,7 +2370,7 @@ class EducationClassApi
         }
 
 
-        $resourcePath = '/education/classes/{class-id}';
+        $resourcePath = '/v1.0/education/classes/{class-id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

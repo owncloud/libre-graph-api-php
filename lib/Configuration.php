@@ -93,7 +93,7 @@ class Configuration
      *
      * @var string
      */
-    protected $host = 'https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0';
+    protected $host = 'https://ocis.ocis-traefik.latest.owncloud.works/graph';
 
     /**
      * User agent of the HTTP request, set to "OpenAPI-Generator/{version}/PHP" by default
@@ -472,11 +472,11 @@ class Configuration
     {
         return [
             [
-                "url" => "https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0",
+                "url" => "https://ocis.ocis-traefik.latest.owncloud.works/graph",
                 "description" => "ownCloud Infinite Scale Latest",
             ],
             [
-                "url" => "https://localhost:9200/graph/v1.0",
+                "url" => "https://localhost:9200/graph",
                 "description" => "ownCloud Infinite Scale Development Setup",
             ]
         ];

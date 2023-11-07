@@ -1,11 +1,11 @@
 # OpenAPI\Client\ApplicationsApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getApplication()**](ApplicationsApi.md#getApplication) | **GET** /applications/{application-id} | Get application by id |
-| [**listApplications()**](ApplicationsApi.md#listApplications) | **GET** /applications | Get all applications |
+| [**getApplication()**](ApplicationsApi.md#getApplication) | **GET** /v1.0/applications/{application-id} | Get application by id |
+| [**listApplications()**](ApplicationsApi.md#listApplications) | **GET** /v1.0/applications | Get all applications |
 
 
 ## `getApplication()`

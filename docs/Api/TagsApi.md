@@ -1,12 +1,12 @@
 # OpenAPI\Client\TagsApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**assignTags()**](TagsApi.md#assignTags) | **PUT** /extensions/org.libregraph/tags | Assign tags to a resource |
-| [**getTags()**](TagsApi.md#getTags) | **GET** /extensions/org.libregraph/tags | Get all known tags |
-| [**unassignTags()**](TagsApi.md#unassignTags) | **DELETE** /extensions/org.libregraph/tags | Unassign tags from a resource |
+| [**assignTags()**](TagsApi.md#assignTags) | **PUT** /v1.0/extensions/org.libregraph/tags | Assign tags to a resource |
+| [**getTags()**](TagsApi.md#getTags) | **GET** /v1.0/extensions/org.libregraph/tags | Get all known tags |
+| [**unassignTags()**](TagsApi.md#unassignTags) | **DELETE** /v1.0/extensions/org.libregraph/tags | Unassign tags from a resource |
 
 
 ## `assignTags()`

@@ -1,11 +1,11 @@
 # OpenAPI\Client\UsersApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createUser()**](UsersApi.md#createUser) | **POST** /users | Add new entity to users |
-| [**listUsers()**](UsersApi.md#listUsers) | **GET** /users | Get entities from users |
+| [**createUser()**](UsersApi.md#createUser) | **POST** /v1.0/users | Add new entity to users |
+| [**listUsers()**](UsersApi.md#listUsers) | **GET** /v1.0/users | Get entities from users |
 
 
 ## `createUser()`

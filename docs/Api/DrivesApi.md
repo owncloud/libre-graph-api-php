@@ -1,13 +1,13 @@
 # OpenAPI\Client\DrivesApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**createDrive()**](DrivesApi.md#createDrive) | **POST** /drives | Create a new drive of a specific type |
-| [**deleteDrive()**](DrivesApi.md#deleteDrive) | **DELETE** /drives/{drive-id} | Delete a specific space |
-| [**getDrive()**](DrivesApi.md#getDrive) | **GET** /drives/{drive-id} | Get drive by id |
-| [**updateDrive()**](DrivesApi.md#updateDrive) | **PATCH** /drives/{drive-id} | Update the drive |
+| [**createDrive()**](DrivesApi.md#createDrive) | **POST** /v1.0/drives | Create a new drive of a specific type |
+| [**deleteDrive()**](DrivesApi.md#deleteDrive) | **DELETE** /v1.0/drives/{drive-id} | Delete a specific space |
+| [**getDrive()**](DrivesApi.md#getDrive) | **GET** /v1.0/drives/{drive-id} | Get drive by id |
+| [**updateDrive()**](DrivesApi.md#updateDrive) | **PATCH** /v1.0/drives/{drive-id} | Update the drive |
 
 
 ## `createDrive()`

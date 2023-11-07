@@ -1,17 +1,17 @@
 # OpenAPI\Client\EducationClassApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**addUserToClass()**](EducationClassApi.md#addUserToClass) | **POST** /education/classes/{class-id}/members/$ref | Assign a user to a class |
-| [**createClass()**](EducationClassApi.md#createClass) | **POST** /education/classes | Add new education class |
-| [**deleteClass()**](EducationClassApi.md#deleteClass) | **DELETE** /education/classes/{class-id} | Delete education class |
-| [**deleteUserFromClass()**](EducationClassApi.md#deleteUserFromClass) | **DELETE** /education/classes/{class-id}/members/{user-id}/$ref | Unassign user from a class |
-| [**getClass()**](EducationClassApi.md#getClass) | **GET** /education/classes/{class-id} | Get class by key |
-| [**listClassMembers()**](EducationClassApi.md#listClassMembers) | **GET** /education/classes/{class-id}/members | Get the educationClass resources owned by an educationSchool |
-| [**listClasses()**](EducationClassApi.md#listClasses) | **GET** /education/classes | list education classes |
-| [**updateClass()**](EducationClassApi.md#updateClass) | **PATCH** /education/classes/{class-id} | Update properties of a education class |
+| [**addUserToClass()**](EducationClassApi.md#addUserToClass) | **POST** /v1.0/education/classes/{class-id}/members/$ref | Assign a user to a class |
+| [**createClass()**](EducationClassApi.md#createClass) | **POST** /v1.0/education/classes | Add new education class |
+| [**deleteClass()**](EducationClassApi.md#deleteClass) | **DELETE** /v1.0/education/classes/{class-id} | Delete education class |
+| [**deleteUserFromClass()**](EducationClassApi.md#deleteUserFromClass) | **DELETE** /v1.0/education/classes/{class-id}/members/{user-id}/$ref | Unassign user from a class |
+| [**getClass()**](EducationClassApi.md#getClass) | **GET** /v1.0/education/classes/{class-id} | Get class by key |
+| [**listClassMembers()**](EducationClassApi.md#listClassMembers) | **GET** /v1.0/education/classes/{class-id}/members | Get the educationClass resources owned by an educationSchool |
+| [**listClasses()**](EducationClassApi.md#listClasses) | **GET** /v1.0/education/classes | list education classes |
+| [**updateClass()**](EducationClassApi.md#updateClass) | **PATCH** /v1.0/education/classes/{class-id} | Update properties of a education class |
 
 
 ## `addUserToClass()`

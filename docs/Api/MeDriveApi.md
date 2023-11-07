@@ -1,12 +1,12 @@
 # OpenAPI\Client\MeDriveApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph/v1.0, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**getHome()**](MeDriveApi.md#getHome) | **GET** /me/drive | Get personal space for user |
-| [**listSharedByMe()**](MeDriveApi.md#listSharedByMe) | **GET** /me/drive/sharedByMe | Get a list of driveItem objects shared by the current user. |
-| [**listSharedWithMe()**](MeDriveApi.md#listSharedWithMe) | **GET** /me/drive/sharedWithMe | Get a list of driveItem objects shared with the owner of a drive. |
+| [**getHome()**](MeDriveApi.md#getHome) | **GET** /v1.0/me/drive | Get personal space for user |
+| [**listSharedByMe()**](MeDriveApi.md#listSharedByMe) | **GET** /v1beta1/me/drive/sharedByMe | Get a list of driveItem objects shared by the current user. |
+| [**listSharedWithMe()**](MeDriveApi.md#listSharedWithMe) | **GET** /v1beta1/me/drive/sharedWithMe | Get a list of driveItem objects shared with the owner of a drive. |
 
 
 ## `getHome()`
