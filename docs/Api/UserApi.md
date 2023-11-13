@@ -208,7 +208,7 @@ $apiInstance = new OpenAPI\Client\Api\UserApi(
     $config
 );
 $user_id = 'user_id_example'; // string | key: id of user
-$user = new \OpenAPI\Client\Model\User(); // \OpenAPI\Client\Model\User | New property values
+$user = {"displayName":"Marie Skłodowska Curie"}; // \OpenAPI\Client\Model\User | New property values
 
 try {
     $result = $apiInstance->updateUser($user_id, $user);

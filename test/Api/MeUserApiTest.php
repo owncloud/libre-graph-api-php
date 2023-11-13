@@ -82,4 +82,16 @@ class MeUserApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for updateOwnUser
+     *
+     * Update the current user.
+     *
+     */
+    public function testUpdateOwnUser()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

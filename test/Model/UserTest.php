@@ -204,4 +204,13 @@ class UserTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "preferred_language"
+     */
+    public function testPropertyPreferredLanguage()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

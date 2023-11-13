@@ -71,7 +71,8 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         'password_profile' => '\OpenAPI\Client\Model\PasswordProfile',
         'surname' => 'string',
         'given_name' => 'string',
-        'user_type' => 'string'
+        'user_type' => 'string',
+        'preferred_language' => 'string'
     ];
 
     /**
@@ -95,7 +96,8 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         'password_profile' => null,
         'surname' => null,
         'given_name' => null,
-        'user_type' => null
+        'user_type' => null,
+        'preferred_language' => null
     ];
 
     /**
@@ -117,7 +119,8 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
 		'password_profile' => false,
 		'surname' => false,
 		'given_name' => false,
-		'user_type' => false
+		'user_type' => false,
+		'preferred_language' => false
     ];
 
     /**
@@ -219,7 +222,8 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         'password_profile' => 'passwordProfile',
         'surname' => 'surname',
         'given_name' => 'givenName',
-        'user_type' => 'userType'
+        'user_type' => 'userType',
+        'preferred_language' => 'preferredLanguage'
     ];
 
     /**
@@ -241,7 +245,8 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         'password_profile' => 'setPasswordProfile',
         'surname' => 'setSurname',
         'given_name' => 'setGivenName',
-        'user_type' => 'setUserType'
+        'user_type' => 'setUserType',
+        'preferred_language' => 'setPreferredLanguage'
     ];
 
     /**
@@ -263,7 +268,8 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         'password_profile' => 'getPasswordProfile',
         'surname' => 'getSurname',
         'given_name' => 'getGivenName',
-        'user_type' => 'getUserType'
+        'user_type' => 'getUserType',
+        'preferred_language' => 'getPreferredLanguage'
     ];
 
     /**
@@ -337,6 +343,7 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('surname', $data ?? [], null);
         $this->setIfExists('given_name', $data ?? [], null);
         $this->setIfExists('user_type', $data ?? [], null);
+        $this->setIfExists('preferred_language', $data ?? [], null);
     }
 
     /**
@@ -763,6 +770,33 @@ class User implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable user_type cannot be null');
         }
         $this->container['user_type'] = $user_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets preferred_language
+     *
+     * @return string|null
+     */
+    public function getPreferredLanguage()
+    {
+        return $this->container['preferred_language'];
+    }
+
+    /**
+     * Sets preferred_language
+     *
+     * @param string|null $preferred_language Represents the users language setting, ISO-639-1 Code
+     *
+     * @return self
+     */
+    public function setPreferredLanguage($preferred_language)
+    {
+        if (is_null($preferred_language)) {
+            throw new \InvalidArgumentException('non-nullable preferred_language cannot be null');
+        }
+        $this->container['preferred_language'] = $preferred_language;
 
         return $this;
     }

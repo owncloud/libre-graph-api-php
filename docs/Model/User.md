@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **surname** | **string** | The user&#39;s surname (family name or last name). Returned by default. | [optional]
 **given_name** | **string** | The user&#39;s givenName. Returned by default. | [optional]
 **user_type** | **string** | The user&#x60;s type. This can be either \&quot;Member\&quot; for regular user, or \&quot;Guest\&quot; for guest users. | [optional]
+**preferred_language** | **string** | Represents the users language setting, ISO-639-1 Code | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
