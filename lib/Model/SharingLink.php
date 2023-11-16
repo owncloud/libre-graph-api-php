@@ -61,7 +61,8 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => '\OpenAPI\Client\Model\SharingLinkType',
         'prevents_download' => 'bool',
         'web_url' => 'string',
-        'at_libre_graph_display_name' => 'string'
+        'at_libre_graph_display_name' => 'string',
+        'at_libre_graph_quick_link' => 'bool'
     ];
 
     /**
@@ -75,7 +76,8 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => null,
         'prevents_download' => null,
         'web_url' => null,
-        'at_libre_graph_display_name' => null
+        'at_libre_graph_display_name' => null,
+        'at_libre_graph_quick_link' => null
     ];
 
     /**
@@ -87,7 +89,8 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => false,
 		'prevents_download' => false,
 		'web_url' => false,
-		'at_libre_graph_display_name' => false
+		'at_libre_graph_display_name' => false,
+		'at_libre_graph_quick_link' => false
     ];
 
     /**
@@ -179,7 +182,8 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'type',
         'prevents_download' => 'preventsDownload',
         'web_url' => 'webUrl',
-        'at_libre_graph_display_name' => '@libre.graph.displayName'
+        'at_libre_graph_display_name' => '@libre.graph.displayName',
+        'at_libre_graph_quick_link' => '@libre.graph.quickLink'
     ];
 
     /**
@@ -191,7 +195,8 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'setType',
         'prevents_download' => 'setPreventsDownload',
         'web_url' => 'setWebUrl',
-        'at_libre_graph_display_name' => 'setAtLibreGraphDisplayName'
+        'at_libre_graph_display_name' => 'setAtLibreGraphDisplayName',
+        'at_libre_graph_quick_link' => 'setAtLibreGraphQuickLink'
     ];
 
     /**
@@ -203,7 +208,8 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
         'type' => 'getType',
         'prevents_download' => 'getPreventsDownload',
         'web_url' => 'getWebUrl',
-        'at_libre_graph_display_name' => 'getAtLibreGraphDisplayName'
+        'at_libre_graph_display_name' => 'getAtLibreGraphDisplayName',
+        'at_libre_graph_quick_link' => 'getAtLibreGraphQuickLink'
     ];
 
     /**
@@ -267,6 +273,7 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
         $this->setIfExists('prevents_download', $data ?? [], null);
         $this->setIfExists('web_url', $data ?? [], null);
         $this->setIfExists('at_libre_graph_display_name', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_quick_link', $data ?? [], null);
     }
 
     /**
@@ -415,6 +422,33 @@ class SharingLink implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable at_libre_graph_display_name cannot be null');
         }
         $this->container['at_libre_graph_display_name'] = $at_libre_graph_display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets at_libre_graph_quick_link
+     *
+     * @return bool|null
+     */
+    public function getAtLibreGraphQuickLink()
+    {
+        return $this->container['at_libre_graph_quick_link'];
+    }
+
+    /**
+     * Sets at_libre_graph_quick_link
+     *
+     * @param bool|null $at_libre_graph_quick_link The quicklink property can be assigned to only one link per resource. A quicklink can be used in the clients to provide a one-click copy to clipboard action. Optional. Libregraph only.
+     *
+     * @return self
+     */
+    public function setAtLibreGraphQuickLink($at_libre_graph_quick_link)
+    {
+        if (is_null($at_libre_graph_quick_link)) {
+            throw new \InvalidArgumentException('non-nullable at_libre_graph_quick_link cannot be null');
+        }
+        $this->container['at_libre_graph_quick_link'] = $at_libre_graph_quick_link;
 
         return $this;
     }

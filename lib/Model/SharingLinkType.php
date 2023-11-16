@@ -33,7 +33,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * SharingLinkType Class Doc Comment
  *
  * @category Class
- * @description The type of the link created.  | Value          | Display name      | Description                                                     | | -------------- | ----------------- | --------------------------------------------------------------- | | view           | View              | Creates a read-only link to the driveItem.                      | | upload         | Upload            | Creates a read-write link to the folder driveItem.              | | edit           | Edit              | Creates a read-write link to the driveItem.                     | | createOnly     | File Drop         | Creates an upload-only link to the folder driveItem.            | | blocksDownload | Secure View       | Creates a read-only link that blocks download to the driveItem. |
+ * @description The type of the link created.  | Value          | Display name      | Description                                                     | | -------------- | ----------------- | --------------------------------------------------------------- | | internal       | Internal          | Creates an internal link without any permissions.               | | view           | View              | Creates a read-only link to the driveItem.                      | | upload         | Upload            | Creates a read-write link to the folder driveItem.              | | edit           | Edit              | Creates a read-write link to the driveItem.                     | | createOnly     | File Drop         | Creates an upload-only link to the folder driveItem.            | | blocksDownload | Secure View       | Creates a read-only link that blocks download to the driveItem. |
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
@@ -43,6 +43,8 @@ class SharingLinkType
     /**
      * Possible values of this enum
      */
+    public const INTERNAL = 'internal';
+
     public const VIEW = 'view';
 
     public const UPLOAD = 'upload';
@@ -60,6 +62,7 @@ class SharingLinkType
     public static function getAllowableEnumValues()
     {
         return [
+            self::INTERNAL,
             self::VIEW,
             self::UPLOAD,
             self::EDIT,

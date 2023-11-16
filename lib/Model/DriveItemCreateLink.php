@@ -60,7 +60,8 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => '\OpenAPI\Client\Model\SharingLinkType',
         'expiration_date_time' => '\DateTime',
         'password' => 'string',
-        'display_name' => 'string'
+        'display_name' => 'string',
+        'at_libre_graph_quick_link' => 'bool'
     ];
 
     /**
@@ -74,7 +75,8 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => null,
         'expiration_date_time' => 'date-time',
         'password' => null,
-        'display_name' => null
+        'display_name' => null,
+        'at_libre_graph_quick_link' => null
     ];
 
     /**
@@ -86,7 +88,8 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => false,
 		'expiration_date_time' => false,
 		'password' => false,
-		'display_name' => false
+		'display_name' => false,
+		'at_libre_graph_quick_link' => false
     ];
 
     /**
@@ -178,7 +181,8 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'type',
         'expiration_date_time' => 'expirationDateTime',
         'password' => 'password',
-        'display_name' => 'displayName'
+        'display_name' => 'displayName',
+        'at_libre_graph_quick_link' => '@libre.graph.quickLink'
     ];
 
     /**
@@ -190,7 +194,8 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'setType',
         'expiration_date_time' => 'setExpirationDateTime',
         'password' => 'setPassword',
-        'display_name' => 'setDisplayName'
+        'display_name' => 'setDisplayName',
+        'at_libre_graph_quick_link' => 'setAtLibreGraphQuickLink'
     ];
 
     /**
@@ -202,7 +207,8 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
         'type' => 'getType',
         'expiration_date_time' => 'getExpirationDateTime',
         'password' => 'getPassword',
-        'display_name' => 'getDisplayName'
+        'display_name' => 'getDisplayName',
+        'at_libre_graph_quick_link' => 'getAtLibreGraphQuickLink'
     ];
 
     /**
@@ -266,6 +272,7 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
         $this->setIfExists('expiration_date_time', $data ?? [], null);
         $this->setIfExists('password', $data ?? [], null);
         $this->setIfExists('display_name', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_quick_link', $data ?? [], null);
     }
 
     /**
@@ -414,6 +421,33 @@ class DriveItemCreateLink implements ModelInterface, ArrayAccess, \JsonSerializa
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
         }
         $this->container['display_name'] = $display_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets at_libre_graph_quick_link
+     *
+     * @return bool|null
+     */
+    public function getAtLibreGraphQuickLink()
+    {
+        return $this->container['at_libre_graph_quick_link'];
+    }
+
+    /**
+     * Sets at_libre_graph_quick_link
+     *
+     * @param bool|null $at_libre_graph_quick_link The quicklink property can be assigned to only one link per resource. A quicklink can be used in the clients to provide a one-click copy to clipboard action. Optional. Libregraph only.
+     *
+     * @return self
+     */
+    public function setAtLibreGraphQuickLink($at_libre_graph_quick_link)
+    {
+        if (is_null($at_libre_graph_quick_link)) {
+            throw new \InvalidArgumentException('non-nullable at_libre_graph_quick_link cannot be null');
+        }
+        $this->container['at_libre_graph_quick_link'] = $at_libre_graph_quick_link;
 
         return $this;
     }
