@@ -85,6 +85,7 @@ Class | Method | HTTP request | Description
 *DrivesPermissionsApi* | [**getPermission**](docs/Api/DrivesPermissionsApi.md#getpermission) | **GET** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Get sharing permission for a file or folder
 *DrivesPermissionsApi* | [**invite**](docs/Api/DrivesPermissionsApi.md#invite) | **POST** /v1beta1/drives/{drive-id}/items/{item-id}/invite | Send a sharing invitation
 *DrivesPermissionsApi* | [**listPermissions**](docs/Api/DrivesPermissionsApi.md#listpermissions) | **GET** /v1beta1/drives/{drive-id}/items/{item-id}/permissions | List the effective sharing permissions on a driveItem.
+*DrivesPermissionsApi* | [**setPermissionPassword**](docs/Api/DrivesPermissionsApi.md#setpermissionpassword) | **POST** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id}/setPassword | Set sharing link password
 *DrivesPermissionsApi* | [**updatePermission**](docs/Api/DrivesPermissionsApi.md#updatepermission) | **PATCH** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Update sharing permission
 *DrivesRootApi* | [**getRoot**](docs/Api/DrivesRootApi.md#getroot) | **GET** /v1.0/drives/{drive-id}/root | Get root from arbitrary space
 *EducationClassApi* | [**addUserToClass**](docs/Api/EducationClassApi.md#addusertoclass) | **POST** /v1.0/education/classes/{class-id}/members/$ref | Assign a user to a class
@@ -210,6 +211,7 @@ Class | Method | HTTP request | Description
 - [SharePointIdentitySet](docs/Model/SharePointIdentitySet.md)
 - [Shared](docs/Model/Shared.md)
 - [SharingLink](docs/Model/SharingLink.md)
+- [SharingLinkPassword](docs/Model/SharingLinkPassword.md)
 - [SharingLinkType](docs/Model/SharingLinkType.md)
 - [SpecialFolder](docs/Model/SpecialFolder.md)
 - [TagAssignment](docs/Model/TagAssignment.md)

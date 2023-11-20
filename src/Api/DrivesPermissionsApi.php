@@ -86,6 +86,9 @@ class DrivesPermissionsApi
         'listPermissions' => [
             'application/json',
         ],
+        'setPermissionPassword' => [
+            'application/json',
+        ],
         'updatePermission' => [
             'application/json',
         ],
@@ -1901,6 +1904,401 @@ class DrivesPermissionsApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation setPermissionPassword
+     *
+     * Set sharing link password
+     *
+     * @param  string $drive_id key: id of drive (required)
+     * @param  string $item_id key: id of item (required)
+     * @param  string $perm_id key: id of permission (required)
+     * @param  \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password New password value (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPermissionPassword'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response
+     * @throws InvalidArgumentException
+     * @return \OpenAPI\Client\Model\Permission|\OpenAPI\Client\Model\OdataError
+     */
+    public function setPermissionPassword(
+        string $drive_id,
+        string $item_id,
+        string $perm_id,
+        \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password,
+        string $contentType = self::contentTypes['setPermissionPassword'][0]
+    )
+    {
+        list($response) = $this->setPermissionPasswordWithHttpInfo($drive_id, $item_id, $perm_id, $sharing_link_password, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation setPermissionPasswordWithHttpInfo
+     *
+     * Set sharing link password
+     *
+     * @param  string $drive_id key: id of drive (required)
+     * @param  string $item_id key: id of item (required)
+     * @param  string $perm_id key: id of permission (required)
+     * @param  \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password New password value (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPermissionPassword'] to see the possible values for this operation
+     *
+     * @throws ApiException on non-2xx response
+     * @throws InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\Permission|\OpenAPI\Client\Model\OdataError, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function setPermissionPasswordWithHttpInfo(
+        string $drive_id,
+        string $item_id,
+        string $perm_id,
+        \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password,
+        string $contentType = self::contentTypes['setPermissionPassword'][0]
+    ): array
+    {
+        $request = $this->setPermissionPasswordRequest($drive_id, $item_id, $perm_id, $sharing_link_password, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\Permission' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\Permission' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Permission', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\OpenAPI\Client\Model\OdataError' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\OdataError' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\OdataError', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\Permission';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\Permission',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\OdataError',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation setPermissionPasswordAsync
+     *
+     * Set sharing link password
+     *
+     * @param  string $drive_id key: id of drive (required)
+     * @param  string $item_id key: id of item (required)
+     * @param  string $perm_id key: id of permission (required)
+     * @param  \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password New password value (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPermissionPassword'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function setPermissionPasswordAsync(
+        string $drive_id,
+        string $item_id,
+        string $perm_id,
+        \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password,
+        string $contentType = self::contentTypes['setPermissionPassword'][0]
+    ): PromiseInterface
+    {
+        return $this->setPermissionPasswordAsyncWithHttpInfo($drive_id, $item_id, $perm_id, $sharing_link_password, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation setPermissionPasswordAsyncWithHttpInfo
+     *
+     * Set sharing link password
+     *
+     * @param  string $drive_id key: id of drive (required)
+     * @param  string $item_id key: id of item (required)
+     * @param  string $perm_id key: id of permission (required)
+     * @param  \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password New password value (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPermissionPassword'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return PromiseInterface
+     */
+    public function setPermissionPasswordAsyncWithHttpInfo(
+        $drive_id,
+        $item_id,
+        $perm_id,
+        $sharing_link_password,
+        string $contentType = self::contentTypes['setPermissionPassword'][0]
+    ): PromiseInterface
+    {
+        $returnType = '\OpenAPI\Client\Model\Permission';
+        $request = $this->setPermissionPasswordRequest($drive_id, $item_id, $perm_id, $sharing_link_password, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'setPermissionPassword'
+     *
+     * @param  string $drive_id key: id of drive (required)
+     * @param  string $item_id key: id of item (required)
+     * @param  string $perm_id key: id of permission (required)
+     * @param  \OpenAPI\Client\Model\SharingLinkPassword $sharing_link_password New password value (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['setPermissionPassword'] to see the possible values for this operation
+     *
+     * @throws InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function setPermissionPasswordRequest(
+        $drive_id,
+        $item_id,
+        $perm_id,
+        $sharing_link_password,
+        string $contentType = self::contentTypes['setPermissionPassword'][0]
+    ): Request
+    {
+
+        // verify the required parameter 'drive_id' is set
+        if ($drive_id === null || (is_array($drive_id) && count($drive_id) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $drive_id when calling setPermissionPassword'
+            );
+        }
+
+        // verify the required parameter 'item_id' is set
+        if ($item_id === null || (is_array($item_id) && count($item_id) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $item_id when calling setPermissionPassword'
+            );
+        }
+
+        // verify the required parameter 'perm_id' is set
+        if ($perm_id === null || (is_array($perm_id) && count($perm_id) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $perm_id when calling setPermissionPassword'
+            );
+        }
+
+        // verify the required parameter 'sharing_link_password' is set
+        if ($sharing_link_password === null || (is_array($sharing_link_password) && count($sharing_link_password) === 0)) {
+            throw new InvalidArgumentException(
+                'Missing the required parameter $sharing_link_password when calling setPermissionPassword'
+            );
+        }
+
+
+        $resourcePath = '/v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id}/setPassword';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($drive_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'drive-id' . '}',
+                ObjectSerializer::toPathValue($drive_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($item_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'item-id' . '}',
+                ObjectSerializer::toPathValue($item_id),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($perm_id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'perm-id' . '}',
+                ObjectSerializer::toPathValue($perm_id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($sharing_link_password)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($sharing_link_password));
+            } else {
+                $httpBody = $sharing_link_password;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

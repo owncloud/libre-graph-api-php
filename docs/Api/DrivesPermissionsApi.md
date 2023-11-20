@@ -9,6 +9,7 @@ All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, 
 | [**getPermission()**](DrivesPermissionsApi.md#getPermission) | **GET** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Get sharing permission for a file or folder |
 | [**invite()**](DrivesPermissionsApi.md#invite) | **POST** /v1beta1/drives/{drive-id}/items/{item-id}/invite | Send a sharing invitation |
 | [**listPermissions()**](DrivesPermissionsApi.md#listPermissions) | **GET** /v1beta1/drives/{drive-id}/items/{item-id}/permissions | List the effective sharing permissions on a driveItem. |
+| [**setPermissionPassword()**](DrivesPermissionsApi.md#setPermissionPassword) | **POST** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id}/setPassword | Set sharing link password |
 | [**updatePermission()**](DrivesPermissionsApi.md#updatePermission) | **PATCH** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Update sharing permission |
 
 
@@ -313,6 +314,70 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `setPermissionPassword()`
+
+```php
+setPermissionPassword($drive_id, $item_id, $perm_id, $sharing_link_password): \OpenAPI\Client\Model\Permission
+```
+
+Set sharing link password
+
+Set the password of a sharing permission.  Only the `password` property can be modified this way.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+
+$apiInstance = new OpenAPI\Client\Api\DrivesPermissionsApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$drive_id = 'drive_id_example'; // string | key: id of drive
+$item_id = 'item_id_example'; // string | key: id of item
+$perm_id = 'perm_id_example'; // string | key: id of permission
+$sharing_link_password = {"password":"TestPassword123!"}; // \OpenAPI\Client\Model\SharingLinkPassword | New password value
+
+try {
+    $result = $apiInstance->setPermissionPassword($drive_id, $item_id, $perm_id, $sharing_link_password);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DrivesPermissionsApi->setPermissionPassword: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **drive_id** | **string**| key: id of drive | |
+| **item_id** | **string**| key: id of item | |
+| **perm_id** | **string**| key: id of permission | |
+| **sharing_link_password** | [**\OpenAPI\Client\Model\SharingLinkPassword**](../Model/SharingLinkPassword.md)| New password value | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\Permission**](../Model/Permission.md)
+
+### Authorization
+
+[openId](../../README.md#openId)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

@@ -130,6 +130,18 @@ class DrivesPermissionsApiTest extends TestCase
     }
 
     /**
+     * Test case for setPermissionPassword
+     *
+     * Set sharing link password.
+     *
+     */
+    public function testSetPermissionPassword()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for updatePermission
      *
      * Update sharing permission.

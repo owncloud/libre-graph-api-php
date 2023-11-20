@@ -88,6 +88,7 @@ docs/Model/RemoteItem.md
 docs/Model/SharePointIdentitySet.md
 docs/Model/Shared.md
 docs/Model/SharingLink.md
+docs/Model/SharingLinkPassword.md
 docs/Model/SharingLinkType.md
 docs/Model/SpecialFolder.md
 docs/Model/TagAssignment.md
@@ -186,6 +187,7 @@ src/Model/RemoteItem.php
 src/Model/SharePointIdentitySet.php
 src/Model/Shared.php
 src/Model/SharingLink.php
+src/Model/SharingLinkPassword.php
 src/Model/SharingLinkType.php
 src/Model/SpecialFolder.php
 src/Model/TagAssignment.php
@@ -278,6 +280,7 @@ tests/Model/QuotaTest.php
 tests/Model/RemoteItemTest.php
 tests/Model/SharePointIdentitySetTest.php
 tests/Model/SharedTest.php
+tests/Model/SharingLinkPasswordTest.php
 tests/Model/SharingLinkTest.php
 tests/Model/SharingLinkTypeTest.php
 tests/Model/SpecialFolderTest.php
