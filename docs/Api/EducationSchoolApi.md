@@ -489,7 +489,7 @@ try {
 ## `listSchoolUsers()`
 
 ```php
-listSchoolUsers($school_id): \OpenAPI\Client\Model\CollectionOfEducationUser1
+listSchoolUsers($school_id): \OpenAPI\Client\Model\CollectionOfEducationUser
 ```
 
 Get the educationUser resources associated with an educationSchool
@@ -529,7 +529,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CollectionOfEducationUser1**](../Model/CollectionOfEducationUser1.md)
+[**\OpenAPI\Client\Model\CollectionOfEducationUser**](../Model/CollectionOfEducationUser.md)
 
 ### Authorization
 

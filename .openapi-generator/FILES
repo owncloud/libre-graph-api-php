@@ -42,7 +42,6 @@ docs/Model/CollectionOfDrives.md
 docs/Model/CollectionOfDrives1.md
 docs/Model/CollectionOfEducationClass.md
 docs/Model/CollectionOfEducationUser.md
-docs/Model/CollectionOfEducationUser1.md
 docs/Model/CollectionOfGroup.md
 docs/Model/CollectionOfPermissions.md
 docs/Model/CollectionOfSchools.md
@@ -140,7 +139,6 @@ src/Model/CollectionOfDrives.php
 src/Model/CollectionOfDrives1.php
 src/Model/CollectionOfEducationClass.php
 src/Model/CollectionOfEducationUser.php
-src/Model/CollectionOfEducationUser1.php
 src/Model/CollectionOfGroup.php
 src/Model/CollectionOfPermissions.php
 src/Model/CollectionOfSchools.php
@@ -234,7 +232,6 @@ tests/Model/CollectionOfDriveItemsTest.php
 tests/Model/CollectionOfDrives1Test.php
 tests/Model/CollectionOfDrivesTest.php
 tests/Model/CollectionOfEducationClassTest.php
-tests/Model/CollectionOfEducationUser1Test.php
 tests/Model/CollectionOfEducationUserTest.php
 tests/Model/CollectionOfGroupTest.php
 tests/Model/CollectionOfPermissionsTest.php

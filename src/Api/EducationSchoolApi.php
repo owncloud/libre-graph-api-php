@@ -2514,7 +2514,7 @@ class EducationSchoolApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CollectionOfEducationUser1|\OpenAPI\Client\Model\OdataError
+     * @return \OpenAPI\Client\Model\CollectionOfEducationUser|\OpenAPI\Client\Model\OdataError
      */
     public function listSchoolUsers(
         string $school_id,
@@ -2535,7 +2535,7 @@ class EducationSchoolApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CollectionOfEducationUser1|\OpenAPI\Client\Model\OdataError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CollectionOfEducationUser|\OpenAPI\Client\Model\OdataError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listSchoolUsersWithHttpInfo(
         string $school_id,
@@ -2581,17 +2581,17 @@ class EducationSchoolApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CollectionOfEducationUser1' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\CollectionOfEducationUser' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CollectionOfEducationUser1' !== 'string') {
+                        if ('\OpenAPI\Client\Model\CollectionOfEducationUser' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CollectionOfEducationUser1', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CollectionOfEducationUser', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -2612,7 +2612,7 @@ class EducationSchoolApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CollectionOfEducationUser1';
+            $returnType = '\OpenAPI\Client\Model\CollectionOfEducationUser';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -2633,7 +2633,7 @@ class EducationSchoolApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CollectionOfEducationUser1',
+                        '\OpenAPI\Client\Model\CollectionOfEducationUser',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2691,7 +2691,7 @@ class EducationSchoolApi
         string $contentType = self::contentTypes['listSchoolUsers'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\CollectionOfEducationUser1';
+        $returnType = '\OpenAPI\Client\Model\CollectionOfEducationUser';
         $request = $this->listSchoolUsersRequest($school_id, $contentType);
 
         return $this->client

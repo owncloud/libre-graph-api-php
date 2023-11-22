@@ -165,7 +165,6 @@ Class | Method | HTTP request | Description
 - [CollectionOfDrives1](docs/Model/CollectionOfDrives1.md)
 - [CollectionOfEducationClass](docs/Model/CollectionOfEducationClass.md)
 - [CollectionOfEducationUser](docs/Model/CollectionOfEducationUser.md)
-- [CollectionOfEducationUser1](docs/Model/CollectionOfEducationUser1.md)
 - [CollectionOfGroup](docs/Model/CollectionOfGroup.md)
 - [CollectionOfPermissions](docs/Model/CollectionOfPermissions.md)
 - [CollectionOfSchools](docs/Model/CollectionOfSchools.md)
