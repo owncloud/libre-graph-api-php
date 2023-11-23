@@ -1,6 +1,6 @@
 <?php
 /**
- * CollectionOfPermissionsTest
+ * CollectionOfPermissionsWithAllowedValuesTest
  *
  * PHP version 8.1
  *
@@ -30,14 +30,14 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * CollectionOfPermissionsTest Class Doc Comment
+ * CollectionOfPermissionsWithAllowedValuesTest Class Doc Comment
  *
- * @description CollectionOfPermissions
+ * @description CollectionOfPermissionsWithAllowedValues
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class CollectionOfPermissionsTest extends TestCase
+class CollectionOfPermissionsWithAllowedValuesTest extends TestCase
 {
 
     /**
@@ -69,9 +69,27 @@ class CollectionOfPermissionsTest extends TestCase
     }
 
     /**
-     * Test "CollectionOfPermissions"
+     * Test "CollectionOfPermissionsWithAllowedValues"
      */
-    public function testCollectionOfPermissions()
+    public function testCollectionOfPermissionsWithAllowedValues()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "at_libre_graph_permissions_roles_allowed_values"
+     */
+    public function testPropertyAtLibreGraphPermissionsRolesAllowedValues()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "at_libre_graph_permissions_actions_allowed_values"
+     */
+    public function testPropertyAtLibreGraphPermissionsActionsAllowedValues()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

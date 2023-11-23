@@ -167,6 +167,7 @@ Class | Method | HTTP request | Description
 - [CollectionOfEducationUser](docs/Model/CollectionOfEducationUser.md)
 - [CollectionOfGroup](docs/Model/CollectionOfGroup.md)
 - [CollectionOfPermissions](docs/Model/CollectionOfPermissions.md)
+- [CollectionOfPermissionsWithAllowedValues](docs/Model/CollectionOfPermissionsWithAllowedValues.md)
 - [CollectionOfSchools](docs/Model/CollectionOfSchools.md)
 - [CollectionOfTags](docs/Model/CollectionOfTags.md)
 - [CollectionOfUser](docs/Model/CollectionOfUser.md)

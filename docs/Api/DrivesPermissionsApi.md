@@ -201,7 +201,7 @@ try {
 ## `invite()`
 
 ```php
-invite($drive_id, $item_id, $drive_item_invite): \OpenAPI\Client\Model\Permission
+invite($drive_id, $item_id, $drive_item_invite): \OpenAPI\Client\Model\CollectionOfPermissions
 ```
 
 Send a sharing invitation
@@ -245,7 +245,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\Permission**](../Model/Permission.md)
+[**\OpenAPI\Client\Model\CollectionOfPermissions**](../Model/CollectionOfPermissions.md)
 
 ### Authorization
 
@@ -263,7 +263,7 @@ try {
 ## `listPermissions()`
 
 ```php
-listPermissions($drive_id, $item_id): \OpenAPI\Client\Model\CollectionOfPermissions
+listPermissions($drive_id, $item_id): \OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues
 ```
 
 List the effective sharing permissions on a driveItem.
@@ -305,7 +305,7 @@ try {
 
 ### Return type
 
-[**\OpenAPI\Client\Model\CollectionOfPermissions**](../Model/CollectionOfPermissions.md)
+[**\OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues**](../Model/CollectionOfPermissionsWithAllowedValues.md)
 
 ### Authorization
 

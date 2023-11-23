@@ -1189,7 +1189,7 @@ class DrivesPermissionsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\Permission|\OpenAPI\Client\Model\OdataError|\OpenAPI\Client\Model\OdataError
+     * @return \OpenAPI\Client\Model\CollectionOfPermissions|\OpenAPI\Client\Model\OdataError|\OpenAPI\Client\Model\OdataError
      */
     public function invite(
         string $drive_id,
@@ -1214,7 +1214,7 @@ class DrivesPermissionsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\Permission|\OpenAPI\Client\Model\OdataError|\OpenAPI\Client\Model\OdataError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CollectionOfPermissions|\OpenAPI\Client\Model\OdataError|\OpenAPI\Client\Model\OdataError, HTTP status code, HTTP response headers (array of strings)
      */
     public function inviteWithHttpInfo(
         string $drive_id,
@@ -1262,17 +1262,17 @@ class DrivesPermissionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\Permission' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\CollectionOfPermissions' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\Permission' !== 'string') {
+                        if ('\OpenAPI\Client\Model\CollectionOfPermissions' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\Permission', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CollectionOfPermissions', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1308,7 +1308,7 @@ class DrivesPermissionsApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\Permission';
+            $returnType = '\OpenAPI\Client\Model\CollectionOfPermissions';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1329,7 +1329,7 @@ class DrivesPermissionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\Permission',
+                        '\OpenAPI\Client\Model\CollectionOfPermissions',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1403,7 +1403,7 @@ class DrivesPermissionsApi
         string $contentType = self::contentTypes['invite'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\Permission';
+        $returnType = '\OpenAPI\Client\Model\CollectionOfPermissions';
         $request = $this->inviteRequest($drive_id, $item_id, $drive_item_invite, $contentType);
 
         return $this->client
@@ -1575,7 +1575,7 @@ class DrivesPermissionsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return \OpenAPI\Client\Model\CollectionOfPermissions|\OpenAPI\Client\Model\OdataError
+     * @return \OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues|\OpenAPI\Client\Model\OdataError
      */
     public function listPermissions(
         string $drive_id,
@@ -1598,7 +1598,7 @@ class DrivesPermissionsApi
      *
      * @throws ApiException on non-2xx response
      * @throws InvalidArgumentException
-     * @return array of \OpenAPI\Client\Model\CollectionOfPermissions|\OpenAPI\Client\Model\OdataError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues|\OpenAPI\Client\Model\OdataError, HTTP status code, HTTP response headers (array of strings)
      */
     public function listPermissionsWithHttpInfo(
         string $drive_id,
@@ -1645,17 +1645,17 @@ class DrivesPermissionsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\OpenAPI\Client\Model\CollectionOfPermissions' === '\SplFileObject') {
+                    if ('\OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\OpenAPI\Client\Model\CollectionOfPermissions' !== 'string') {
+                        if ('\OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues' !== 'string') {
                             $content = json_decode($content);
                         }
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CollectionOfPermissions', []),
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1676,7 +1676,7 @@ class DrivesPermissionsApi
                     ];
             }
 
-            $returnType = '\OpenAPI\Client\Model\CollectionOfPermissions';
+            $returnType = '\OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1697,7 +1697,7 @@ class DrivesPermissionsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\OpenAPI\Client\Model\CollectionOfPermissions',
+                        '\OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1759,7 +1759,7 @@ class DrivesPermissionsApi
         string $contentType = self::contentTypes['listPermissions'][0]
     ): PromiseInterface
     {
-        $returnType = '\OpenAPI\Client\Model\CollectionOfPermissions';
+        $returnType = '\OpenAPI\Client\Model\CollectionOfPermissionsWithAllowedValues';
         $request = $this->listPermissionsRequest($drive_id, $item_id, $contentType);
 
         return $this->client

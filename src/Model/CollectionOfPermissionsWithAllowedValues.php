@@ -1,6 +1,6 @@
 <?php
 /**
- * CollectionOfPermissions
+ * CollectionOfPermissionsWithAllowedValues
  *
  * PHP version 8.1
  *
@@ -34,14 +34,14 @@ use ReturnTypeWillChange;
 use OpenAPI\Client\ObjectSerializer;
 
 /**
- * CollectionOfPermissions Class Doc Comment
+ * CollectionOfPermissionsWithAllowedValues Class Doc Comment
  *
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerializable
+class CollectionOfPermissionsWithAllowedValues implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +50,7 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'Collection_of_permissions';
+    protected static string $openAPIModelName = 'Collection_of_permissions_with_allowed_values';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,6 +58,8 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
       * @var array<string, string>
       */
     protected static array $openAPITypes = [
+        'at_libre_graph_permissions_roles_allowed_values' => '\OpenAPI\Client\Model\UnifiedRoleDefinition[]',
+        'at_libre_graph_permissions_actions_allowed_values' => 'string[]',
         'value' => '\OpenAPI\Client\Model\Permission[]'
     ];
 
@@ -67,6 +69,8 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
       * @var array<string, string|null>
       */
     protected static array $openAPIFormats = [
+        'at_libre_graph_permissions_roles_allowed_values' => null,
+        'at_libre_graph_permissions_actions_allowed_values' => null,
         'value' => null
     ];
 
@@ -76,7 +80,9 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
       * @var array<string, bool>
       */
     protected static array $openAPINullables = [
-        'value' => false
+        'at_libre_graph_permissions_roles_allowed_values' => false,
+		'at_libre_graph_permissions_actions_allowed_values' => false,
+		'value' => false
     ];
 
     /**
@@ -165,6 +171,8 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
      * @var array<string, string>
      */
     protected static array $attributeMap = [
+        'at_libre_graph_permissions_roles_allowed_values' => '@libre.graph.permissions.roles.allowedValues',
+        'at_libre_graph_permissions_actions_allowed_values' => '@libre.graph.permissions.actions.allowedValues',
         'value' => 'value'
     ];
 
@@ -174,6 +182,8 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
      * @var array<string, string>
      */
     protected static array $setters = [
+        'at_libre_graph_permissions_roles_allowed_values' => 'setAtLibreGraphPermissionsRolesAllowedValues',
+        'at_libre_graph_permissions_actions_allowed_values' => 'setAtLibreGraphPermissionsActionsAllowedValues',
         'value' => 'setValue'
     ];
 
@@ -183,6 +193,8 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
      * @var array<string, string>
      */
     protected static array $getters = [
+        'at_libre_graph_permissions_roles_allowed_values' => 'getAtLibreGraphPermissionsRolesAllowedValues',
+        'at_libre_graph_permissions_actions_allowed_values' => 'getAtLibreGraphPermissionsActionsAllowedValues',
         'value' => 'getValue'
     ];
 
@@ -242,6 +254,8 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
      */
     public function __construct(array $data = null)
     {
+        $this->setIfExists('at_libre_graph_permissions_roles_allowed_values', $data ?? [], null);
+        $this->setIfExists('at_libre_graph_permissions_actions_allowed_values', $data ?? [], null);
         $this->setIfExists('value', $data ?? [], null);
     }
 
@@ -286,6 +300,60 @@ class CollectionOfPermissions implements ModelInterface, ArrayAccess, JsonSerial
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets at_libre_graph_permissions_roles_allowed_values
+     *
+     * @return \OpenAPI\Client\Model\UnifiedRoleDefinition[]|null
+     */
+    public function getAtLibreGraphPermissionsRolesAllowedValues(): ?array
+    {
+        return $this->container['at_libre_graph_permissions_roles_allowed_values'];
+    }
+
+    /**
+     * Sets at_libre_graph_permissions_roles_allowed_values
+     *
+     * @param \OpenAPI\Client\Model\UnifiedRoleDefinition[]|null $at_libre_graph_permissions_roles_allowed_values A list of role definitions that can be chosen for the resource.
+     *
+     * @return $this
+     */
+    public function setAtLibreGraphPermissionsRolesAllowedValues(?array $at_libre_graph_permissions_roles_allowed_values): static
+    {
+        if (is_null($at_libre_graph_permissions_roles_allowed_values)) {
+            throw new InvalidArgumentException('non-nullable at_libre_graph_permissions_roles_allowed_values cannot be null');
+        }
+        $this->container['at_libre_graph_permissions_roles_allowed_values'] = $at_libre_graph_permissions_roles_allowed_values;
+
+        return $this;
+    }
+
+    /**
+     * Gets at_libre_graph_permissions_actions_allowed_values
+     *
+     * @return string[]|null
+     */
+    public function getAtLibreGraphPermissionsActionsAllowedValues(): ?array
+    {
+        return $this->container['at_libre_graph_permissions_actions_allowed_values'];
+    }
+
+    /**
+     * Sets at_libre_graph_permissions_actions_allowed_values
+     *
+     * @param string[]|null $at_libre_graph_permissions_actions_allowed_values A list of actions that can be chosen for a custom role.  Following the CS3 API we can represent the CS3 permissions by mapping them to driveItem properties or relations like this: | [CS3 ResourcePermission](https://cs3org.github.io/cs3apis/#cs3.storage.provider.v1beta1.ResourcePermissions) | action | comment | | ------------------------------------------------------------------------------------------------------------ | ------ | ------- | | `stat` | `libre.graph/driveItem/basic/read` | `basic` because it does not include versions or trashed items | | `get_quota` | `libre.graph/driveItem/quota/read` | read only the `quota` property | | `get_path` | `libre.graph/driveItem/path/read` | read only the `path` property | | `move` | `libre.graph/driveItem/path/update` | allows updating the `path` property of a CS3 resource | | `delete` | `libre.graph/driveItem/standard/delete` | `standard` because deleting is a common update operation | | `list_container` | `libre.graph/driveItem/children/read` | | | `create_container` | `libre.graph/driveItem/children/create` | | | `initiate_file_download` | `libre.graph/driveItem/content/read` | `content` is the property read when initiating a download | | `initiate_file_upload` | `libre.graph/driveItem/upload/create` | `uploads` are a separate property. postprocessing creates the `content` | | `add_grant` | `libre.graph/driveItem/permissions/create` | | | `list_grant` | `libre.graph/driveItem/permissions/read` | | | `update_grant` | `libre.graph/driveItem/permissions/update` | | | `remove_grant` | `libre.graph/driveItem/permissions/delete` | | | `deny_grant` | `libre.graph/driveItem/permissions/deny` | uses a non CRUD action `deny` | | `list_file_versions` | `libre.graph/driveItem/versions/read` | `versions` is a `driveItemVersion` collection | | `restore_file_version` | `libre.graph/driveItem/versions/update` | the only `update` action is restore | | `list_recycle` | `libre.graph/driveItem/deleted/read` | reading a driveItem `deleted` property implies listing | | `restore_recycle_item` | `libre.graph/driveItem/deleted/update` | the only `update` action is restore | | `purge_recycle` | `libre.graph/driveItem/deleted/delete` | allows purging deleted `driveItems` |
+     *
+     * @return $this
+     */
+    public function setAtLibreGraphPermissionsActionsAllowedValues(?array $at_libre_graph_permissions_actions_allowed_values): static
+    {
+        if (is_null($at_libre_graph_permissions_actions_allowed_values)) {
+            throw new InvalidArgumentException('non-nullable at_libre_graph_permissions_actions_allowed_values cannot be null');
+        }
+        $this->container['at_libre_graph_permissions_actions_allowed_values'] = $at_libre_graph_permissions_actions_allowed_values;
+
+        return $this;
+    }
 
     /**
      * Gets value

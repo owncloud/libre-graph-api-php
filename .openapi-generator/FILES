@@ -44,6 +44,7 @@ docs/Model/CollectionOfEducationClass.md
 docs/Model/CollectionOfEducationUser.md
 docs/Model/CollectionOfGroup.md
 docs/Model/CollectionOfPermissions.md
+docs/Model/CollectionOfPermissionsWithAllowedValues.md
 docs/Model/CollectionOfSchools.md
 docs/Model/CollectionOfTags.md
 docs/Model/CollectionOfUser.md
@@ -141,6 +142,7 @@ src/Model/CollectionOfEducationClass.php
 src/Model/CollectionOfEducationUser.php
 src/Model/CollectionOfGroup.php
 src/Model/CollectionOfPermissions.php
+src/Model/CollectionOfPermissionsWithAllowedValues.php
 src/Model/CollectionOfSchools.php
 src/Model/CollectionOfTags.php
 src/Model/CollectionOfUser.php
@@ -235,6 +237,7 @@ tests/Model/CollectionOfEducationClassTest.php
 tests/Model/CollectionOfEducationUserTest.php
 tests/Model/CollectionOfGroupTest.php
 tests/Model/CollectionOfPermissionsTest.php
+tests/Model/CollectionOfPermissionsWithAllowedValuesTest.php
 tests/Model/CollectionOfSchoolsTest.php
 tests/Model/CollectionOfTagsTest.php
 tests/Model/CollectionOfUserTest.php
