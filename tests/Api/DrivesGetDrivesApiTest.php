@@ -80,4 +80,16 @@ class DrivesGetDrivesApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for listAllDrivesBeta
+     *
+     * Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles.
+     *
+     */
+    public function testListAllDrivesBeta()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
