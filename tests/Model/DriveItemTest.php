@@ -328,4 +328,13 @@ class DriveItemTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "video"
+     */
+    public function testPropertyVideo()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

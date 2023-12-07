@@ -97,6 +97,7 @@ docs/Model/Trash.md
 docs/Model/UnifiedRoleDefinition.md
 docs/Model/UnifiedRolePermission.md
 docs/Model/User.md
+docs/Model/Video.md
 git_push.sh
 phpunit.xml.dist
 src/Api/ApplicationsApi.php
@@ -196,6 +197,7 @@ src/Model/Trash.php
 src/Model/UnifiedRoleDefinition.php
 src/Model/UnifiedRolePermission.php
 src/Model/User.php
+src/Model/Video.php
 src/ObjectSerializer.php
 tests/Api/ApplicationsApiTest.php
 tests/Api/DrivesApiTest.php
@@ -290,3 +292,4 @@ tests/Model/TrashTest.php
 tests/Model/UnifiedRoleDefinitionTest.php
 tests/Model/UnifiedRolePermissionTest.php
 tests/Model/UserTest.php
+tests/Model/VideoTest.php

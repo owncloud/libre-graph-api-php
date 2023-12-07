@@ -222,6 +222,7 @@ Class | Method | HTTP request | Description
 - [UnifiedRoleDefinition](docs/Model/UnifiedRoleDefinition.md)
 - [UnifiedRolePermission](docs/Model/UnifiedRolePermission.md)
 - [User](docs/Model/User.md)
+- [Video](docs/Model/Video.md)
 
 ## Authorization
 

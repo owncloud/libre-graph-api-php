@@ -32,5 +32,6 @@ Name | Type | Description | Notes
 **children** | [**\OpenAPI\Client\Model\DriveItem[]**](DriveItem.md) | Collection containing Item objects for the immediate children of Item. Only items representing folders have children. Read-only. Nullable. | [optional] [readonly]
 **permissions** | [**\OpenAPI\Client\Model\Permission[]**](Permission.md) | The set of permissions for the item. Read-only. Nullable. | [optional] [readonly]
 **audio** | [**\OpenAPI\Client\Model\Audio**](Audio.md) |  | [optional]
+**video** | [**\OpenAPI\Client\Model\Video**](Video.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
