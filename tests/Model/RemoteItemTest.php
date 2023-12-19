@@ -231,6 +231,15 @@ class RemoteItemTest extends TestCase
     }
 
     /**
+     * Test attribute "permissions"
+     */
+    public function testPropertyPermissions()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "size"
      */
     public function testPropertySize()
