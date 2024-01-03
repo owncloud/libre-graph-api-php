@@ -148,13 +148,4 @@ class PermissionTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
-
-    /**
-     * Test attribute "at_ui_hidden"
-     */
-    public function testPropertyAtUiHidden()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
 }

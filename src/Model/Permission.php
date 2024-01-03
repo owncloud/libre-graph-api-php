@@ -66,8 +66,7 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
         'link' => '\OpenAPI\Client\Model\SharingLink',
         'roles' => 'string[]',
         'granted_to_identities' => '\OpenAPI\Client\Model\IdentitySet[]',
-        'at_libre_graph_permissions_actions' => 'string[]',
-        'at_ui_hidden' => 'bool'
+        'at_libre_graph_permissions_actions' => 'string[]'
     ];
 
     /**
@@ -83,8 +82,7 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
         'link' => null,
         'roles' => null,
         'granted_to_identities' => null,
-        'at_libre_graph_permissions_actions' => null,
-        'at_ui_hidden' => null
+        'at_libre_graph_permissions_actions' => null
     ];
 
     /**
@@ -100,8 +98,7 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
 		'link' => false,
 		'roles' => false,
 		'granted_to_identities' => false,
-		'at_libre_graph_permissions_actions' => false,
-		'at_ui_hidden' => false
+		'at_libre_graph_permissions_actions' => false
     ];
 
     /**
@@ -197,8 +194,7 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
         'link' => 'link',
         'roles' => 'roles',
         'granted_to_identities' => 'grantedToIdentities',
-        'at_libre_graph_permissions_actions' => '@libre.graph.permissions.actions',
-        'at_ui_hidden' => '@UI.Hidden'
+        'at_libre_graph_permissions_actions' => '@libre.graph.permissions.actions'
     ];
 
     /**
@@ -214,8 +210,7 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
         'link' => 'setLink',
         'roles' => 'setRoles',
         'granted_to_identities' => 'setGrantedToIdentities',
-        'at_libre_graph_permissions_actions' => 'setAtLibreGraphPermissionsActions',
-        'at_ui_hidden' => 'setAtUiHidden'
+        'at_libre_graph_permissions_actions' => 'setAtLibreGraphPermissionsActions'
     ];
 
     /**
@@ -231,8 +226,7 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
         'link' => 'getLink',
         'roles' => 'getRoles',
         'granted_to_identities' => 'getGrantedToIdentities',
-        'at_libre_graph_permissions_actions' => 'getAtLibreGraphPermissionsActions',
-        'at_ui_hidden' => 'getAtUiHidden'
+        'at_libre_graph_permissions_actions' => 'getAtLibreGraphPermissionsActions'
     ];
 
     /**
@@ -299,7 +293,6 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('roles', $data ?? [], null);
         $this->setIfExists('granted_to_identities', $data ?? [], null);
         $this->setIfExists('at_libre_graph_permissions_actions', $data ?? [], null);
-        $this->setIfExists('at_ui_hidden', $data ?? [], null);
     }
 
     /**
@@ -565,33 +558,6 @@ class Permission implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable at_libre_graph_permissions_actions cannot be null');
         }
         $this->container['at_libre_graph_permissions_actions'] = $at_libre_graph_permissions_actions;
-
-        return $this;
-    }
-
-    /**
-     * Gets at_ui_hidden
-     *
-     * @return bool|null
-     */
-    public function getAtUiHidden(): ?bool
-    {
-        return $this->container['at_ui_hidden'];
-    }
-
-    /**
-     * Sets at_ui_hidden
-     *
-     * @param bool|null $at_ui_hidden Properties or facets (see UI.Facet) annotated with this term will not be rendered if the annotation evaluates to true. Users can set this to hide permissons.
-     *
-     * @return $this
-     */
-    public function setAtUiHidden(?bool $at_ui_hidden): static
-    {
-        if (is_null($at_ui_hidden)) {
-            throw new InvalidArgumentException('non-nullable at_ui_hidden cannot be null');
-        }
-        $this->container['at_ui_hidden'] = $at_ui_hidden;
 
         return $this;
     }

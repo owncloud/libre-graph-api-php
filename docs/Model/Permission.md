@@ -12,6 +12,5 @@ Name | Type | Description | Notes
 **roles** | **string[]** |  | [optional]
 **granted_to_identities** | [**\OpenAPI\Client\Model\IdentitySet[]**](IdentitySet.md) | For link type permissions, the details of the identity to whom permission was granted. This could be used to grant access to a an external user that can be identified by email, aka guest accounts. | [optional]
 **at_libre_graph_permissions_actions** | **string[]** | Use this to create a permission with custom actions. | [optional]
-**at_ui_hidden** | **bool** | Properties or facets (see UI.Facet) annotated with this term will not be rendered if the annotation evaluates to true. Users can set this to hide permissons. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
