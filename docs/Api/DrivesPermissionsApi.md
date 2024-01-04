@@ -412,7 +412,7 @@ $apiInstance = new OpenAPI\Client\Api\DrivesPermissionsApi(
 $drive_id = 'drive_id_example'; // string | key: id of drive
 $item_id = 'item_id_example'; // string | key: id of item
 $perm_id = 'perm_id_example'; // string | key: id of permission
-$permission = {"roles":["7ccc2a61-9615-4063-a80a-eb7cd8e59d8"]}; // \OpenAPI\Client\Model\Permission | New property values
+$permission = {"link":{"type":"edit"}}; // \OpenAPI\Client\Model\Permission | New property values
 
 try {
     $result = $apiInstance->updatePermission($drive_id, $item_id, $perm_id, $permission);
