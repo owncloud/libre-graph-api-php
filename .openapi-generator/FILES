@@ -5,6 +5,7 @@
 README.md
 composer.json
 docs/Api/ApplicationsApi.md
+docs/Api/DriveItemApi.md
 docs/Api/DrivesApi.md
 docs/Api/DrivesGetDrivesApi.md
 docs/Api/DrivesPermissionsApi.md
@@ -101,6 +102,7 @@ docs/Model/Video.md
 git_push.sh
 phpunit.xml.dist
 src/Api/ApplicationsApi.php
+src/Api/DriveItemApi.php
 src/Api/DrivesApi.php
 src/Api/DrivesGetDrivesApi.php
 src/Api/DrivesPermissionsApi.php
@@ -200,6 +202,7 @@ src/Model/User.php
 src/Model/Video.php
 src/ObjectSerializer.php
 tests/Api/ApplicationsApiTest.php
+tests/Api/DriveItemApiTest.php
 tests/Api/DrivesApiTest.php
 tests/Api/DrivesGetDrivesApiTest.php
 tests/Api/DrivesPermissionsApiTest.php

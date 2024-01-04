@@ -1,6 +1,6 @@
 <?php
 /**
- * DrivesRootApiTest
+ * DriveItemApiTest
  * PHP version 8.1
  *
  * @package  OpenAPI\Client
@@ -32,13 +32,13 @@ use OpenAPI\Client\ObjectSerializer;
 use PHPUnit\Framework\TestCase;
 
 /**
- * DrivesRootApiTest Class Doc Comment
+ * DriveItemApiTest Class Doc Comment
  *
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DrivesRootApiTest extends TestCase
+class DriveItemApiTest extends TestCase
 {
 
     /**
@@ -70,24 +70,12 @@ class DrivesRootApiTest extends TestCase
     }
 
     /**
-     * Test case for createDriveItem
+     * Test case for deleteDriveItem
      *
-     * Create a drive item.
-     *
-     */
-    public function testCreateDriveItem()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for getRoot
-     *
-     * Get root from arbitrary space.
+     * Delete a DriveItem..
      *
      */
-    public function testGetRoot()
+    public function testDeleteDriveItem()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
