@@ -80,9 +80,7 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'int',
         'special_folder' => '\OpenAPI\Client\Model\SpecialFolder',
         'web_dav_url' => 'string',
-        'web_url' => 'string',
-        'at_client_synchronize' => 'bool',
-        'at_ui_hidden' => 'bool'
+        'web_url' => 'string'
     ];
 
     /**
@@ -112,9 +110,7 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'int64',
         'special_folder' => null,
         'web_dav_url' => null,
-        'web_url' => null,
-        'at_client_synchronize' => null,
-        'at_ui_hidden' => null
+        'web_url' => null
     ];
 
     /**
@@ -144,9 +140,7 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
 		'size' => false,
 		'special_folder' => false,
 		'web_dav_url' => false,
-		'web_url' => false,
-		'at_client_synchronize' => false,
-		'at_ui_hidden' => false
+		'web_url' => false
     ];
 
     /**
@@ -256,9 +250,7 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'size',
         'special_folder' => 'specialFolder',
         'web_dav_url' => 'webDavUrl',
-        'web_url' => 'webUrl',
-        'at_client_synchronize' => '@client.synchronize',
-        'at_ui_hidden' => '@ui.hidden'
+        'web_url' => 'webUrl'
     ];
 
     /**
@@ -288,9 +280,7 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'setSize',
         'special_folder' => 'setSpecialFolder',
         'web_dav_url' => 'setWebDavUrl',
-        'web_url' => 'setWebUrl',
-        'at_client_synchronize' => 'setAtClientSynchronize',
-        'at_ui_hidden' => 'setAtUiHidden'
+        'web_url' => 'setWebUrl'
     ];
 
     /**
@@ -320,9 +310,7 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'getSize',
         'special_folder' => 'getSpecialFolder',
         'web_dav_url' => 'getWebDavUrl',
-        'web_url' => 'getWebUrl',
-        'at_client_synchronize' => 'getAtClientSynchronize',
-        'at_ui_hidden' => 'getAtUiHidden'
+        'web_url' => 'getWebUrl'
     ];
 
     /**
@@ -403,8 +391,6 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('special_folder', $data ?? [], null);
         $this->setIfExists('web_dav_url', $data ?? [], null);
         $this->setIfExists('web_url', $data ?? [], null);
-        $this->setIfExists('at_client_synchronize', $data ?? [], null);
-        $this->setIfExists('at_ui_hidden', $data ?? [], null);
     }
 
     /**
@@ -1057,60 +1043,6 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable web_url cannot be null');
         }
         $this->container['web_url'] = $web_url;
-
-        return $this;
-    }
-
-    /**
-     * Gets at_client_synchronize
-     *
-     * @return bool|null
-     */
-    public function getAtClientSynchronize(): ?bool
-    {
-        return $this->container['at_client_synchronize'];
-    }
-
-    /**
-     * Sets at_client_synchronize
-     *
-     * @param bool|null $at_client_synchronize Indicates if the item is synchronized with the underlying storage provider. Read-only.
-     *
-     * @return $this
-     */
-    public function setAtClientSynchronize(?bool $at_client_synchronize): static
-    {
-        if (is_null($at_client_synchronize)) {
-            throw new InvalidArgumentException('non-nullable at_client_synchronize cannot be null');
-        }
-        $this->container['at_client_synchronize'] = $at_client_synchronize;
-
-        return $this;
-    }
-
-    /**
-     * Gets at_ui_hidden
-     *
-     * @return bool|null
-     */
-    public function getAtUiHidden(): ?bool
-    {
-        return $this->container['at_ui_hidden'];
-    }
-
-    /**
-     * Sets at_ui_hidden
-     *
-     * @param bool|null $at_ui_hidden Properties or facets (see UI.Facet) annotated with this term will not be rendered if the annotation evaluates to true. Users can set this to hide permissons.
-     *
-     * @return $this
-     */
-    public function setAtUiHidden(?bool $at_ui_hidden): static
-    {
-        if (is_null($at_ui_hidden)) {
-            throw new InvalidArgumentException('non-nullable at_ui_hidden cannot be null');
-        }
-        $this->container['at_ui_hidden'] = $at_ui_hidden;
 
         return $this;
     }

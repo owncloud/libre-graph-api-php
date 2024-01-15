@@ -26,7 +26,5 @@ Name | Type | Description | Notes
 **special_folder** | [**\OpenAPI\Client\Model\SpecialFolder**](SpecialFolder.md) |  | [optional]
 **web_dav_url** | **string** | DAV compatible URL for the item. | [optional]
 **web_url** | **string** | URL that displays the resource in the browser. Read-only. | [optional]
-**at_client_synchronize** | **bool** | Indicates if the item is synchronized with the underlying storage provider. Read-only. | [optional]
-**at_ui_hidden** | **bool** | Properties or facets (see UI.Facet) annotated with this term will not be rendered if the annotation evaluates to true. Users can set this to hide permissons. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
