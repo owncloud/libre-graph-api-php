@@ -16,7 +16,7 @@ createDriveItem($drive_id, $drive_item): \OpenAPI\Client\Model\DriveItem
 
 Create a drive item
 
-You can use the root childrens endpoint to mount a remoteItem in the share jail. The `@client.synchronize` property of the `remoteItem` in the [sharedWithMe](#/me.drive/ListSharedWithMe) endpoint will change to true.
+You can use the root childrens endpoint to mount a remoteItem in the share jail. The `@client.synchronize` property of the `driveItem` in the [sharedWithMe](#/me.drive/ListSharedWithMe) endpoint will change to true.
 
 ### Example
 

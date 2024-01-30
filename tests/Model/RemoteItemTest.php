@@ -222,15 +222,6 @@ class RemoteItemTest extends TestCase
     }
 
     /**
-     * Test attribute "shared"
-     */
-    public function testPropertyShared()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test attribute "permissions"
      */
     public function testPropertyPermissions()

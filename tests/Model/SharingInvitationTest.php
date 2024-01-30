@@ -1,6 +1,6 @@
 <?php
 /**
- * SharedTest
+ * SharingInvitationTest
  *
  * PHP version 8.1
  *
@@ -30,14 +30,14 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * SharedTest Class Doc Comment
+ * SharingInvitationTest Class Doc Comment
  *
- * @description Shared
+ * @description invitation-related data items
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class SharedTest extends TestCase
+class SharingInvitationTest extends TestCase
 {
 
     /**
@@ -69,45 +69,18 @@ class SharedTest extends TestCase
     }
 
     /**
-     * Test "Shared"
+     * Test "SharingInvitation"
      */
-    public function testShared()
+    public function testSharingInvitation()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "owner"
+     * Test attribute "invited_by"
      */
-    public function testPropertyOwner()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "scope"
-     */
-    public function testPropertyScope()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "shared_by"
-     */
-    public function testPropertySharedBy()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "shared_date_time"
-     */
-    public function testPropertySharedDateTime()
+    public function testPropertyInvitedBy()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

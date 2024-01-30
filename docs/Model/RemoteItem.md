@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **e_tag** | **string** | ETag for the item. Read-only. | [optional] [readonly]
 **c_tag** | **string** | An eTag for the content of the item. This eTag is not changed if only the metadata is changed. Note This property is not returned if the item is a folder. Read-only. | [optional] [readonly]
 **parent_reference** | [**\OpenAPI\Client\Model\ItemReference**](ItemReference.md) |  | [optional]
-**shared** | [**\OpenAPI\Client\Model\Shared**](Shared.md) |  | [optional]
 **permissions** | [**\OpenAPI\Client\Model\Permission[]**](Permission.md) | The set of permissions for the item. Read-only. Nullable. | [optional] [readonly]
 **size** | **int** | Size of the remote item. Read-only. | [optional]
 **special_folder** | [**\OpenAPI\Client\Model\SpecialFolder**](SpecialFolder.md) |  | [optional]

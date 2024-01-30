@@ -84,7 +84,7 @@ docs/Model/Photo.md
 docs/Model/Quota.md
 docs/Model/RemoteItem.md
 docs/Model/SharePointIdentitySet.md
-docs/Model/Shared.md
+docs/Model/SharingInvitation.md
 docs/Model/SharingLink.md
 docs/Model/SharingLinkPassword.md
 docs/Model/SharingLinkType.md
@@ -182,7 +182,7 @@ src/Model/Photo.php
 src/Model/Quota.php
 src/Model/RemoteItem.php
 src/Model/SharePointIdentitySet.php
-src/Model/Shared.php
+src/Model/SharingInvitation.php
 src/Model/SharingLink.php
 src/Model/SharingLinkPassword.php
 src/Model/SharingLinkType.php
@@ -275,7 +275,7 @@ tests/Model/PhotoTest.php
 tests/Model/QuotaTest.php
 tests/Model/RemoteItemTest.php
 tests/Model/SharePointIdentitySetTest.php
-tests/Model/SharedTest.php
+tests/Model/SharingInvitationTest.php
 tests/Model/SharingLinkPasswordTest.php
 tests/Model/SharingLinkTest.php
 tests/Model/SharingLinkTypeTest.php

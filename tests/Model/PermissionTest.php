@@ -150,18 +150,9 @@ class PermissionTest extends TestCase
     }
 
     /**
-     * Test attribute "at_client_synchronize"
+     * Test attribute "invitation"
      */
-    public function testPropertyAtClientSynchronize()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "at_ui_hidden"
-     */
-    public function testPropertyAtUiHidden()
+    public function testPropertyInvitation()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

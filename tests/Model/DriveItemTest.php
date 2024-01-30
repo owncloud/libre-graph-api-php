@@ -337,4 +337,22 @@ class DriveItemTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "at_client_synchronize"
+     */
+    public function testPropertyAtClientSynchronize()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "at_ui_hidden"
+     */
+    public function testPropertyAtUiHidden()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

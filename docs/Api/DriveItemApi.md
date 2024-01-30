@@ -15,7 +15,7 @@ deleteDriveItem($drive_id, $item_id)
 
 Delete a DriveItem.
 
-Delete a DriveItem by using its ID.  Deleting items using this method moves the items to the recycle bin instead of permanently deleting the item.  Mounted shares in the share jail are unmounted. The `@client.synchronize` property of the `remoteItem` in the [sharedWithMe](#/me.drive/ListSharedWithMe) endpoint will change to false.
+Delete a DriveItem by using its ID.  Deleting items using this method moves the items to the recycle bin instead of permanently deleting the item.  Mounted shares in the share jail are unmounted. The `@client.synchronize` property of the `driveItem` in the [sharedWithMe](#/me.drive/ListSharedWithMe) endpoint will change to false.
 
 ### Example
 
