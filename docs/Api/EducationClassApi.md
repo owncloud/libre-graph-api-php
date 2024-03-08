@@ -444,7 +444,7 @@ $apiInstance = new OpenAPI\Client\Api\EducationClassApi(
     $config
 );
 $class_id = 86948e45-96a6-43df-b83d-46e92afd30de; // string | key: id or externalId of class
-$education_class = {"displayName":"Musik","externalId":"cb766da3-bab1-478a-9615-f99d4c59c09a"}; // \OpenAPI\Client\Model\EducationClass | New property values
+$education_class = {"displayName":"Musik"}; // \OpenAPI\Client\Model\EducationClass | New property values
 
 try {
     $result = $apiInstance->updateClass($class_id, $education_class);

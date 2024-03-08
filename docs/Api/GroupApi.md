@@ -325,7 +325,7 @@ $apiInstance = new OpenAPI\Client\Api\GroupApi(
     $config
 );
 $group_id = 'group_id_example'; // string | key: id of group
-$group = new \OpenAPI\Client\Model\Group(); // \OpenAPI\Client\Model\Group | New property values
+$group = {"displayName":"GroupName"}; // \OpenAPI\Client\Model\Group | New property values
 
 try {
     $apiInstance->updateGroup($group_id, $group);
