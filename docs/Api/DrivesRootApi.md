@@ -34,7 +34,7 @@ $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
     $config
 );
 $drive_id = a0ca6a90-a365-4782-871e-d44447bbc668$a0ca6a90-a365-4782-871e-d44447bbc668; // string | key: id of drive
-$drive_item = {"name":"Einsteins project share","remoteItem":{"id":"a-storage-provider-id$a-space-id!a-node-id","permissions":[{"id":"share-id"}]}}; // \OpenAPI\Client\Model\DriveItem | In the request body, provide a JSON object with the following parameters. For mounting a share the necessary remoteItem id and permission id can be taken from the [sharedWithMe](#/me.drive/ListSharedWithMe) endpoint.
+$drive_item = {"name":"Einsteins project share","remoteItem":{"id":"a-storage-provider-id$a-space-id!a-node-id"}}; // \OpenAPI\Client\Model\DriveItem | In the request body, provide a JSON object with the following parameters. For mounting a share the necessary remoteItem id and permission id can be taken from the [sharedWithMe](#/me.drive/ListSharedWithMe) endpoint.
 
 try {
     $result = $apiInstance->createDriveItem($drive_id, $drive_item);
