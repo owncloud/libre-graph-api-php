@@ -91,6 +91,8 @@ docs/Model/SharingLinkType.md
 docs/Model/SpecialFolder.md
 docs/Model/TagAssignment.md
 docs/Model/TagUnassignment.md
+docs/Model/Thumbnail.md
+docs/Model/ThumbnailSet.md
 docs/Model/Trash.md
 docs/Model/UnifiedRoleDefinition.md
 docs/Model/UnifiedRolePermission.md
@@ -189,6 +191,8 @@ src/Model/SharingLinkType.php
 src/Model/SpecialFolder.php
 src/Model/TagAssignment.php
 src/Model/TagUnassignment.php
+src/Model/Thumbnail.php
+src/Model/ThumbnailSet.php
 src/Model/Trash.php
 src/Model/UnifiedRoleDefinition.php
 src/Model/UnifiedRolePermission.php
@@ -282,6 +286,8 @@ tests/Model/SharingLinkTypeTest.php
 tests/Model/SpecialFolderTest.php
 tests/Model/TagAssignmentTest.php
 tests/Model/TagUnassignmentTest.php
+tests/Model/ThumbnailSetTest.php
+tests/Model/ThumbnailTest.php
 tests/Model/TrashTest.php
 tests/Model/UnifiedRoleDefinitionTest.php
 tests/Model/UnifiedRolePermissionTest.php

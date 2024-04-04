@@ -249,6 +249,15 @@ class DriveItemTest extends TestCase
     }
 
     /**
+     * Test attribute "thumbnails"
+     */
+    public function testPropertyThumbnails()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test attribute "root"
      */
     public function testPropertyRoot()

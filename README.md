@@ -217,6 +217,8 @@ Class | Method | HTTP request | Description
 - [SpecialFolder](docs/Model/SpecialFolder.md)
 - [TagAssignment](docs/Model/TagAssignment.md)
 - [TagUnassignment](docs/Model/TagUnassignment.md)
+- [Thumbnail](docs/Model/Thumbnail.md)
+- [ThumbnailSet](docs/Model/ThumbnailSet.md)
 - [Trash](docs/Model/Trash.md)
 - [UnifiedRoleDefinition](docs/Model/UnifiedRoleDefinition.md)
 - [UnifiedRolePermission](docs/Model/UnifiedRolePermission.md)

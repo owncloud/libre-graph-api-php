@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **image** | [**\OpenAPI\Client\Model\Image**](Image.md) |  | [optional]
 **photo** | [**\OpenAPI\Client\Model\Photo**](Photo.md) |  | [optional]
 **location** | [**\OpenAPI\Client\Model\GeoCoordinates**](GeoCoordinates.md) |  | [optional]
+**thumbnails** | [**\OpenAPI\Client\Model\ThumbnailSet[]**](ThumbnailSet.md) | Collection containing ThumbnailSet objects associated with the item. Read-only. Nullable. | [optional]
 **root** | **object** | If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. | [optional]
 **trash** | [**\OpenAPI\Client\Model\Trash**](Trash.md) |  | [optional]
 **special_folder** | [**\OpenAPI\Client\Model\SpecialFolder**](SpecialFolder.md) |  | [optional]

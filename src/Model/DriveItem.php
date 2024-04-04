@@ -78,6 +78,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
         'image' => '\OpenAPI\Client\Model\Image',
         'photo' => '\OpenAPI\Client\Model\Photo',
         'location' => '\OpenAPI\Client\Model\GeoCoordinates',
+        'thumbnails' => '\OpenAPI\Client\Model\ThumbnailSet[]',
         'root' => 'object',
         'trash' => '\OpenAPI\Client\Model\Trash',
         'special_folder' => '\OpenAPI\Client\Model\SpecialFolder',
@@ -117,6 +118,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
         'image' => null,
         'photo' => null,
         'location' => null,
+        'thumbnails' => null,
         'root' => null,
         'trash' => null,
         'special_folder' => null,
@@ -156,6 +158,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
 		'image' => false,
 		'photo' => false,
 		'location' => false,
+		'thumbnails' => false,
 		'root' => false,
 		'trash' => false,
 		'special_folder' => false,
@@ -275,6 +278,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
         'image' => 'image',
         'photo' => 'photo',
         'location' => 'location',
+        'thumbnails' => 'thumbnails',
         'root' => 'root',
         'trash' => 'trash',
         'special_folder' => 'specialFolder',
@@ -314,6 +318,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
         'image' => 'setImage',
         'photo' => 'setPhoto',
         'location' => 'setLocation',
+        'thumbnails' => 'setThumbnails',
         'root' => 'setRoot',
         'trash' => 'setTrash',
         'special_folder' => 'setSpecialFolder',
@@ -353,6 +358,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
         'image' => 'getImage',
         'photo' => 'getPhoto',
         'location' => 'getLocation',
+        'thumbnails' => 'getThumbnails',
         'root' => 'getRoot',
         'trash' => 'getTrash',
         'special_folder' => 'getSpecialFolder',
@@ -442,6 +448,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('image', $data ?? [], null);
         $this->setIfExists('photo', $data ?? [], null);
         $this->setIfExists('location', $data ?? [], null);
+        $this->setIfExists('thumbnails', $data ?? [], null);
         $this->setIfExists('root', $data ?? [], null);
         $this->setIfExists('trash', $data ?? [], null);
         $this->setIfExists('special_folder', $data ?? [], null);
@@ -1025,6 +1032,33 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable location cannot be null');
         }
         $this->container['location'] = $location;
+
+        return $this;
+    }
+
+    /**
+     * Gets thumbnails
+     *
+     * @return \OpenAPI\Client\Model\ThumbnailSet[]|null
+     */
+    public function getThumbnails(): ?array
+    {
+        return $this->container['thumbnails'];
+    }
+
+    /**
+     * Sets thumbnails
+     *
+     * @param \OpenAPI\Client\Model\ThumbnailSet[]|null $thumbnails Collection containing ThumbnailSet objects associated with the item. Read-only. Nullable.
+     *
+     * @return $this
+     */
+    public function setThumbnails(?array $thumbnails): static
+    {
+        if (is_null($thumbnails)) {
+            throw new InvalidArgumentException('non-nullable thumbnails cannot be null');
+        }
+        $this->container['thumbnails'] = $thumbnails;
 
         return $this;
     }
