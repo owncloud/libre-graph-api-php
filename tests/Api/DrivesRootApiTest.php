@@ -82,12 +82,96 @@ class DrivesRootApiTest extends TestCase
     }
 
     /**
+     * Test case for createLinkSpaceRoot
+     *
+     * Create a sharing link for the root item of a Drive.
+     *
+     */
+    public function testCreateLinkSpaceRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for deletePermissionSpaceRoot
+     *
+     * Remove access to a DriveItem.
+     *
+     */
+    public function testDeletePermissionSpaceRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for getPermissionSpaceRoot
+     *
+     * Get a single sharing permission for the root item of a drive.
+     *
+     */
+    public function testGetPermissionSpaceRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for getRoot
      *
      * Get root from arbitrary space.
      *
      */
     public function testGetRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for inviteSpaceRoot
+     *
+     * Send a sharing invitation.
+     *
+     */
+    public function testInviteSpaceRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for listPermissionsSpaceRoot
+     *
+     * List the effective permissions on the root item of a drive..
+     *
+     */
+    public function testListPermissionsSpaceRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for setPermissionPasswordSpaceRoot
+     *
+     * Set sharing link password for the root item of a drive.
+     *
+     */
+    public function testSetPermissionPasswordSpaceRoot()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for updatePermissionSpaceRoot
+     *
+     * Update sharing permission.
+     *
+     */
+    public function testUpdatePermissionSpaceRoot()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
