@@ -5,6 +5,7 @@ All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**deleteDriveItem()**](DriveItemApi.md#deleteDriveItem) | **DELETE** /v1beta1/drives/{drive-id}/items/{item-id} | Delete a DriveItem. |
+| [**updateDriveItem()**](DriveItemApi.md#updateDriveItem) | **PATCH** /v1beta1/drives/{drive-id}/items/{item-id} | Update a DriveItem. |
 
 
 ## `deleteDriveItem()`
@@ -60,6 +61,67 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateDriveItem()`
+
+```php
+updateDriveItem($drive_id, $item_id, $drive_item)
+```
+
+Update a DriveItem.
+
+Update a DriveItem.  The request body must include a JSON object with the properties to update. Only the properties that are provided will be updated.  Currently it supports updating the following properties:  * `@UI.Hidden` - Hides the item from the UI.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+
+$apiInstance = new OpenAPI\Client\Api\DriveItemApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$drive_id = a0ca6a90-a365-4782-871e-d44447bbc668$a0ca6a90-a365-4782-871e-d44447bbc668; // string | key: id of drive
+$item_id = a0ca6a90-a365-4782-871e-d44447bbc668$a0ca6a90-a365-4782-871e-d44447bbc668!share-id; // string | key: id of item
+$drive_item = {"@UI.Hidden":true}; // \OpenAPI\Client\Model\DriveItem | DriveItem properties to update
+
+try {
+    $apiInstance->updateDriveItem($drive_id, $item_id, $drive_item);
+} catch (Exception $e) {
+    echo 'Exception when calling DriveItemApi->updateDriveItem: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **drive_id** | **string**| key: id of drive | |
+| **item_id** | **string**| key: id of item | |
+| **drive_item** | [**\OpenAPI\Client\Model\DriveItem**](../Model/DriveItem.md)| DriveItem properties to update | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[openId](../../README.md#openId)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

@@ -80,4 +80,16 @@ class DriveItemApiTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test case for updateDriveItem
+     *
+     * Update a DriveItem..
+     *
+     */
+    public function testUpdateDriveItem()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
