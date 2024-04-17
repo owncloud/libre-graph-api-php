@@ -92,7 +92,7 @@ Class | Method | HTTP request | Description
 *DrivesPermissionsApi* | [**updatePermission**](docs/Api/DrivesPermissionsApi.md#updatepermission) | **PATCH** /v1beta1/drives/{drive-id}/items/{item-id}/permissions/{perm-id} | Update sharing permission
 *DrivesRootApi* | [**createDriveItem**](docs/Api/DrivesRootApi.md#createdriveitem) | **POST** /v1beta1/drives/{drive-id}/root/children | Create a drive item
 *DrivesRootApi* | [**createLinkSpaceRoot**](docs/Api/DrivesRootApi.md#createlinkspaceroot) | **POST** /v1beta1/drives/{drive-id}/root/createLink | Create a sharing link for the root item of a Drive
-*DrivesRootApi* | [**deletePermissionSpaceRoot**](docs/Api/DrivesRootApi.md#deletepermissionspaceroot) | **DELETE** /v1beta1/drives/{drive-id}/root/permissions/{perm-id} | Remove access to a DriveItem
+*DrivesRootApi* | [**deletePermissionSpaceRoot**](docs/Api/DrivesRootApi.md#deletepermissionspaceroot) | **DELETE** /v1beta1/drives/{drive-id}/root/permissions/{perm-id} | Remove access to a Drive
 *DrivesRootApi* | [**getPermissionSpaceRoot**](docs/Api/DrivesRootApi.md#getpermissionspaceroot) | **GET** /v1beta1/drives/{drive-id}/root/permissions/{perm-id} | Get a single sharing permission for the root item of a drive
 *DrivesRootApi* | [**getRoot**](docs/Api/DrivesRootApi.md#getroot) | **GET** /v1.0/drives/{drive-id}/root | Get root from arbitrary space
 *DrivesRootApi* | [**inviteSpaceRoot**](docs/Api/DrivesRootApi.md#invitespaceroot) | **POST** /v1beta1/drives/{drive-id}/root/invite | Send a sharing invitation

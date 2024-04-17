@@ -899,7 +899,7 @@ class DrivesRootApi
     /**
      * Operation deletePermissionSpaceRoot
      *
-     * Remove access to a DriveItem
+     * Remove access to a Drive
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $perm_id key: id of permission (required)
@@ -921,7 +921,7 @@ class DrivesRootApi
     /**
      * Operation deletePermissionSpaceRootWithHttpInfo
      *
-     * Remove access to a DriveItem
+     * Remove access to a Drive
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $perm_id key: id of permission (required)
@@ -994,7 +994,7 @@ class DrivesRootApi
     /**
      * Operation deletePermissionSpaceRootAsync
      *
-     * Remove access to a DriveItem
+     * Remove access to a Drive
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $perm_id key: id of permission (required)
@@ -1020,7 +1020,7 @@ class DrivesRootApi
     /**
      * Operation deletePermissionSpaceRootAsyncWithHttpInfo
      *
-     * Remove access to a DriveItem
+     * Remove access to a Drive
      *
      * @param  string $drive_id key: id of drive (required)
      * @param  string $perm_id key: id of permission (required)

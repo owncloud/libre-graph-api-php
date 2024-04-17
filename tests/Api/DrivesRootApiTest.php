@@ -96,7 +96,7 @@ class DrivesRootApiTest extends TestCase
     /**
      * Test case for deletePermissionSpaceRoot
      *
-     * Remove access to a DriveItem.
+     * Remove access to a Drive.
      *
      */
     public function testDeletePermissionSpaceRoot()

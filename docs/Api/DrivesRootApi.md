@@ -6,7 +6,7 @@ All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, 
 | ------------- | ------------- | ------------- |
 | [**createDriveItem()**](DrivesRootApi.md#createDriveItem) | **POST** /v1beta1/drives/{drive-id}/root/children | Create a drive item |
 | [**createLinkSpaceRoot()**](DrivesRootApi.md#createLinkSpaceRoot) | **POST** /v1beta1/drives/{drive-id}/root/createLink | Create a sharing link for the root item of a Drive |
-| [**deletePermissionSpaceRoot()**](DrivesRootApi.md#deletePermissionSpaceRoot) | **DELETE** /v1beta1/drives/{drive-id}/root/permissions/{perm-id} | Remove access to a DriveItem |
+| [**deletePermissionSpaceRoot()**](DrivesRootApi.md#deletePermissionSpaceRoot) | **DELETE** /v1beta1/drives/{drive-id}/root/permissions/{perm-id} | Remove access to a Drive |
 | [**getPermissionSpaceRoot()**](DrivesRootApi.md#getPermissionSpaceRoot) | **GET** /v1beta1/drives/{drive-id}/root/permissions/{perm-id} | Get a single sharing permission for the root item of a drive |
 | [**getRoot()**](DrivesRootApi.md#getRoot) | **GET** /v1.0/drives/{drive-id}/root | Get root from arbitrary space |
 | [**inviteSpaceRoot()**](DrivesRootApi.md#inviteSpaceRoot) | **POST** /v1beta1/drives/{drive-id}/root/invite | Send a sharing invitation |
@@ -141,7 +141,7 @@ try {
 deletePermissionSpaceRoot($drive_id, $perm_id)
 ```
 
-Remove access to a DriveItem
+Remove access to a Drive
 
 Remove access to the root item of a drive.  Only sharing permissions that are not inherited can be deleted. The `inheritedFrom` property must be `null`.
 
