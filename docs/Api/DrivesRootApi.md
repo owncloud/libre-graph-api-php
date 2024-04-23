@@ -336,7 +336,7 @@ $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
     $config
 );
 $drive_id = 'drive_id_example'; // string | key: id of drive
-$drive_item_invite = {"recipients":[{"objectId":"4c510ada-c86b-4815-8820-42cdf82c3d51"}],"roles":["7ccc2a61-9615-4063-a80a-eb7cd8e59d8"]}; // \OpenAPI\Client\Model\DriveItemInvite | In the request body, provide a JSON object with the following parameters. To create a custom role submit a list of actions instead of roles.
+$drive_item_invite = {"recipients":[{"objectId":"4c510ada-c86b-4815-8820-42cdf82c3d51"}],"roles":["b1e2218d-eef8-4d4c-b82d-0f1a1b48f3b5"]}; // \OpenAPI\Client\Model\DriveItemInvite | In the request body, provide a JSON object with the following parameters. To create a custom role submit a list of actions instead of roles.
 
 try {
     $result = $apiInstance->inviteSpaceRoot($drive_id, $drive_item_invite);
