@@ -70,7 +70,7 @@ void (empty response body)
 ## `updateDriveItem()`
 
 ```php
-updateDriveItem($drive_id, $item_id, $drive_item)
+updateDriveItem($drive_id, $item_id, $drive_item): \OpenAPI\Client\Model\DriveItem
 ```
 
 Update a DriveItem.
@@ -97,7 +97,8 @@ $item_id = a0ca6a90-a365-4782-871e-d44447bbc668$a0ca6a90-a365-4782-871e-d44447bb
 $drive_item = {"@UI.Hidden":true}; // \OpenAPI\Client\Model\DriveItem | DriveItem properties to update
 
 try {
-    $apiInstance->updateDriveItem($drive_id, $item_id, $drive_item);
+    $result = $apiInstance->updateDriveItem($drive_id, $item_id, $drive_item);
+    print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DriveItemApi->updateDriveItem: ', $e->getMessage(), PHP_EOL;
 }
@@ -113,7 +114,7 @@ try {
 
 ### Return type
 
-void (empty response body)
+[**\OpenAPI\Client\Model\DriveItem**](../Model/DriveItem.md)
 
 ### Authorization
 
