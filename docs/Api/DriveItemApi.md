@@ -5,6 +5,7 @@ All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**deleteDriveItem()**](DriveItemApi.md#deleteDriveItem) | **DELETE** /v1beta1/drives/{drive-id}/items/{item-id} | Delete a DriveItem. |
+| [**getDriveItem()**](DriveItemApi.md#getDriveItem) | **GET** /v1beta1/drives/{drive-id}/items/{item-id} | Get a DriveItem. |
 | [**updateDriveItem()**](DriveItemApi.md#updateDriveItem) | **PATCH** /v1beta1/drives/{drive-id}/items/{item-id} | Update a DriveItem. |
 
 
@@ -53,6 +54,66 @@ try {
 ### Return type
 
 void (empty response body)
+
+### Authorization
+
+[openId](../../README.md#openId)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getDriveItem()`
+
+```php
+getDriveItem($drive_id, $item_id): \OpenAPI\Client\Model\DriveItem
+```
+
+Get a DriveItem.
+
+Get a DriveItem by using its ID.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+
+$apiInstance = new OpenAPI\Client\Api\DriveItemApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$drive_id = a0ca6a90-a365-4782-871e-d44447bbc668$a0ca6a90-a365-4782-871e-d44447bbc668; // string | key: id of drive
+$item_id = a0ca6a90-a365-4782-871e-d44447bbc668$a0ca6a90-a365-4782-871e-d44447bbc668!share-id; // string | key: id of item
+
+try {
+    $result = $apiInstance->getDriveItem($drive_id, $item_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DriveItemApi->getDriveItem: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **drive_id** | **string**| key: id of drive | |
+| **item_id** | **string**| key: id of item | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\DriveItem**](../Model/DriveItem.md)
 
 ### Authorization
 
