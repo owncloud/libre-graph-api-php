@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** | The unique identifier of the permission among all permissions on the item. Read-only. | [optional] [readonly]
 **has_password** | **bool** | Indicates whether the password is set for this permission. This property only appears in the response. Optional. Read-only. | [optional] [readonly]
 **expiration_date_time** | **\DateTime** | An optional expiration date which limits the permission in time. | [optional]
+**created_date_time** | **\DateTime** | An optional creation date. Libregraph only. | [optional]
 **granted_to_v2** | [**\OpenAPI\Client\Model\SharePointIdentitySet**](SharePointIdentitySet.md) |  | [optional]
 **link** | [**\OpenAPI\Client\Model\SharingLink**](SharingLink.md) |  | [optional]
 **roles** | **string[]** |  | [optional]
