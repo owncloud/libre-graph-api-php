@@ -27,6 +27,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new OpenAPI\Client\Api\UserAppRoleAssignmentApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -58,7 +63,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -84,6 +89,11 @@ Delete the appRoleAssignment from a user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\UserAppRoleAssignmentApi(
@@ -117,7 +127,7 @@ void (empty response body)
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -145,6 +155,11 @@ Represents the global roles a user has been granted for an application.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\UserAppRoleAssignmentApi(
@@ -175,7 +190,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

@@ -33,6 +33,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -64,7 +69,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -92,6 +97,11 @@ You can use the createLink action to share a driveItem via a sharing link.  The 
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -124,7 +134,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -152,6 +162,11 @@ Remove access to the root item of a drive.  Only sharing permissions that are no
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -183,7 +198,7 @@ void (empty response body)
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -211,6 +226,11 @@ Return the effective sharing permission for a particular permission resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -243,7 +263,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -269,6 +289,11 @@ Get root from arbitrary space
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -299,7 +324,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -327,6 +352,11 @@ Sends a sharing invitation for the root of a `drive`. A sharing invitation provi
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -359,7 +389,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -387,6 +417,11 @@ The permissions collection includes potentially sensitive information and may no
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -417,7 +452,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -445,6 +480,11 @@ Set the password of a sharing permission.  Only the `password` property can be m
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -479,7 +519,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -507,6 +547,11 @@ Update the properties of a sharing permission by patching the permission resourc
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesRootApi(
@@ -541,7 +586,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

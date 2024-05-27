@@ -24,6 +24,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new OpenAPI\Client\Api\DrivesGetDrivesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -55,7 +60,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -81,6 +86,11 @@ Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles c
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\DrivesGetDrivesApi(
@@ -113,7 +123,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

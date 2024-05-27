@@ -26,6 +26,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new OpenAPI\Client\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -56,7 +61,7 @@ void (empty response body)
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -82,6 +87,11 @@ export personal data of a user
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\UserApi(
@@ -113,7 +123,7 @@ void (empty response body)
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -139,6 +149,11 @@ Get entity from users by key
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\UserApi(
@@ -173,7 +188,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -199,6 +214,11 @@ Update entity in users
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\UserApi(
@@ -231,7 +251,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 

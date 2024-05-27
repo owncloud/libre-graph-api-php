@@ -24,6 +24,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
 
 $apiInstance = new OpenAPI\Client\Api\ApplicationsApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -53,7 +58,7 @@ try {
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -79,6 +84,11 @@ Get all applications
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
 
 
 $apiInstance = new OpenAPI\Client\Api\ApplicationsApi(
@@ -106,7 +116,7 @@ This endpoint does not need any parameter.
 
 ### Authorization
 
-[openId](../../README.md#openId)
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
 
 ### HTTP request headers
 
