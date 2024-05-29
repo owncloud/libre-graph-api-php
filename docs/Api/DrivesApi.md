@@ -197,7 +197,7 @@ try {
 ## `updateDrive()`
 
 ```php
-updateDrive($drive_id, $drive): \OpenAPI\Client\Model\Drive
+updateDrive($drive_id, $drive_update): \OpenAPI\Client\Model\Drive
 ```
 
 Update the drive
@@ -223,10 +223,10 @@ $apiInstance = new OpenAPI\Client\Api\DrivesApi(
     $config
 );
 $drive_id = 'drive_id_example'; // string | key: id of drive
-$drive = {"quota":{"total":1000000000}}; // \OpenAPI\Client\Model\Drive | New space values
+$drive_update = {"quota":{"total":1000000000}}; // \OpenAPI\Client\Model\DriveUpdate | New space values
 
 try {
-    $result = $apiInstance->updateDrive($drive_id, $drive);
+    $result = $apiInstance->updateDrive($drive_id, $drive_update);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DrivesApi->updateDrive: ', $e->getMessage(), PHP_EOL;
@@ -238,7 +238,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **drive_id** | **string**| key: id of drive | |
-| **drive** | [**\OpenAPI\Client\Model\Drive**](../Model/Drive.md)| New space values | |
+| **drive_update** | [**\OpenAPI\Client\Model\DriveUpdate**](../Model/DriveUpdate.md)| New space values | |
 
 ### Return type
 

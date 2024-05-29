@@ -56,6 +56,7 @@ docs/Model/DriveItem.md
 docs/Model/DriveItemCreateLink.md
 docs/Model/DriveItemInvite.md
 docs/Model/DriveRecipient.md
+docs/Model/DriveUpdate.md
 docs/Model/EducationClass.md
 docs/Model/EducationSchool.md
 docs/Model/EducationUser.md
@@ -155,6 +156,7 @@ src/Model/DriveItem.php
 src/Model/DriveItemCreateLink.php
 src/Model/DriveItemInvite.php
 src/Model/DriveRecipient.php
+src/Model/DriveUpdate.php
 src/Model/EducationClass.php
 src/Model/EducationSchool.php
 src/Model/EducationUser.php
@@ -251,6 +253,7 @@ tests/Model/DriveItemInviteTest.php
 tests/Model/DriveItemTest.php
 tests/Model/DriveRecipientTest.php
 tests/Model/DriveTest.php
+tests/Model/DriveUpdateTest.php
 tests/Model/EducationClassTest.php
 tests/Model/EducationSchoolTest.php
 tests/Model/EducationUserReferenceTest.php
