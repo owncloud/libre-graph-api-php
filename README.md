@@ -55,19 +55,19 @@ $config = OpenAPI\Client\Configuration::getDefaultConfiguration()
               ->setPassword('YOUR_PASSWORD');
 
 
-$apiInstance = new OpenAPI\Client\Api\ApplicationsApi(
+$apiInstance = new OpenAPI\Client\Api\ActivitiesApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$application_id = 'application_id_example'; // string | key: id of application
+$kql = resourceid:a0ca6a90-a365-4782-871e-d44447bbc668$a0ca6a90-a365-4782-871e-d44447bbc668 depth:2; // string
 
 try {
-    $result = $apiInstance->getApplication($application_id);
+    $result = $apiInstance->getActivities($kql);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ApplicationsApi->getApplication: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ActivitiesApi->getActivities: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -78,6 +78,7 @@ All URIs are relative to *https://ocis.ocis-traefik.latest.owncloud.works/graph*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ActivitiesApi* | [**getActivities**](docs/Api/ActivitiesApi.md#getactivities) | **GET** /v1beta1/extensions/org.libregraph/activities | Get activities
 *ApplicationsApi* | [**getApplication**](docs/Api/ApplicationsApi.md#getapplication) | **GET** /v1.0/applications/{application-id} | Get application by id
 *ApplicationsApi* | [**listApplications**](docs/Api/ApplicationsApi.md#listapplications) | **GET** /v1.0/applications | Get all applications
 *DriveItemApi* | [**deleteDriveItem**](docs/Api/DriveItemApi.md#deletedriveitem) | **DELETE** /v1beta1/drives/{drive-id}/items/{item-id} | Delete a DriveItem.
@@ -167,6 +168,9 @@ Class | Method | HTTP request | Description
 
 ## Models
 
+- [Activity](docs/Model/Activity.md)
+- [ActivityTemplate](docs/Model/ActivityTemplate.md)
+- [ActivityTimes](docs/Model/ActivityTimes.md)
 - [AppRole](docs/Model/AppRole.md)
 - [AppRoleAssignment](docs/Model/AppRoleAssignment.md)
 - [Application](docs/Model/Application.md)
@@ -174,6 +178,7 @@ Class | Method | HTTP request | Description
 - [ClassMemberReference](docs/Model/ClassMemberReference.md)
 - [ClassReference](docs/Model/ClassReference.md)
 - [ClassTeacherReference](docs/Model/ClassTeacherReference.md)
+- [CollectionOfActivities](docs/Model/CollectionOfActivities.md)
 - [CollectionOfAppRoleAssignments](docs/Model/CollectionOfAppRoleAssignments.md)
 - [CollectionOfApplications](docs/Model/CollectionOfApplications.md)
 - [CollectionOfClass](docs/Model/CollectionOfClass.md)

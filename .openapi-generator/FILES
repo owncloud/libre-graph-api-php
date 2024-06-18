@@ -4,6 +4,7 @@
 .travis.yml
 README.md
 composer.json
+docs/Api/ActivitiesApi.md
 docs/Api/ApplicationsApi.md
 docs/Api/DriveItemApi.md
 docs/Api/DrivesApi.md
@@ -27,6 +28,9 @@ docs/Api/TagsApi.md
 docs/Api/UserApi.md
 docs/Api/UserAppRoleAssignmentApi.md
 docs/Api/UsersApi.md
+docs/Model/Activity.md
+docs/Model/ActivityTemplate.md
+docs/Model/ActivityTimes.md
 docs/Model/AppRole.md
 docs/Model/AppRoleAssignment.md
 docs/Model/Application.md
@@ -34,6 +38,7 @@ docs/Model/Audio.md
 docs/Model/ClassMemberReference.md
 docs/Model/ClassReference.md
 docs/Model/ClassTeacherReference.md
+docs/Model/CollectionOfActivities.md
 docs/Model/CollectionOfAppRoleAssignments.md
 docs/Model/CollectionOfApplications.md
 docs/Model/CollectionOfClass.md
@@ -101,6 +106,7 @@ docs/Model/User.md
 docs/Model/Video.md
 git_push.sh
 phpunit.xml.dist
+src/Api/ActivitiesApi.php
 src/Api/ApplicationsApi.php
 src/Api/DriveItemApi.php
 src/Api/DrivesApi.php
@@ -127,6 +133,9 @@ src/Api/UsersApi.php
 src/ApiException.php
 src/Configuration.php
 src/HeaderSelector.php
+src/Model/Activity.php
+src/Model/ActivityTemplate.php
+src/Model/ActivityTimes.php
 src/Model/AppRole.php
 src/Model/AppRoleAssignment.php
 src/Model/Application.php
@@ -134,6 +143,7 @@ src/Model/Audio.php
 src/Model/ClassMemberReference.php
 src/Model/ClassReference.php
 src/Model/ClassTeacherReference.php
+src/Model/CollectionOfActivities.php
 src/Model/CollectionOfAppRoleAssignments.php
 src/Model/CollectionOfApplications.php
 src/Model/CollectionOfClass.php
@@ -201,6 +211,7 @@ src/Model/UnifiedRolePermission.php
 src/Model/User.php
 src/Model/Video.php
 src/ObjectSerializer.php
+tests/Api/ActivitiesApiTest.php
 tests/Api/ApplicationsApiTest.php
 tests/Api/DriveItemApiTest.php
 tests/Api/DrivesApiTest.php
@@ -224,6 +235,9 @@ tests/Api/TagsApiTest.php
 tests/Api/UserApiTest.php
 tests/Api/UserAppRoleAssignmentApiTest.php
 tests/Api/UsersApiTest.php
+tests/Model/ActivityTemplateTest.php
+tests/Model/ActivityTest.php
+tests/Model/ActivityTimesTest.php
 tests/Model/AppRoleAssignmentTest.php
 tests/Model/AppRoleTest.php
 tests/Model/ApplicationTest.php
@@ -231,6 +245,7 @@ tests/Model/AudioTest.php
 tests/Model/ClassMemberReferenceTest.php
 tests/Model/ClassReferenceTest.php
 tests/Model/ClassTeacherReferenceTest.php
+tests/Model/CollectionOfActivitiesTest.php
 tests/Model/CollectionOfAppRoleAssignmentsTest.php
 tests/Model/CollectionOfApplicationsTest.php
 tests/Model/CollectionOfClassTest.php
