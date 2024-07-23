@@ -1,6 +1,6 @@
 # OpenAPI\Client\MeDrivesApi
 
-All URIs are relative to https://ocis.ocis-traefik.latest.owncloud.works/graph, except if the operation defines another base path.
+All URIs are relative to https://ocis.ocis.rolling.owncloud.works/graph, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
