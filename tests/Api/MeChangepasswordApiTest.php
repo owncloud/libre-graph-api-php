@@ -72,7 +72,7 @@ class MeChangepasswordApiTest extends TestCase
     /**
      * Test case for changeOwnPassword
      *
-     * Chanage your own password.
+     * Change your own password.
      *
      */
     public function testChangeOwnPassword()

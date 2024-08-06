@@ -421,7 +421,7 @@ class DriveUpdate implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets id
      *
-     * @param string|null $id The unique idenfier for this drive.
+     * @param string|null $id The unique identifier for this drive.
      *
      * @return $this
      */

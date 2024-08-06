@@ -1373,7 +1373,7 @@ class DriveItem implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets at_ui_hidden
      *
-     * @param bool|null $at_ui_hidden Properties or facets (see UI.Facet) annotated with this term will not be rendered if the annotation evaluates to true. Users can set this to hide permissons.
+     * @param bool|null $at_ui_hidden Properties or facets (see UI.Facet) annotated with this term will not be rendered if the annotation evaluates to true. Users can set this to hide permissions.
      *
      * @return $this
      */

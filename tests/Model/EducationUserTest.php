@@ -32,7 +32,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * EducationUserTest Class Doc Comment
  *
- * @description And extension of user with education specific attributes
+ * @description An extension of user with education-specific attributes
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech

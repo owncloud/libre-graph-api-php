@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** | The unique idenfier for this drive. | [optional] [readonly]
+**id** | **string** | The unique identifier for this drive. | [optional] [readonly]
 **created_by** | [**\OpenAPI\Client\Model\IdentitySet**](IdentitySet.md) |  | [optional]
 **created_date_time** | **\DateTime** | Date and time of item creation. Read-only. | [optional] [readonly]
 **description** | **string** | Provides a user-visible description of the item. Optional. | [optional]

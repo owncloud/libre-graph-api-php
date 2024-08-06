@@ -4,7 +4,7 @@ All URIs are relative to https://ocis.ocis.rolling.owncloud.works/graph, except 
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**changeOwnPassword()**](MeChangepasswordApi.md#changeOwnPassword) | **POST** /v1.0/me/changePassword | Chanage your own password |
+| [**changeOwnPassword()**](MeChangepasswordApi.md#changeOwnPassword) | **POST** /v1.0/me/changePassword | Change your own password |
 
 
 ## `changeOwnPassword()`
@@ -13,7 +13,7 @@ All URIs are relative to https://ocis.ocis.rolling.owncloud.works/graph, except 
 changeOwnPassword($password_change)
 ```
 
-Chanage your own password
+Change your own password
 
 ### Example
 
