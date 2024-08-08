@@ -767,7 +767,7 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets user_type
      *
-     * @param string|null $user_type The user`s type. This can be either \"Member\" for regular user, or \"Guest\" for guest users.
+     * @param string|null $user_type The user`s type. This can be either \"Member\" for regular user, \"Guest\" for guest users or \"Federated\" for users imported from a federated instance.
      *
      * @return $this
      */
