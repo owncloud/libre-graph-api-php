@@ -94,4 +94,13 @@ class IdentityTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "at_libre_graph_user_type"
+     */
+    public function testPropertyAtLibreGraphUserType()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
