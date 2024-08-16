@@ -1,6 +1,6 @@
 <?php
 /**
- * User
+ * UserUpdate
  *
  * PHP version 8.1
  *
@@ -34,15 +34,15 @@ use ReturnTypeWillChange;
 use OpenAPI\Client\ObjectSerializer;
 
 /**
- * User Class Doc Comment
+ * UserUpdate Class Doc Comment
  *
- * @description Represents an Active Directory user object.
+ * @description Represents updates to an Active Directory user object.
  * @package  OpenAPI\Client
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements ArrayAccess<string, mixed>
  */
-class User implements ModelInterface, ArrayAccess, JsonSerializable
+class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -51,7 +51,7 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
       *
       * @var string
       */
-    protected static string $openAPIModelName = 'user';
+    protected static string $openAPIModelName = 'userUpdate';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -371,16 +371,10 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['display_name'] === null) {
-            $invalidProperties[] = "'display_name' can't be null";
-        }
         if (!is_null($this->container['drives']) && (count($this->container['drives']) > 100)) {
             $invalidProperties[] = "invalid value for 'drives', number of items must be less than or equal to 100.";
         }
 
-        if ($this->container['on_premises_sam_account_name'] === null) {
-            $invalidProperties[] = "'on_premises_sam_account_name' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -480,9 +474,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets display_name
      *
-     * @return string
+     * @return string|null
      */
-    public function getDisplayName(): string
+    public function getDisplayName(): ?string
     {
         return $this->container['display_name'];
     }
@@ -490,11 +484,11 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets display_name
      *
-     * @param string $display_name The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Returned by default. Supports $orderby.
+     * @param string|null $display_name The name displayed in the address book for the user. This value is usually the combination of the user's first name, middle initial, and last name. This property is required when a user is created and it cannot be cleared during updates. Returned by default. Supports $orderby.
      *
      * @return $this
      */
-    public function setDisplayName(string $display_name): static
+    public function setDisplayName(?string $display_name): static
     {
         if (is_null($display_name)) {
             throw new InvalidArgumentException('non-nullable display_name cannot be null');
@@ -528,7 +522,7 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
         }
 
         if ((count($drives) > 100)) {
-            throw new InvalidArgumentException('invalid value for $drives when calling User., number of items must be less than or equal to 100.');
+            throw new InvalidArgumentException('invalid value for $drives when calling UserUpdate., number of items must be less than or equal to 100.');
         }
         $this->container['drives'] = $drives;
 
@@ -646,9 +640,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets on_premises_sam_account_name
      *
-     * @return string
+     * @return string|null
      */
-    public function getOnPremisesSamAccountName(): string
+    public function getOnPremisesSamAccountName(): ?string
     {
         return $this->container['on_premises_sam_account_name'];
     }
@@ -656,11 +650,11 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets on_premises_sam_account_name
      *
-     * @param string $on_premises_sam_account_name Contains the on-premises SAM account name synchronized from the on-premises directory.
+     * @param string|null $on_premises_sam_account_name Contains the on-premises SAM account name synchronized from the on-premises directory.
      *
      * @return $this
      */
-    public function setOnPremisesSamAccountName(string $on_premises_sam_account_name): static
+    public function setOnPremisesSamAccountName(?string $on_premises_sam_account_name): static
     {
         if (is_null($on_premises_sam_account_name)) {
             throw new InvalidArgumentException('non-nullable on_premises_sam_account_name cannot be null');

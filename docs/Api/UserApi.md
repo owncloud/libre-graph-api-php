@@ -202,7 +202,7 @@ try {
 ## `updateUser()`
 
 ```php
-updateUser($user_id, $user): \OpenAPI\Client\Model\User
+updateUser($user_id, $user_update): \OpenAPI\Client\Model\User
 ```
 
 Update entity in users
@@ -228,10 +228,10 @@ $apiInstance = new OpenAPI\Client\Api\UserApi(
     $config
 );
 $user_id = 'user_id_example'; // string | key: id of user
-$user = {"displayName":"Marie Skłodowska Curie"}; // \OpenAPI\Client\Model\User | New property values
+$user_update = {"displayName":"Marie Skłodowska Curie"}; // \OpenAPI\Client\Model\UserUpdate | New property values
 
 try {
-    $result = $apiInstance->updateUser($user_id, $user);
+    $result = $apiInstance->updateUser($user_id, $user_update);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->updateUser: ', $e->getMessage(), PHP_EOL;
@@ -243,7 +243,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **user_id** | **string**| key: id of user | |
-| **user** | [**\OpenAPI\Client\Model\User**](../Model/User.md)| New property values | |
+| **user_update** | [**\OpenAPI\Client\Model\UserUpdate**](../Model/UserUpdate.md)| New property values | |
 
 ### Return type
 

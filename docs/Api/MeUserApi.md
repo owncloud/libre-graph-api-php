@@ -72,7 +72,7 @@ try {
 ## `updateOwnUser()`
 
 ```php
-updateOwnUser($user): \OpenAPI\Client\Model\User
+updateOwnUser($user_update): \OpenAPI\Client\Model\User
 ```
 
 Update the current user
@@ -97,10 +97,10 @@ $apiInstance = new OpenAPI\Client\Api\MeUserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$user = {"preferredLanguage":"en"}; // \OpenAPI\Client\Model\User | New user values
+$user_update = {"preferredLanguage":"en"}; // \OpenAPI\Client\Model\UserUpdate | New user values
 
 try {
-    $result = $apiInstance->updateOwnUser($user);
+    $result = $apiInstance->updateOwnUser($user_update);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling MeUserApi->updateOwnUser: ', $e->getMessage(), PHP_EOL;
@@ -111,7 +111,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **user** | [**\OpenAPI\Client\Model\User**](../Model/User.md)| New user values | [optional] |
+| **user_update** | [**\OpenAPI\Client\Model\UserUpdate**](../Model/UserUpdate.md)| New user values | [optional] |
 
 ### Return type
 
