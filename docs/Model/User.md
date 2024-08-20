@@ -12,12 +12,12 @@ Name | Type | Description | Notes
 **drive** | [**\OpenAPI\Client\Model\Drive**](Drive.md) |  | [optional]
 **identities** | [**\OpenAPI\Client\Model\ObjectIdentity[]**](ObjectIdentity.md) | Identities associated with this account. | [optional]
 **mail** | **string** | The SMTP address for the user, for example, &#39;jeff@contoso.onowncloud.com&#39;. Returned by default. | [optional]
-**member_of** | [**\OpenAPI\Client\Model\Group[]**](Group.md) | Groups that this user is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand. | [optional]
+**member_of** | [**\OpenAPI\Client\Model\Group[]**](Group.md) | Groups that this user is a member of. HTTP Methods: GET (supported for all groups). Read-only. Nullable. Supports $expand. | [optional] [readonly]
 **on_premises_sam_account_name** | **string** | Contains the on-premises SAM account name synchronized from the on-premises directory. |
 **password_profile** | [**\OpenAPI\Client\Model\PasswordProfile**](PasswordProfile.md) |  | [optional]
 **surname** | **string** | The user&#39;s surname (family name or last name). Returned by default. | [optional]
 **given_name** | **string** | The user&#39;s givenName. Returned by default. | [optional]
-**user_type** | **string** | The user&#x60;s type. This can be either \&quot;Member\&quot; for regular user, \&quot;Guest\&quot; for guest users or \&quot;Federated\&quot; for users imported from a federated instance. | [optional]
+**user_type** | **string** | The user&#x60;s type. This can be either \&quot;Member\&quot; for regular user, \&quot;Guest\&quot; for guest users or \&quot;Federated\&quot; for users imported from a federated instance. | [optional] [readonly]
 **preferred_language** | **string** | Represents the users language setting, ISO-639-1 Code | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
