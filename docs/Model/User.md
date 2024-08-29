@@ -19,5 +19,6 @@ Name | Type | Description | Notes
 **given_name** | **string** | The user&#39;s givenName. Returned by default. | [optional]
 **user_type** | **string** | The user&#x60;s type. This can be either \&quot;Member\&quot; for regular user, \&quot;Guest\&quot; for guest users or \&quot;Federated\&quot; for users imported from a federated instance. | [optional] [readonly]
 **preferred_language** | **string** | Represents the users language setting, ISO-639-1 Code | [optional]
+**sign_in_activity** | [**\OpenAPI\Client\Model\SignInActivity**](SignInActivity.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

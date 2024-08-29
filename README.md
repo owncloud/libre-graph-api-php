@@ -234,6 +234,7 @@ Class | Method | HTTP request | Description
 - [SharingLink](docs/Model/SharingLink.md)
 - [SharingLinkPassword](docs/Model/SharingLinkPassword.md)
 - [SharingLinkType](docs/Model/SharingLinkType.md)
+- [SignInActivity](docs/Model/SignInActivity.md)
 - [SpecialFolder](docs/Model/SpecialFolder.md)
 - [TagAssignment](docs/Model/TagAssignment.md)
 - [TagUnassignment](docs/Model/TagUnassignment.md)

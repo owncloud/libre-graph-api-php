@@ -211,4 +211,13 @@ class UserUpdateTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "sign_in_activity"
+     */
+    public function testPropertySignInActivity()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
