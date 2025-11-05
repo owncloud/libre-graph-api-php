@@ -18,5 +18,6 @@ Name | Type | Description | Notes
 **given_name** | **string** | The user&#39;s givenName. Returned by default. | [optional]
 **primary_role** | **string** | The user&#x60;s default role. Such as \&quot;student\&quot; or \&quot;teacher\&quot; | [optional]
 **user_type** | **string** | The user&#x60;s type. This can be either \&quot;Member\&quot; for regular user, \&quot;Guest\&quot; for guest users or \&quot;Federated\&quot; for users imported from a federated instance. | [optional]
+**external_id** | **string** | A unique identifier for the user assigned by the school or institution. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

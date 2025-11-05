@@ -202,4 +202,13 @@ class EducationUserTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "external_id"
+     */
+    public function testPropertyExternalId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }
