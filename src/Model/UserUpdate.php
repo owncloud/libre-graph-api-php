@@ -74,7 +74,8 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'given_name' => 'string',
         'user_type' => 'string',
         'preferred_language' => 'string',
-        'sign_in_activity' => '\OpenAPI\Client\Model\SignInActivity'
+        'sign_in_activity' => '\OpenAPI\Client\Model\SignInActivity',
+        'external_id' => 'string'
     ];
 
     /**
@@ -98,7 +99,8 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'given_name' => null,
         'user_type' => null,
         'preferred_language' => null,
-        'sign_in_activity' => null
+        'sign_in_activity' => null,
+        'external_id' => null
     ];
 
     /**
@@ -122,7 +124,8 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
 		'given_name' => false,
 		'user_type' => false,
 		'preferred_language' => false,
-		'sign_in_activity' => false
+		'sign_in_activity' => false,
+		'external_id' => false
     ];
 
     /**
@@ -226,7 +229,8 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'given_name' => 'givenName',
         'user_type' => 'userType',
         'preferred_language' => 'preferredLanguage',
-        'sign_in_activity' => 'signInActivity'
+        'sign_in_activity' => 'signInActivity',
+        'external_id' => 'externalID'
     ];
 
     /**
@@ -250,7 +254,8 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'given_name' => 'setGivenName',
         'user_type' => 'setUserType',
         'preferred_language' => 'setPreferredLanguage',
-        'sign_in_activity' => 'setSignInActivity'
+        'sign_in_activity' => 'setSignInActivity',
+        'external_id' => 'setExternalId'
     ];
 
     /**
@@ -274,7 +279,8 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         'given_name' => 'getGivenName',
         'user_type' => 'getUserType',
         'preferred_language' => 'getPreferredLanguage',
-        'sign_in_activity' => 'getSignInActivity'
+        'sign_in_activity' => 'getSignInActivity',
+        'external_id' => 'getExternalId'
     ];
 
     /**
@@ -349,6 +355,7 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('user_type', $data ?? [], null);
         $this->setIfExists('preferred_language', $data ?? [], null);
         $this->setIfExists('sign_in_activity', $data ?? [], null);
+        $this->setIfExists('external_id', $data ?? [], null);
     }
 
     /**
@@ -829,6 +836,33 @@ class UserUpdate implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable sign_in_activity cannot be null');
         }
         $this->container['sign_in_activity'] = $sign_in_activity;
+
+        return $this;
+    }
+
+    /**
+     * Gets external_id
+     *
+     * @return string|null
+     */
+    public function getExternalId(): ?string
+    {
+        return $this->container['external_id'];
+    }
+
+    /**
+     * Sets external_id
+     *
+     * @param string|null $external_id A unique identifier assigned to the user by the organization.
+     *
+     * @return $this
+     */
+    public function setExternalId(?string $external_id): static
+    {
+        if (is_null($external_id)) {
+            throw new InvalidArgumentException('non-nullable external_id cannot be null');
+        }
+        $this->container['external_id'] = $external_id;
 
         return $this;
     }
