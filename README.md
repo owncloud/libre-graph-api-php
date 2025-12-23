@@ -85,9 +85,13 @@ Class | Method | HTTP request | Description
 *DriveItemApi* | [**getDriveItem**](docs/Api/DriveItemApi.md#getdriveitem) | **GET** /v1beta1/drives/{drive-id}/items/{item-id} | Get a DriveItem.
 *DriveItemApi* | [**updateDriveItem**](docs/Api/DriveItemApi.md#updatedriveitem) | **PATCH** /v1beta1/drives/{drive-id}/items/{item-id} | Update a DriveItem.
 *DrivesApi* | [**createDrive**](docs/Api/DrivesApi.md#createdrive) | **POST** /v1.0/drives | Create a new drive of a specific type
+*DrivesApi* | [**createDriveBeta**](docs/Api/DrivesApi.md#createdrivebeta) | **POST** /v1beta1/drives | Create a new drive of a specific type. Alias for &#39;/v1.0/drives&#39;, the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles.
 *DrivesApi* | [**deleteDrive**](docs/Api/DrivesApi.md#deletedrive) | **DELETE** /v1.0/drives/{drive-id} | Delete a specific space
+*DrivesApi* | [**deleteDriveBeta**](docs/Api/DrivesApi.md#deletedrivebeta) | **DELETE** /v1beta1/drives/{drive-id} | Delete a specific space. Alias for &#39;/v1.0/drives&#39;.
 *DrivesApi* | [**getDrive**](docs/Api/DrivesApi.md#getdrive) | **GET** /v1.0/drives/{drive-id} | Get drive by id
+*DrivesApi* | [**getDriveBeta**](docs/Api/DrivesApi.md#getdrivebeta) | **GET** /v1beta1/drives/{drive-id} | Get drive by id. Alias for &#39;/v1.0/drives&#39;, the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles
 *DrivesApi* | [**updateDrive**](docs/Api/DrivesApi.md#updatedrive) | **PATCH** /v1.0/drives/{drive-id} | Update the drive
+*DrivesApi* | [**updateDriveBeta**](docs/Api/DrivesApi.md#updatedrivebeta) | **PATCH** /v1beta1/drives/{drive-id} | Update the drive. Alias for &#39;/v1.0/drives&#39;, the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles
 *DrivesGetDrivesApi* | [**listAllDrives**](docs/Api/DrivesGetDrivesApi.md#listalldrives) | **GET** /v1.0/drives | Get all available drives
 *DrivesGetDrivesApi* | [**listAllDrivesBeta**](docs/Api/DrivesGetDrivesApi.md#listalldrivesbeta) | **GET** /v1beta1/drives | Alias for &#39;/v1.0/drives&#39;, the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles
 *DrivesPermissionsApi* | [**createLink**](docs/Api/DrivesPermissionsApi.md#createlink) | **POST** /v1beta1/drives/{drive-id}/items/{item-id}/createLink | Create a sharing link for a DriveItem

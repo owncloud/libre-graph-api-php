@@ -5,9 +5,13 @@ All URIs are relative to https://ocis.ocis.rolling.owncloud.works/graph, except 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**createDrive()**](DrivesApi.md#createDrive) | **POST** /v1.0/drives | Create a new drive of a specific type |
+| [**createDriveBeta()**](DrivesApi.md#createDriveBeta) | **POST** /v1beta1/drives | Create a new drive of a specific type. Alias for &#39;/v1.0/drives&#39;, the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles. |
 | [**deleteDrive()**](DrivesApi.md#deleteDrive) | **DELETE** /v1.0/drives/{drive-id} | Delete a specific space |
+| [**deleteDriveBeta()**](DrivesApi.md#deleteDriveBeta) | **DELETE** /v1beta1/drives/{drive-id} | Delete a specific space. Alias for &#39;/v1.0/drives&#39;. |
 | [**getDrive()**](DrivesApi.md#getDrive) | **GET** /v1.0/drives/{drive-id} | Get drive by id |
+| [**getDriveBeta()**](DrivesApi.md#getDriveBeta) | **GET** /v1beta1/drives/{drive-id} | Get drive by id. Alias for &#39;/v1.0/drives&#39;, the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles |
 | [**updateDrive()**](DrivesApi.md#updateDrive) | **PATCH** /v1.0/drives/{drive-id} | Update the drive |
+| [**updateDriveBeta()**](DrivesApi.md#updateDriveBeta) | **PATCH** /v1beta1/drives/{drive-id} | Update the drive. Alias for &#39;/v1.0/drives&#39;, the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles |
 
 
 ## `createDrive()`
@@ -45,6 +49,67 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DrivesApi->createDrive: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **drive** | [**\OpenAPI\Client\Model\Drive**](../Model/Drive.md)| New space property values | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\Drive**](../Model/Drive.md)
+
+### Authorization
+
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `createDriveBeta()`
+
+```php
+createDriveBeta($drive): \OpenAPI\Client\Model\Drive
+```
+
+Create a new drive of a specific type. Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new OpenAPI\Client\Api\DrivesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$drive = {"name":"Mars","quota":{"total":1000000000},"description":"Team space mars project"}; // \OpenAPI\Client\Model\Drive | New space property values
+
+try {
+    $result = $apiInstance->createDriveBeta($drive);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DrivesApi->createDriveBeta: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -133,6 +198,68 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `deleteDriveBeta()`
+
+```php
+deleteDriveBeta($drive_id, $if_match)
+```
+
+Delete a specific space. Alias for '/v1.0/drives'.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new OpenAPI\Client\Api\DrivesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$drive_id = 'drive_id_example'; // string | key: id of drive
+$if_match = 'if_match_example'; // string | ETag
+
+try {
+    $apiInstance->deleteDriveBeta($drive_id, $if_match);
+} catch (Exception $e) {
+    echo 'Exception when calling DrivesApi->deleteDriveBeta: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **drive_id** | **string**| key: id of drive | |
+| **if_match** | **string**| ETag | [optional] |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `getDrive()`
 
 ```php
@@ -168,6 +295,67 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DrivesApi->getDrive: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **drive_id** | **string**| key: id of drive | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\Drive**](../Model/Drive.md)
+
+### Authorization
+
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `getDriveBeta()`
+
+```php
+getDriveBeta($drive_id): \OpenAPI\Client\Model\Drive
+```
+
+Get drive by id. Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new OpenAPI\Client\Api\DrivesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$drive_id = 'drive_id_example'; // string | key: id of drive
+
+try {
+    $result = $apiInstance->getDriveBeta($drive_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DrivesApi->getDriveBeta: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -230,6 +418,69 @@ try {
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DrivesApi->updateDrive: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **drive_id** | **string**| key: id of drive | |
+| **drive_update** | [**\OpenAPI\Client\Model\DriveUpdate**](../Model/DriveUpdate.md)| New space values | |
+
+### Return type
+
+[**\OpenAPI\Client\Model\Drive**](../Model/Drive.md)
+
+### Authorization
+
+[openId](../../README.md#openId), [basicAuth](../../README.md#basicAuth)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `updateDriveBeta()`
+
+```php
+updateDriveBeta($drive_id, $drive_update): \OpenAPI\Client\Model\Drive
+```
+
+Update the drive. Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+// Configure HTTP basic authorization: basicAuth
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()
+              ->setUsername('YOUR_USERNAME')
+              ->setPassword('YOUR_PASSWORD');
+
+
+$apiInstance = new OpenAPI\Client\Api\DrivesApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$drive_id = 'drive_id_example'; // string | key: id of drive
+$drive_update = {"quota":{"total":1000000000}}; // \OpenAPI\Client\Model\DriveUpdate | New space values
+
+try {
+    $result = $apiInstance->updateDriveBeta($drive_id, $drive_update);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DrivesApi->updateDriveBeta: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

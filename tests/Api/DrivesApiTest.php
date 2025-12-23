@@ -82,12 +82,36 @@ class DrivesApiTest extends TestCase
     }
 
     /**
+     * Test case for createDriveBeta
+     *
+     * Create a new drive of a specific type. Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles..
+     *
+     */
+    public function testCreateDriveBeta()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for deleteDrive
      *
      * Delete a specific space.
      *
      */
     public function testDeleteDrive()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for deleteDriveBeta
+     *
+     * Delete a specific space. Alias for '/v1.0/drives'..
+     *
+     */
+    public function testDeleteDriveBeta()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -106,12 +130,36 @@ class DrivesApiTest extends TestCase
     }
 
     /**
+     * Test case for getDriveBeta
+     *
+     * Get drive by id. Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles.
+     *
+     */
+    public function testGetDriveBeta()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for updateDrive
      *
      * Update the drive.
      *
      */
     public function testUpdateDrive()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for updateDriveBeta
+     *
+     * Update the drive. Alias for '/v1.0/drives', the difference is that grantedtoV2 is used and roles contain unified roles instead of cs3 roles.
+     *
+     */
+    public function testUpdateDriveBeta()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
