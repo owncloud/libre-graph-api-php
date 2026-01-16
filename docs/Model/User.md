@@ -21,5 +21,7 @@ Name | Type | Description | Notes
 **preferred_language** | **string** | Represents the users language setting, ISO-639-1 Code | [optional]
 **sign_in_activity** | [**\OpenAPI\Client\Model\SignInActivity**](SignInActivity.md) |  | [optional]
 **external_id** | **string** | A unique identifier assigned to the user by the organization. | [optional]
+**cross_instance_reference** | **string** | A unique reference to the user. This is used to query the user from a different oCIS instance connected to the same identity provider. | [optional]
+**instances** | [**\OpenAPI\Client\Model\Instance[]**](Instance.md) | oCIS instances that the user is either a member or a guest of. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

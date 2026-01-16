@@ -75,7 +75,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
         'user_type' => 'string',
         'preferred_language' => 'string',
         'sign_in_activity' => '\OpenAPI\Client\Model\SignInActivity',
-        'external_id' => 'string'
+        'external_id' => 'string',
+        'cross_instance_reference' => 'string',
+        'instances' => '\OpenAPI\Client\Model\Instance[]'
     ];
 
     /**
@@ -100,7 +102,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
         'user_type' => null,
         'preferred_language' => null,
         'sign_in_activity' => null,
-        'external_id' => null
+        'external_id' => null,
+        'cross_instance_reference' => null,
+        'instances' => null
     ];
 
     /**
@@ -125,7 +129,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
 		'user_type' => false,
 		'preferred_language' => false,
 		'sign_in_activity' => false,
-		'external_id' => false
+		'external_id' => false,
+		'cross_instance_reference' => false,
+		'instances' => false
     ];
 
     /**
@@ -230,7 +236,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
         'user_type' => 'userType',
         'preferred_language' => 'preferredLanguage',
         'sign_in_activity' => 'signInActivity',
-        'external_id' => 'externalID'
+        'external_id' => 'externalID',
+        'cross_instance_reference' => 'crossInstanceReference',
+        'instances' => 'instances'
     ];
 
     /**
@@ -255,7 +263,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
         'user_type' => 'setUserType',
         'preferred_language' => 'setPreferredLanguage',
         'sign_in_activity' => 'setSignInActivity',
-        'external_id' => 'setExternalId'
+        'external_id' => 'setExternalId',
+        'cross_instance_reference' => 'setCrossInstanceReference',
+        'instances' => 'setInstances'
     ];
 
     /**
@@ -280,7 +290,9 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
         'user_type' => 'getUserType',
         'preferred_language' => 'getPreferredLanguage',
         'sign_in_activity' => 'getSignInActivity',
-        'external_id' => 'getExternalId'
+        'external_id' => 'getExternalId',
+        'cross_instance_reference' => 'getCrossInstanceReference',
+        'instances' => 'getInstances'
     ];
 
     /**
@@ -356,6 +368,8 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('preferred_language', $data ?? [], null);
         $this->setIfExists('sign_in_activity', $data ?? [], null);
         $this->setIfExists('external_id', $data ?? [], null);
+        $this->setIfExists('cross_instance_reference', $data ?? [], null);
+        $this->setIfExists('instances', $data ?? [], null);
     }
 
     /**
@@ -869,6 +883,60 @@ class User implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable external_id cannot be null');
         }
         $this->container['external_id'] = $external_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets cross_instance_reference
+     *
+     * @return string|null
+     */
+    public function getCrossInstanceReference(): ?string
+    {
+        return $this->container['cross_instance_reference'];
+    }
+
+    /**
+     * Sets cross_instance_reference
+     *
+     * @param string|null $cross_instance_reference A unique reference to the user. This is used to query the user from a different oCIS instance connected to the same identity provider.
+     *
+     * @return $this
+     */
+    public function setCrossInstanceReference(?string $cross_instance_reference): static
+    {
+        if (is_null($cross_instance_reference)) {
+            throw new InvalidArgumentException('non-nullable cross_instance_reference cannot be null');
+        }
+        $this->container['cross_instance_reference'] = $cross_instance_reference;
+
+        return $this;
+    }
+
+    /**
+     * Gets instances
+     *
+     * @return \OpenAPI\Client\Model\Instance[]|null
+     */
+    public function getInstances(): ?array
+    {
+        return $this->container['instances'];
+    }
+
+    /**
+     * Sets instances
+     *
+     * @param \OpenAPI\Client\Model\Instance[]|null $instances oCIS instances that the user is either a member or a guest of.
+     *
+     * @return $this
+     */
+    public function setInstances(?array $instances): static
+    {
+        if (is_null($instances)) {
+            throw new InvalidArgumentException('non-nullable instances cannot be null');
+        }
+        $this->container['instances'] = $instances;
 
         return $this;
     }

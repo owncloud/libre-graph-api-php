@@ -229,4 +229,22 @@ class UserUpdateTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "cross_instance_reference"
+     */
+    public function testPropertyCrossInstanceReference()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "instances"
+     */
+    public function testPropertyInstances()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

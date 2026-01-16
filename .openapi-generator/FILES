@@ -76,6 +76,7 @@ docs/Model/Hashes.md
 docs/Model/Identity.md
 docs/Model/IdentitySet.md
 docs/Model/Image.md
+docs/Model/Instance.md
 docs/Model/ItemReference.md
 docs/Model/MemberReference.md
 docs/Model/ObjectIdentity.md
@@ -183,6 +184,7 @@ src/Model/Hashes.php
 src/Model/Identity.php
 src/Model/IdentitySet.php
 src/Model/Image.php
+src/Model/Instance.php
 src/Model/ItemReference.php
 src/Model/MemberReference.php
 src/Model/ModelInterface.php
@@ -287,6 +289,7 @@ tests/Model/HashesTest.php
 tests/Model/IdentitySetTest.php
 tests/Model/IdentityTest.php
 tests/Model/ImageTest.php
+tests/Model/InstanceTest.php
 tests/Model/ItemReferenceTest.php
 tests/Model/MemberReferenceTest.php
 tests/Model/ObjectIdentityTest.php

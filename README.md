@@ -220,6 +220,7 @@ Class | Method | HTTP request | Description
 - [Identity](docs/Model/Identity.md)
 - [IdentitySet](docs/Model/IdentitySet.md)
 - [Image](docs/Model/Image.md)
+- [Instance](docs/Model/Instance.md)
 - [ItemReference](docs/Model/ItemReference.md)
 - [MemberReference](docs/Model/MemberReference.md)
 - [ObjectIdentity](docs/Model/ObjectIdentity.md)
