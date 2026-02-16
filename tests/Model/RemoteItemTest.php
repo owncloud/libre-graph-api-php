@@ -265,4 +265,13 @@ class RemoteItemTest extends TestCase
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
+
+    /**
+     * Test attribute "space_id"
+     */
+    public function testPropertySpaceId()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
 }

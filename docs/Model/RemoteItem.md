@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **special_folder** | [**\OpenAPI\Client\Model\SpecialFolder**](SpecialFolder.md) |  | [optional]
 **web_dav_url** | **string** | DAV compatible URL for the item. | [optional]
 **web_url** | **string** | URL that displays the resource in the browser. Read-only. | [optional]
+**space_id** | **string** | The UUID of the space that contains the item. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

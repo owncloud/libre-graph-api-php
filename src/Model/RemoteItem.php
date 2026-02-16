@@ -79,7 +79,8 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'int',
         'special_folder' => '\OpenAPI\Client\Model\SpecialFolder',
         'web_dav_url' => 'string',
-        'web_url' => 'string'
+        'web_url' => 'string',
+        'space_id' => 'string'
     ];
 
     /**
@@ -108,7 +109,8 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'int64',
         'special_folder' => null,
         'web_dav_url' => null,
-        'web_url' => null
+        'web_url' => null,
+        'space_id' => null
     ];
 
     /**
@@ -137,7 +139,8 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
 		'size' => false,
 		'special_folder' => false,
 		'web_dav_url' => false,
-		'web_url' => false
+		'web_url' => false,
+		'space_id' => false
     ];
 
     /**
@@ -246,7 +249,8 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'size',
         'special_folder' => 'specialFolder',
         'web_dav_url' => 'webDavUrl',
-        'web_url' => 'webUrl'
+        'web_url' => 'webUrl',
+        'space_id' => 'spaceId'
     ];
 
     /**
@@ -275,7 +279,8 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'setSize',
         'special_folder' => 'setSpecialFolder',
         'web_dav_url' => 'setWebDavUrl',
-        'web_url' => 'setWebUrl'
+        'web_url' => 'setWebUrl',
+        'space_id' => 'setSpaceId'
     ];
 
     /**
@@ -304,7 +309,8 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         'size' => 'getSize',
         'special_folder' => 'getSpecialFolder',
         'web_dav_url' => 'getWebDavUrl',
-        'web_url' => 'getWebUrl'
+        'web_url' => 'getWebUrl',
+        'space_id' => 'getSpaceId'
     ];
 
     /**
@@ -384,6 +390,7 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
         $this->setIfExists('special_folder', $data ?? [], null);
         $this->setIfExists('web_dav_url', $data ?? [], null);
         $this->setIfExists('web_url', $data ?? [], null);
+        $this->setIfExists('space_id', $data ?? [], null);
     }
 
     /**
@@ -1009,6 +1016,33 @@ class RemoteItem implements ModelInterface, ArrayAccess, JsonSerializable
             throw new InvalidArgumentException('non-nullable web_url cannot be null');
         }
         $this->container['web_url'] = $web_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets space_id
+     *
+     * @return string|null
+     */
+    public function getSpaceId(): ?string
+    {
+        return $this->container['space_id'];
+    }
+
+    /**
+     * Sets space_id
+     *
+     * @param string|null $space_id The UUID of the space that contains the item.
+     *
+     * @return $this
+     */
+    public function setSpaceId(?string $space_id): static
+    {
+        if (is_null($space_id)) {
+            throw new InvalidArgumentException('non-nullable space_id cannot be null');
+        }
+        $this->container['space_id'] = $space_id;
 
         return $this;
     }
