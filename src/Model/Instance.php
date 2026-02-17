@@ -280,6 +280,12 @@ class Instance implements ModelInterface, ArrayAccess, JsonSerializable
     {
         $invalidProperties = [];
 
+        if ($this->container['url'] === null) {
+            $invalidProperties[] = "'url' can't be null";
+        }
+        if ($this->container['primary'] === null) {
+            $invalidProperties[] = "'primary' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -298,9 +304,9 @@ class Instance implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets url
      *
-     * @return string|null
+     * @return string
      */
-    public function getUrl(): ?string
+    public function getUrl(): string
     {
         return $this->container['url'];
     }
@@ -308,11 +314,11 @@ class Instance implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets url
      *
-     * @param string|null $url The URL of the oCIS instance.
+     * @param string $url The URL of the oCIS instance.
      *
      * @return $this
      */
-    public function setUrl(?string $url): static
+    public function setUrl(string $url): static
     {
         if (is_null($url)) {
             throw new InvalidArgumentException('non-nullable url cannot be null');
@@ -325,9 +331,9 @@ class Instance implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Gets primary
      *
-     * @return bool|null
+     * @return bool
      */
-    public function getPrimary(): ?bool
+    public function getPrimary(): bool
     {
         return $this->container['primary'];
     }
@@ -335,11 +341,11 @@ class Instance implements ModelInterface, ArrayAccess, JsonSerializable
     /**
      * Sets primary
      *
-     * @param bool|null $primary Whether the instance is the user's primary instance.
+     * @param bool $primary Whether the instance is the user's primary instance.
      *
      * @return $this
      */
-    public function setPrimary(?bool $primary): static
+    public function setPrimary(bool $primary): static
     {
         if (is_null($primary)) {
             throw new InvalidArgumentException('non-nullable primary cannot be null');
