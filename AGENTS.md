@@ -1,4 +1,4 @@
-# agents.md -- Libre Graph API PHP Client
+# AGENTS.md -- Libre Graph API PHP Client
 
 ## Repository Overview
 
